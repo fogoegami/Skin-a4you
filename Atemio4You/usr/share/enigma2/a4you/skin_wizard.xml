@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<skin>
+	<!--
+	##################### mmark_A4Y_ATEMIO v.1.0.0 ########################
+	#                                                                     #
+	Author mmark	       Version 1.0 released                 10-05-2014#
+	EGAMI MOD and additions Edit by fogo v4.1 07-10-2015                  #
+	#                                                                     #
+	#######################################################################
+	The Atemio4you skin has been build for Atemio 4you STB's by MMARK.
+	This skin is Freeware. Everyone can modify and use it in other images.
+	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!
+	Do whatever you want with this skin, but don't tell it's yours,
+	or your idea, and leave the credentials in the "About-box" as they are
+	-->
+
+
+	<!-- Video Wizzard OK -->
+	<screen name="VideoWizard" title="Welcome..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<widget name="text" position="100,100" size="670,420" font="Regular;22" backgroundColor="bkwall" transparent="1"/>
+		<eLabel position="90,305" size="685,315" backgroundColor="#4D5375"/>
+		<widget source="list" render="Listbox" position="100,315" size="665,270" selectionPixmap="buttons/listselect.png" foregroundColor="#73c6ff" backgroundColor="#4D5375" transparent="1" zPosition="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (700, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+		<widget name="config" position="98,311" size="665,270" itemHeight="30" selectionPixmap="buttons/listselect.png" backgroundColor="#4D5375" transparent="1" zPosition="1"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/res.png" position="45,303" size="40,40" zPosition="1" alphatest="on"/>
+		<widget name="portpic" position="45,303" size="40,40" zPosition="2" alphatest="on" transparent="1"/>
+	</screen>
+
+	<!-- Language Wizzard OK -->
+	<screen name="LanguageWizard" title="Language Selection..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<panel name="sRG"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<widget name="text" position="100,100" size="670,420" font="Regular;22" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="755,180" size="15,400" zPosition="2" alphatest="blend"/>
+		<widget source="languages" render="Listbox" position="100,180" size="670,400" backgroundColor="bkwall" transparent="1" zPosition="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (80, 10), size = (600, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+					MultiContentEntryPixmap(pos = (5, 5), size = (60, 40), png = 2), # index 2 is the pixmap
+					],
+					"fonts": [gFont("Regular", 26)],
+					"itemHeight": 50
+				}
+		    </convert>
+		</widget>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+	</screen>
+
+	<!-- Position Wizzard OK -->
+	<screen name="StartWizard" title="Start Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<eLabel zPosition="99" position="0,0" size="30,720" backgroundColor="#ff000000"/>
+		<eLabel zPosition="99" position="0,0" size="1280,20" backgroundColor="#ff000000"/>
+		<eLabel zPosition="99" position="1250,0" size="30,720" backgroundColor="#ff000000"/>
+		<eLabel zPosition="99" position="0,700" size="1280,20" backgroundColor="#ff000000"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<widget name="text" position="100,100" size="670,140" font="Regular;22" backgroundColor="bkwall" transparent="1"/>
+		<eLabel position="90,305" size="685,315" backgroundColor="#4D5375"/>
+		<widget source="list" render="Listbox" position="100,315" size="665,270" selectionPixmap="buttons/listselect.png" foregroundColor="#73c6ff" backgroundColor="#4D5375" transparent="1" zPosition="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (700, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+		<ePixmap position="45,302" pixmap="icons/tv.png" size="40,40" alphatest="blend" zPosition="1"/>
+		<widget name="config" position="100,315" size="665,270" itemHeight="30" selectionPixmap="buttons/listselect.png" backgroundColor="#4D5375" transparent="1" zPosition="2"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Network Wizard OK #4D5375 -->
+	<screen name="NetworkWizard" title="Network Wizard" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<widget name="text" position="100,100" size="670,420" font="Regular;22" backgroundColor="bkwall" transparent="1"/>
+		<eLabel position="90,305" size="685,315" backgroundColor="#4D5375"/>
+		<widget name="HelpWindow" position="700,520" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
+		<widget source="list" render="Listbox" position="100,315" size="665,270" selectionPixmap="buttons/listselect.png" foregroundColor="#73c6ff" backgroundColor="#4D5375" transparent="1" zPosition="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (700, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 45
+				}
+		    </convert>
+		</widget>
+		<widget name="config" position="100,315" size="665,270" itemHeight="30" selectionPixmap="buttons/listselect.png" backgroundColor="#4D5375" transparent="1" zPosition="1"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<ePixmap pixmap="icons/net_on.png" position="40,303" size="40,40" zPosition="10" alphatest="blend"/>
+	</screen>
+
+	<!-- Update Wizard OK -->
+	<screen name="InstallWizardIpkgUpdater" title="Update Wizard..." position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="sWallTemplateSimple"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<ePixmap pixmap="icons/info_on.png" position="40,95" size="40,40" zPosition="10" alphatest="blend"/>
+		<widget source="statusbar" render="Label" position="100,100" size="720,250" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1" zPosition="10"/>
+	</screen>
+
+	<!-- Restore Wizard OK -->
+	<screen name="MessageBoxWizard" title="Message Wizard..." position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<panel name="sWallTemplateSimple"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="40,95" size="53,53" alphatest="blend"/>
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="40,95" size="53,53" alphatest="blend"/>
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="40,95" size="53,53" alphatest="blend"/>
+		<widget name="text" position="100,100" size="670,140" font="Regular;22" backgroundColor="bkwall" transparent="1"/>
+		<eLabel position="90,305" size="685,315" backgroundColor="#4D5375"/>
+		<ePixmap position="45,302" pixmap="icons/tv.png" size="40,40" alphatest="blend" zPosition="1"/>
+		<widget source="list" render="Listbox" position="100,315" size="665,270" selectionPixmap="buttons/listselect.png" foregroundColor="#73c6ff" backgroundColor="#4D5375" transparent="1" zPosition="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (700, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Tutorial Wizard OKK -->
+	<screen name="TutorialWizard" title="Tutorial Wizard..." position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="black">
+		<widget source="global.CurrentTime" render="Label" position="1130,37" size="100,28" font="Regular;26" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="880,67" size="350,25" font="Regular;20" halign="right" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="13">
+		    <convert type="ClockToText">Date</convert>
+		</widget>
+		<widget name="text" position="150,140" size="730,250" font="Regular;22" transparent="1" foregroundColor="#ffffff" backgroundColor="black"/>
+		<widget source="list" render="Listbox" position="150,400" size="730,220" backgroundColor="black">
+		    <convert type="StringList"/>
+		</widget>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="950,140" zPosition="10" size="154,500" alphatest="blend"/>
+		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" alphatest="blend"/>
+	</screen>
+
+	<screen name="SoftwareUpdateChanges" title="Software Update..." position="0,0" size="1280,720" backgroundColor="black" flags="wfNoBorder">
+		<widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/>
+		<widget name="text" position="20,82" size="1240,590" font="Regular;21" backgroundColor="black" transparent="0"/>
+		<panel name="FullscreenRed1Panel"/>
+		<panel name="FullscreenGreen1Panel"/>
+		<panel name="FullscreenYellow1Panel"/>
+	</screen>
+
+	<screen name="SoftwareUpdateChoices" title="Software Update..." position="center,center" size="560,225">
+		<widget name="list" position="0,0" size="560,150" itemHeight="28" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="0" enableWrapAround="1"/>
+		<widget name="text" position="0,150" size="560,75" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" halign="center" transparent="0"/>
+	</screen>
+
+	<!-- CleanupWizard -->
+	<screen name="CleanupWizard" title="Cleanup Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel backgroundColor="bkwall" position="40,25" size="1205,650" zPosition="-10"/>
+		<widget backgroundColor="bkwall" font="Regular;50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;15" foregroundColor="#808080" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;16" foregroundColor="#808080" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<eLabel backgroundColor="bkwall" font="Regular;35" position="70,47" size="800,43" text="CleanupWizard" transparent="1"/>
+		<widget alphatest="blend" name="rc" pixmaps="rc.png,rcold.png" position="175,115" size="154,500" zPosition="10"/>
+		<widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="wizard" pixmap="skin_default/wizard.png" position="500,120" size="110,174" transparent="1" zPosition="10"/>
+		<ePixmap alphatest="blend" pixmap="buttons/red.png" position="500,305" size="30,40"/>
+		<widget backgroundColor="bkwall" font="Regular;21" name="languagetext" position="535,303" size="150,23" transparent="1"/>
+		<widget backgroundColor="bkwall" font="Regular;22" name="text" position="670,120" size="540,300" transparent="1"/>
+		<widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+		    </convert>
+		</widget>
+		<widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14"/>
+	</screen>
+
+	<screen name="CleanupWizardConfiguration" title="Cleanup Wizard Settings" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel backgroundColor="bkwall" position="40,25" size="1205,650" zPosition="-10"/>
+		<widget backgroundColor="bkwall" font="Regular;50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;15" foregroundColor="#808080" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;16" foregroundColor="#808080" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;35" position="70,47" render="Label" size="800,43" source="Title" transparent="1"/>
+		<widget backgroundColor="bkwall" itemHeight="30" name="config" position="70,120" size="700,450" transparent="1"/>
+		<widget backgroundColor="bkwall" font="Regular;22" halign="center" position="70,600" render="Label" size="700,25" source="status" transparent="1"/>
+		<ePixmap alphatest="blend" pixmap="buttons/red.png" position=" 70,635" size="30,40"/>
+		<ePixmap alphatest="blend" pixmap="buttons/green.png" position="360,635" size="30,40"/>
+		<widget backgroundColor="bkwall" font="Regular;20" halign="left" name="key_red" position="105,637" size="240,24" transparent="1" zPosition="1"/>
+		<widget backgroundColor="bkwall" font="Regular;20" halign="left" name="key_green" position="395,637" size="240,24" transparent="1" zPosition="1"/>
+		<ePixmap alphatest="blend" pixmap="icons/setup.png" position="920,230" size="256,256" transparent="1" zPosition="2"/>
+	</screen>
+
+	<!-- Wizards -->
+	<screen name="DefaultSatLists" title="Default Sat Lists..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel backgroundColor="bkwall" position="40,25" size="1205,650" zPosition="-10"/>
+		<widget backgroundColor="bkwall" font="Regular;50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;15" foregroundColor="#808080" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;16" foregroundColor="#808080" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<eLabel backgroundColor="bkwall" font="Regular;35" position="70,47" size="800,43" text="DefaultSatLists" transparent="1"/>
+		<widget alphatest="blend" name="wizard" pixmap="skin_default/wizard.png" position="500,120" size="110,174" transparent="1" zPosition="10"/>
+		<ePixmap alphatest="blend" pixmap="buttons/red.png" position="500,305" size="30,40"/>
+		<widget backgroundColor="bkwall" font="Regular;21" name="languagetext" position="535,305" size="150,23" transparent="1"/>
+		<widget backgroundColor="bkwall" font="Regular;22" name="text" position="670,120" size="540,300" transparent="1"/>
+		<widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+		    </convert>
+		</widget>
+		<widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14"/>
+	</screen>
+
+    <!-- Default Wizard OKK -->
+	<screen name="DefaultWizard" title="Default Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel backgroundColor="bkwall" position="40,25" size="1205,650" zPosition="-10"/>
+		<widget backgroundColor="bkwall" font="Regular;50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;15" foregroundColor="#808080" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;16" foregroundColor="#808080" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<eLabel backgroundColor="bkwall" font="Regular;35" position="70,47" size="800,43" text="DefaultWizard" transparent="1"/>
+		<widget alphatest="blend" name="wizard" pixmap="skin_default/wizard.png" position="500,120" size="110,174" transparent="1" zPosition="10"/>
+		<ePixmap alphatest="blend" pixmap="buttons/red.png" position="500,305" size="30,40"/>
+		<widget backgroundColor="bkwall" font="Regular;21" name="languagetext" position="535,305" size="150,23" transparent="1"/>
+		<widget backgroundColor="bkwall" font="Regular;22" name="text" position="670,120" size="540,300" transparent="1"/>
+		<widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+		    </convert>
+		</widget>
+		<widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14"/>
+	</screen>
+
+	<!-- Restore backups WIZARD OKK -->
+	<screen name="ImageWizard" title="Image Wizard..." position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel backgroundColor="bkwall" position="0,0" size="1280,720" zPosition="-10"/>
+		<widget backgroundColor="bkwall" font="Regular;50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;15" foregroundColor="#808080" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget backgroundColor="bkwall" font="Regular;16" foregroundColor="#808080" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<eLabel backgroundColor="bkwall" font="Regular;35" position="70,47" size="800,43" text="ImageWizard" transparent="1"/>
+		<widget alphatest="blend" name="rc" pixmaps="rc.png,rcold.png" position="175,115" size="154,500" zPosition="10"/>
+		<widget alphatest="blend" name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" zPosition="11"/>
+		<widget alphatest="blend" name="wizard" pixmap="skin_default/wizard.png" position="500,120" size="110,174" transparent="1" zPosition="10"/>
+		<ePixmap alphatest="blend" pixmap="buttons/red.png" position="500,305" size="30,40"/>
+		<widget backgroundColor="bkwall" font="Regular;21" name="languagetext" position="535,305" size="150,23" transparent="1"/>
+		<widget backgroundColor="bkwall" font="Regular;22" name="text" position="670,120" size="540,300" transparent="1"/>
+		<widget position="510,430" render="Listbox" size="700,160" source="list" transparent="1" zPosition="13">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 32
+				}
+		    </convert>
+		</widget>
+		<widget itemHeight="32" name="config" position="510,430" size="700,160" transparent="1" zPosition="14"/>
+	</screen>
+</skin>

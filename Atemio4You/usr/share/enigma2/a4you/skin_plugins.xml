@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!--
+	##################### mmark_A4Y_ATEMIO v.1.0.0 ########################
+	#                                                                     #
+	Author mmark	       Version 1.0 released                 10-05-2014#
+	EGAMI MOD and additions Edit by fogo v4.1 07-10-2015                 #
+	#                                                                     #
+	#######################################################################
+	The Atemio4you skin has been build for Atemio 4you STB's by MMARK.
+	This skin is Freeware. Everyone can modify and use it in other images.
+	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!
+	Do whatever you want with this skin, but don't tell it's yours,
+	or your idea, and leave the credentials in the "About-box" as they are
+	-->
+    <!-- ********** FrontPanelUpgrade ********** -->
+	<screen name="FirmwareUpgrade" position="fill" flags="wfNoBorder" backgroundColor="bkwall" title="Firmware Upgrade">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRG"/>
+		<widget name="oldversion_label" position="100,200" size="290,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#ffffff"/>
+		<widget name="oldversion" position="400,200" size="100,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#0056c856"/>
+		<widget name="newversion_label" position="100,230" size="290,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#ffffff"/>
+		<widget name="newversion" position="400,230" size="100,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#00ff4a3c"/>
+		<widget source="status" render="Label" position="100,290" size="503,25" backgroundColor="bkwall" foregroundColor="bluette" font="Regular;20" zPosition="5" valign="top"/>
+	</screen>
+<!-- ********** AutoTimer ********** -->
+	<!-- AutoTimer OK -->
+	<screen name="AutoTimer" title="Auto Timer" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="config" position="40,90" size="560,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+     <!-- AutoTimerServiceEditor OK -->
+	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="config" position="40,90" size="560,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Auto Timer OK -->
+	<screen name="AutoTimerOverview" title="AutoTimer Overview" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="entries" position="40,80" size="585,500" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/key_menu1.png" position="1100,667" size="40,22" alphatest="blend"/>
+		<ePixmap position="870,500" size="300,300" pixmap="menu/timer.png" alphatest="blend"/>
+	</screen>
+
+	<!-- dont saw this screen, may be later -->
+	<screen name="AutoTimerOverviewSummary" title="AutoTimer Overview Summary" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget source="parent.Title" render="Label" position="40,25" size="580,24" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
+		<widget source="entry" render="Label" position="40,90" size="560,24" scrollbarMode="showOnDemand" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
+		<widget source="global.CurrentTime" render="Label" position="40,120" size="82,18" font="Regular;16" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">WithSeconds</convert>
+		</widget>
+	</screen>
+
+	<!-- AutoTimer Help OK -->
+	<screen name="AutoTimerHelp" title="AutoTimer Help" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRYB"/>
+		<widget render="Label" source="title" position="40,80" size="585,60" zPosition="5" valign="center" halign="center" font="Regular;26" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="detailtext" font="Regular;22" position="40,150" size="585,460" halign="center" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="870,500" size="300,300" pixmap="menu/info.png" alphatest="blend"/>
+	</screen>
+	
+	<!-- AutoTimer Import OK -->
+	<screen name="AutoTimerImporter" title="Import AutoTimer" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRG"/>
+		<widget name="list" position="40,80" size="585,450" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- AutoTimer Wizard OK -->
+	<screen name="AutoTimerWizard" title="AutoTimer Wizard" position="fill" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Default</convert>
+		</widget>
+		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format:%e. %b</convert>
+		</widget>
+		<widget name="text" position="40,90" size="720,260" font="Regular;22" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget source="list" render="Listbox" position="40,240" size="720,220" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="StringList"/>
+		</widget>
+		<widget name="config" position="40,240" size="720,220" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" zPosition="11"/>
+		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
+		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
+		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="80,410" zPosition="1" size="40,22" transparent="1" alphatest="on">
+		    <convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<!-- AutoTimer Setting OK -->
+	<screen name="AutoTimerSettings" title="AutoTimer Settings" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRG"/>
+		<widget name="config" position="40,90" size="585,504" itemHeight="28" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+		<widget source="help" render="Label" position="680,470" size="560,140" transparent="1" font="Regular;20" valign="bottom" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
+	</screen>
+
+	<!-- AutoTimer Preview OK -->
+	<screen name="AutoTimerPreview" title="Preview AutoTimer" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRY"/>
+		<widget source="timerlist" render="Listbox" position="40,90" size="585,510" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=( 10,5),size=(595,26),text = 3,font = 0,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+					MultiContentEntryText(pos=( 10,32),size=(595,24),text = 0,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+					MultiContentEntryText(pos=( 10,57),size=(310,24),text = 4,font = 1,flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+					MultiContentEntryText(pos=(330,57),size=(240,24),text = 2,font = 1,flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
+					],
+					"fonts": [gFont("Regular",22),gFont("Regular",20)],
+					"itemHeight": 85
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- AutoTimer Editor OK -->
+	<screen name="AutoTimerEditor" title="Edit AutoTimer" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="config" position="40,90" size="585,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+		<widget source="help" render="Label" position="680,520" size="560,140" transparent="1" font="Regular;20" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
+	</screen>
+
+	<!-- AutoTimer Filter Editor OK -->
+	<screen name="AutoTimerFilterEditor" title="Edit AutoTimer Filters" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="config" position="40,90" size="585,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+	</screen>
+
+	<!-- MPHelp -->
+	<screen name="MPHelp" title="MP Help" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRYB"/>
+		<widget render="Label" source="title" position="40,80" size="585,50" font="Regular;24" zPosition="5" valign="center" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="detailtext" position="40,150" size="585,400" font="Regular;22" halign="center" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="870,500" size="300,300" pixmap="menu/info.png" alphatest="blend"/>
+	</screen>
+
+	<!-- ********** AutoBouquetsMaker ********** -->
+
+	<!-- AutoBouquetsMaker Config OK -->
+	<screen name="AutoBouquetsMaker_Setup" title="AutoBouquet Maker Setup" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="config" position="40,80" size="585,230" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/info_on.png" position="300,460" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="description" position="40,350" size="585,400" font="Regular;22" halign="center" valign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="pleasewait" position="40,80" size="585,230" font="Regular;32" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+	</screen>
+
+	<!-- AutoBouquetsMaker Menu OK -->
+	<screen name="AutoBouquetsMaker_Menu" title="AutoBouquet Maker Menu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="fakeExit"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,360" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (12, 4), size = (0, 0), png = 0),
+					MultiContentEntryText(pos = (5, 5), size = (580, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 40
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- AutoBouquetsMaker Config Providers OK -->
+	<screen name="AutoBouquetsMaker_ProvidersSetup" title="AutoBouquet Maker Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="config" position="40,80" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/info_on.png" position="300,500" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="description" position="60,560" size="520,200" font="Regular;20" halign="center" foregroundColor="bluette" transparent="1" zPosition="2"/>
+		<widget name="pleasewait" position="40,80" size="585,230" font="Regular;32" halign="left" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+	</screen>
+
+	<!-- AutoBouquetsMaker Hide Selection OK -->
+	<screen name="AutoBouquetsMaker_HideSections" title="AutoBouquet Maker Hide" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (0, 0), png = 0),
+					MultiContentEntryText(pos = (5, 0), size = (440, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (455, 0), size = (130, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!-- AutoBouquet Maker PanelConfig OKK -->
+	<screen name="PanelConfigAdd" position="0,0" size="1280,720" title="Panel configuration Add" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget source="menu" render="Listbox" position="30,100" size="520,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" enableWrapAround="1" backgroundColor="background" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (30, 5), size = (490, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 24)],
+					"itemHeight": 50
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!-- AutoBouquet Maker KeepsBouquets OKK -->
+	<screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="sRG"/>
+		<widget source="list" render="Listbox" position="60,100" size="520,450" scrollbarMode="showOnDemand" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (0, 0), png = 0),
+					MultiContentEntryText(pos = (47, 0), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					MultiContentEntryText(pos = (450, 0), size = (120, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- AutoBouquetsMaker Ordering OK -->
+	<screen name="AutoBouquetsMaker_Ordering" title="AutoBouquet Maker Ordering" position="center,center" size="600,500">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,360" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (12, 1), size = (440, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+		<widget name="pleasewait" position="40,90" size="585,140" font="Regular;18" halign="center" valign="center" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+	</screen>
+
+	<!-- AutoBouquetsMaker Logs OK -->
+	<screen name="AutoBouquetsMaker_Log" title="Backup Log" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="fakeExit"/>
+		<widget name="list" position="40,90" size="585,500" font="Regular;16" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- AutoBouquetsMaker About OK -->
+	<screen name="AutoBouquetsMaker_About" title="AutoBouquets Maker About" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="fakeExit"/>
+		<widget name="about" position="40,90" size="585,500" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
+		<widget name="oealogo" position="240,440" size="200,135" zPosition="4" transparent="1" alphatest="blend"/>
+	</screen>
+	
+	<!-- AutoBouquet Maker CrossEPG OKK -->
+	<screen name="AutoBouquetsMaker" position="640,625" size="600,70" title="CrossEPG" flags="wfNoBorder">
+		<widget name="background" position="0,0" size="600,70" zPosition="-1"/>
+		<widget name="action" halign="center" valign="center" position="65,10" size="520,20" font="Regular;18" backgroundColor="#11404040" transparent="1"/>
+		<widget name="status" halign="center" valign="center" position="65,35" size="520,20" font="Regular;18" backgroundColor="#11000000" transparent="1"/>
+		<widget name="progress" position="65,55" size="520,5" borderWidth="1" backgroundColor="#11000000"/>
+	</screen>
+
+	<!-- ********** Picture Player ********** -->
+	<screen name="Pic_Setup" title="PictirePlayer Settings" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="config" position="40,90" size="585,510" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,510" zPosition="2" alphatest="blend"/>
+	</screen>
+
+	<screen name="picshow" title="PictirePlayer Show" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGY"/>
+		<panel name="KeyMenuTemplate"/>
+		<widget name="filelist" position="40,90" size="585,510" itemHeight="30" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,510" zPosition="2" alphatest="blend"/>
+		<eLabel position="675,60" size="550,300" backgroundColor="#ffffff" zPosition="0"/>
+		<widget name="thn" position="667,62" size="546,296" alphatest="on" zPosition="1"/>
+		<widget name="label" position="680,580" size="560,25" font="Regular;22" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+	</screen>
+
+	<screen name="Pic_Exif" title="PictirePlayer Exif" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sR"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,510" zPosition="2" alphatest="blend"/>
+		<widget source="menu" render="Listbox" position="40,90" size="585,490" selectionDisabled="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (5,7),size = (250,30),flags = RT_HALIGN_LEFT,text = 0),
+					MultiContentEntryText(pos = (260,7),size = (430,30),flags = RT_HALIGN_LEFT,text = 1)],
+					"fonts": [gFont("Regular",20)],
+					"itemHeight": 35
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<screen name="Pic_Full_View" title="PictirePlayer FullView" position="fill" flags="wfNoBorder">
+		<eLabel position="0,0" zPosition="0" size="1280,720" backgroundColor="black"/>
+		<widget name="pic" position="fill" zPosition="1" alphatest="on"/>
+		<eLabel position="25,25" size="30,25" zPosition="2" backgroundColor="black" transparent="1"/>
+		<widget name="point" position="27,27" size="21,21" zPosition="3" pixmap="skin_default/icons/epgclock.png" alphatest="on"/>
+		<widget name="play_icon" position="30,30" size="16,16" zPosition="3" pixmap="skin_default/icons/ico_mp_play.png" alphatest="on"/>
+		<widget source="file" render="Label" position="70,25" size="600,25" zPosition="3" font="Regular;22" halign="left" noWrap="1" foregroundColor="foreground" backgroundColor="black" transparent="1" borderWidth="2"/>
+	</screen>
+
+	<!-- ********** HDMI-CEC Setup ********** -->
+	<screen name="HdmiCECSetupScreen" title="HDMI-CEC Setup" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGYB"/>
+		<widget name="config" position="40,80" size="585,510" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget source="current_address" render="Label" position="40,540" size="585,30" zPosition="10" font="Regular;21" halign="left" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget source="fixed_address" render="Label" position="40,580" size="700,30" zPosition="10" font="Regular;21" halign="left" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="890,480" size="300,300" pixmap="menu/hdmi.png" alphatest="blend"/>
+	</screen>
+
+	<!-- ********** CrossEPG ********** -->
+
+	<!-- Cross EPG SETUP -->
+	<screen title="CrossEPG Setup" name="CrossEPG_Setup" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<ePixmap pixmap="menu/ico_crossepg.png" position="920,510" size="300,300" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="icons/info_on.png" position="300,440" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="config" position="40,90" size="585,300" font="Regular;22" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="information" position="60,400" size="540,300" halign="center" valign="center" font="Regular;22" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Cross EPG Menu -->
+	<screen title="CrossEPG Menu" name="CrossEPG_Menu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="fakeExit"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,490" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="menu/ico_crossepg.png" position="920,510" size="300,300" zPosition="2" alphatest="blend"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,490" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (5, 1), size = (35, 35), png = 0),
+					MultiContentEntryText(pos = (50, 6), size = (530, 34), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+				],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 35
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- Cross EPG Info -->
+	<screen title="CrossEPG Info" name="CrossEPG_Info" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nR"/>
+		<widget name="version" position="40,90" size="585,25" font="Regular;24" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="create" position="40,163" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="last_update" position="40,193" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="headersdb_size" position="40,223" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="descriptorsdb_size" position="40,253" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="indexesdb_size" position="40,283" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="aliasesdb_size" position="40,313" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="total_size" position="40,343" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="channels_count" position="40,373" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="events_count" position="40,403" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="hashes_count" position="40,433" size="585,25" font="Regular;22" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Cross Extra -->
+	<screen name="CrossEPG_Extra" title="CrossEPG Extra" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,500" zPosition="2" alphatest="blend"/>
+		<widget name="menu" position="40,90" size="585,500" font="Regular;22" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- Cross Providers -->
+	<screen name="CrossEPG_Providers" title="CrossEPG Providers" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGY"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,490" zPosition="2" alphatest="blend"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,490" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (5, 5), size = (555, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+					MultiContentEntryPixmapAlphaTest(pos = (535, 1), size = (35, 35), png = 1),
+					],
+					"fonts": [gFont("Regular", 20)],
+					"itemHeight": 35
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- Cross About -->
+	<screen name="CrossEPG_About" title="About CrossEPG" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nR"/>
+		<widget name="about" position="40,90" size="585,510" font="Regular;18" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="rytec_pix" position="850,530" size="70,70" alphatest="blend"/>
+		<widget name="krkadoni_pix" position="975,577" size="70,22" alphatest="blend"/>
+	</screen>
+
+	<!-- Cross Ordering -->
+	<screen name="CrossEPG_Ordering" title="Cross EPG - Providers start order" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,90" size="15,490" zPosition="2" alphatest="blend"/>
+		<widget source="list" render="Listbox" position="40,90" size="585,490" font="Regular;22" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1" zPosition="2">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (5, 5), size = (515, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
+				MultiContentEntryPixmapAlphaTest(pos = (535, 1), size = (35, 35), png = 1),
+				],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 35
+				}
+		    </convert>
+		</widget>
+	</screen>
+
+	<!-- EPG Import Configuration -->
+	<screen name="EPGImportConfig" title="EPG Import Configuration" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<panel name="KeyInfoTemplate"/>
+		<widget name="config" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="status" position="45,500" size="560,50" foregroundColor="#73c6ff" font="Regular;20" backgroundColor="bkwall"/>
+		<widget name="statusbar" position="45,550" size="560,50" foregroundColor="#73c6ff" font="Regular;20" backgroundColor="bkwall"/>
+	</screen>
+
+	<!-- EPG Import Sources -->
+	<screen name="EPGImportSources" title="EPG Import Sources" position="fill" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="list" selectionPixmap="buttons/listselect.png" scrollbarMode="showOnDemand" position="40,70" size="585,510" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- EPG Import Log -->
+	<screen name="EPGImportLog" position="fill" title="EPG Import Log" flags="wfNoBorder">
+	    <panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRB"/>
+		<widget name="list" position="40,90" size="585,510" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" zPosition="2" alphatest="blend"/>
+	</screen>
+
+	<!-- ********** IMDB ********** -->
+	<screen name="IMDB" position="fill" title="Internet Movie Database Details Plugin" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="statusbar" position="40,80" size="585,26" font="Regular;22" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="40,130" size="96,160" pixmap="menu/imdb.png" zPosition="1" alphatest="blend"/>
+		<widget name="poster" position="40,130" size="96,160" alphatest="on" zPosition="2"/>
+		<widget name="detailslabel" position="150,130" size="475,160" font="Regular;18" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="610,320" size="15,300" pixmap="buttons/maxbar.png" zPosition="4" alphatest="blend"/>
+		<widget name="menu" position="40,330" size="585,275" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="castlabel" position="40,330" size="585,300" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
+		<widget name="extralabel" position="40,330" size="585,300" font="Regular;18" backgroundColor="bkwall" transparent="1"/>
+		<widget name="ratinglabel" position="40,300" size="250,20" font="Regular;18" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="starsbg" position="260,297" size="250,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_empty.png" zPosition="0" transparent="1" alphatest="on"/>
+		<widget name="stars" position="260,297" size="250,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/IMDb/starsbar_filled.png" zPosition="1" transparent="1"/>
+	</screen>
+
+	<screen name="IMDbLCDScreen" position="0,0" size="132,64" title="IMDB Plugin">
+		<widget name="headline" position="4,0" size="128,22" font="Regular;20"/>
+		<widget source="parent.title" render="Label" position="6,26" size="120,34" font="Regular;14"/>
+	</screen>
+
+	<!-- ********** PartnerBox ********** -->
+	<screen name="PartnerboxSetup" title="PartnerBox Setup" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGY"/>
+		<eLabel text="PartnerBox Setup" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="config" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!--remote info -->
+	<screen name="CurrentRemoteTV" title="Current Remote Tv" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<eLabel text="PartnerBox Remote TV" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<eLabel text="Remote Player" position="40,90" size="885,55" font="Regular;24" valign="center" halign="left" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+	</screen>
+
+	<screen name="PartnerboxEntryConfigScreen" title="PartnerBox Config screen" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="KeyTextTemplate"/>
+		<panel name="nRG"/>
+		<eLabel text="PartnerBox Config Entry" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="config" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="85,420" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
+	</screen>
+
+	<screen name="PartnerboxEntriesListConfigScreen" title="PartnerBox List Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="PartnerBox List Config" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="name" position="40,90" size="585,28" font="Regular;26" halign="left" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="ip" position="40,140" size="200,24" font="Regular;20" halign="left" backgroundColor="bkwall" transparent="1"/>
+		<widget name="port" position="280,140" size="100,24" font="Regular;20" halign="left" backgroundColor="bkwall" transparent="1"/>
+		<widget name="type" position="40,180" size="580,24" font="Regular;20" halign="left" backgroundColor="bkwall" transparent="1"/>
+		<widget name="entrylist" position="40,210" size="585,300" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="RemotePlayer" title="Partnerbox - RemotePlayer" position="283,102" size="720,576" backgroundColor="#FFFFFFFF" flags="wfNoBorder">
+		<ePixmap position="41,388" zPosition="-1" size="630,130" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Partnerbox/ExPlayer.png" alphatest="off" transparent="1"/>
+		<eLabel text="PartnerBox Remote Player" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="ServiceName" zPosition="1" position="50,404" size="610,59" valign="center" halign="center" font="Regular;21" foregroundColor="#F0F0F0" backgroundColor="#302C2C39"/>
+		<widget name="DateTime" zPosition="1" position="52,473" size="500,30" halign="left" font="Regular;16" foregroundColor="#F0F0F0" backgroundColor="#302C2C39" transparent="1"/>
+		<widget name="IP" zPosition="2" position="361,473" size="300,30" halign="right" font="Regular;16" foregroundColor="#F0F0F0" backgroundColor="#302C2C39" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteTimerBouquetList" title="Remote Timer List" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<eLabel text="PartnerBox Remote Timer List" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="text" position="40,90" size="585,510" font="Regular;26" halign="center" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="bouquetlist" position="40,90" size="585,510" font="Regular;26" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteTimer" title="Remote Timer" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="PartnerBox Timer" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="text" position="40,90" size="585,510" font="Regular;26" halign="center" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="timerlist" position="40,90" size="585,510" font="Regular;26" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteTimerEPGList" title="Remote Timer EPG" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="PartnerBox Remote EPG" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="text" position="40,90" size="585,510" font="Regular;26" halign="center" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="epglist" position="40,90" size="585,510" font="Regular;26" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteTimerChannelList" title="Remote Channel List" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="PartnerBox Remote Channel" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="text" position="40,90" size="585,510" font="Regular;26" halign="center" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="channellist" position="40,90" size="585,510" font="Regular;26" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteTimerEventView" title="Remote Timer Event" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<eLabel text="PartnerBox Remote Event" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="channel" position="590,110" size="300,30" font="Regular;22"/>
+		<widget name="datetime" position="900,110" size="150,30" font="Regular;22"/>
+		<widget name="duration" position="1050,110" size="150,30" font="Regular;22"/>
+		<widget name="epg_description" position="590,160" size="600,384" font="Regular;22"/>
+	</screen>
+
+	<screen name="RemoteTimerEntry" title="Remote Timer Entry" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="CancelOkTemplate"/>
+		<eLabel text="PartnerBox Remote Timer Entry" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="config" position="40,90" size="585,420" itemHeight="28" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- ********** VLC Player ********** -->
+	<screen name="VlcServerConfigScreen" title="VLC Server Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<eLabel text="VLC Player Config" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="config" position="40,90" size="585,510" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="660,300" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="660,510" zPosition="1" size="40,22" transparent="1" alphatest="on">
+		    <convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap position="990,520" size="300,300" pixmap="menu/vlc.png" alphatest="blend"/>
+	</screen>
+
+	<screen name="VlcServerListScreen" title="VLC Server List" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="VLC ListScreen" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="serverlabel" position="40,90" size="585,36" font="Regular;18" backgroundColor="bkwall" transparent="1"/>
+		<widget name="serverlist" position="40,150" size="585,330" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="990,520" size="300,300" pixmap="menu/vlc.png" alphatest="blend"/>
+	</screen>
+
+	<screen name="VlcMediaListScreen" title="Select a VLC-Server Profile" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<eLabel text="VLC MediaList" position="40,30" size="580,30" font="xRegular;26" halign="center" foregroundColor="#808080" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="filelist_button_sel" position="40,90" size="210,40" pixmap="skin_default/epg_now.png" zPosition="1" alphatest="on"/>
+		<widget name="playlist_button_sel" position="40,90" size="210,40" pixmap="skin_default/epg_next.png" zPosition="1" alphatest="on"/>
+		<widget name="filelist_text" position="40,90" size="110,25" font="Regular;18" valign="center" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<widget name="playlist_text" position="140,90" size="110,25" font="Regular;18" valign="center" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<widget name="server_name" position="270,90" size="200,25" backgroundColor="bkwall" transparent="1" zPosition="1" font="Regular;22" valign="center" halign="left"/>
+		<widget name="current_dir" position="40,130" size="585,25" backgroundColor="bkwall" transparent="1" zPosition="1" font="Regular;22" valign="center" halign="left"/>
+		<widget name="filelist" position="40,170" size="585,420" itemHeight="28" selectionPixmap="buttons/listselect.png"/>
+		<widget name="playlist" position="40,170" size="585,420" itemHeight="28" zPosition="2" selectionPixmap="buttons/listselect.png" halign="left"/>
+		<ePixmap position="990,520" size="300,300" pixmap="menu/vlc.png" alphatest="blend"/>
+	</screen>
+
+	<!-- ********** Cron Manager ********** -->
+    <!--screen name="CronTimersConfig" title="Cronmanager Menu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="ClockTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="menu" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="920,520" size="300,90" pixmap="menu/cron.png" alphatest="blend"/>
+    </screen-->
+
+    <!--screen name="CronTimers" title="Cronmanager Menu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="ClockTemplate"/>
+		<panel name="nRGYB"/>
+    	<widget name="lab1" position="40,90" size="200,28" font="Regular;24" halign="left" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+    	<widget name="labactive" position="280,90" size="200,28" font="Regular;24" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="green" zPosition="1"/>
+    	<widget name="labdisabled" position="280,90" size="200,28" font="Regular;24" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="red" zPosition="1"/>
+    	<widget name="lab2" position="40,140" size="200,28" font="Regular;24" halign="left" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+    	<widget name="labstop" position="280,140" size="120,28" font="Regular;24" halign="left" valign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+    	<widget name="labrun" position="280,140" size="200,28" font="Regular;24" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="green" zPosition="1"/>
+    	<widget name="labactive" position="280,140" size="200,28" font="Regular;24" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="red" zPosition="1"/>
+		<ePixmap position="920,520" size="300,90" pixmap="menu/cron.png" alphatest="blend"/>
+    </screen-->
+
+	<!-- ********** CCcam Info ********** -->
+	<screen name="CCcamInfoMain" title="CCCamInfo MainMenu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="menu" position="40,90" size="585,510" scrollbarMode="showOnDemand" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoEcmInfoSelection" title="CCcamInfo ECMInfo" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="list" title="CCcamInfo ECMInfo Selection" position="40,90" size="585,510" scrollbarMode="showOnDemand" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoInfoScreen" title="CCcamInfo InfoScreen" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="text" position="40,90" size="585,510" font="Console;17" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamShareViewMenu" title="CCcamInfo Client Info" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="list" position="40,80" size="585,370" scrollbarMode="showOnDemand" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="uphops" position="680,400" size="240,25" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="cards" position="930,400" size="220,25" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="providers" position="680,440" size="240,25" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="reshare" position="930,570" size="220,25" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="title" position="50,600" size="480,20" halign="center" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoSubMenu" title="CCcamInfo SubMenu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="info" position="680,380" size="540,200" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoServerMenu" title="CCcamInfo ServerMenu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="info" position="680,380" size="540,200" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoConfigMenu" title="CCcamInfo Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="config" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoRemoteBoxMenu" title="CCcamInfo Info RemoteBox" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoShareInfo" title="CCcamInfo ShareInfo" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoConfigSwitcher" title="CCcamInfo ConfigSwitcher" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<screen name="CCcamInfoMenuConfig" title="CCcamInfo Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGY"/>
+		<widget name="list" position="40,80" size="585,510" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- ********** OScam Info ********** -->
+	<screen name="OscamInfoMenu" title="OScamInfo Menu" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="mainmenu" position="40,80" size="585,510" foregroundColor="bluette" backgroundColor="bkwall" transparent="0"/>
+	</screen>
+
+	<screen name="oscECMInfo" title="OScamInfo ECMInfo" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget name="output" position="40,180" size="585,390" foregroundColor="bluette" backgroundColor="bkwall" transparent="0"/>
+	</screen>
+
+	<screen name="OscamInfoConfigScreen" title="OScamInfo Config" position="fill" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="sRG"/>
+		<widget name="config" position="40,100" size="650,300" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="bkwall" transparent="0"/>
+		<widget name="status" position="40,100" size="585,240" foregroundColor="white" backgroundColor="bkwall" transparent="0"/>
+	</screen>
+	
+	<!-- ********** ADD network ********** -->
+	<screen name="NetworkSamba" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="bkwall">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="lab1" position="80,100" size="250,30" font="Regular;20" valign="center" backgroundColor="#101010" transparent="1"/>
+		<widget name="labactive" position="240,100" size="250,30" font="Regular;20" valign="center" backgroundColor="#101010" transparent="1"/>
+		<widget name="lab2" position="80,170" size="250,30" font="Regular;20" valign="center" backgroundColor="#101010" transparent="1"/>
+		<widget name="labstop" position="240,170" size="250,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="240,170" size="250,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
+	</screen>	
+	
+	<screen name="BluetoothDevicesManager" position="fill" title="Bluetooth Devices Manager" backgroundColor="bkwall">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<widget name="devicelist" position="60,90" size="730,300" foregroundColor="#ffffff" zPosition="10" transparent="1"/>
+		<widget name="ConnStatus" position="60,420" size="730,150" font="Regular;20" halign="center" valign="center" foregroundColor="bluette" backgroundColor="#101010" transparent="1" zPosition="1"/>
+	</screen>
+	
+	<!-- ********** ADD TranscodingSetup ********** -->
+	<screen name="TranscodingSetup" position="fill" title="Transcoding Setup" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="config" zPosition="2" position="50,100" size="730,300" scrollbarMode="showOnDemand" transparent="1"/>
+		<eLabel text="exit" position="85,660" size="60,25" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<eLabel text="save" position="335,660" size="60,25" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<widget name="description" position="50,245" size="730,70" font="Regular;17" halign="center" valign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpTextHeader1" position="50,320" size="730,22" font="Regular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpText1" position="50,350" size="730,150" font="Regular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpTextHeader2" position="50,510" size="730,22" font="Regular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpText2" position="50,540" size="730,50" font="Regular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+    <!-- ADD MyTubePlayer MainScreen OKK -->
+    <screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="nRGY"/>
+		<ePixmap pixmap="menu/ico_mytube.png" position="940,440" size="300,325" zPosition="-1" alphatest="blend"/>
+		<ePixmap pixmap="/usr/share/enigma2/picon_default.png" position="870,570" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="config" position="50,90" size="730,28" zPosition="3" scrollbarMode="showNever" itemHeight="25"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="765,90" size="15,530" zPosition="2" alphatest="blend"/>
+		<widget source="feedlist" render="Listbox" position="50,130" size="730,480" zPosition="1" transparent="1">
+		    <convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (80,[
+						MultiContentEntryPixmapAlphaTest(pos = (2, 2), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (120, 1), size = (600, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (120, 29), size = (360, 22), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 54), size = (360, 22), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (465, 29), size = (240, 22), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (465, 54), size = (240, 22), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP, text = 8), # index 8 is the ratingcount
+					]),
+				"state": (80,[
+						MultiContentEntryText(pos = (10, 10), size = (710, 28), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (10, 40), size = (710, 50), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1), # index 2 is the description
+					])
+				},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 20),gFont("Regular", 22),gFont("Regular", 20)],
+				"itemHeight": 80
+			}
+		    </convert>
+		</widget>
+		<eLabel text="Press CH+ to enter search TEXT" position="60,616" size="730,21" font="Regular;19" zPosition="1" halign="left" foregroundColor="red" backgroundColor="bkwall" transparent="1"/>
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+		<widget name="HelpWindow" position="60,515" size="1,1" zPosition="10" transparent="1" alphatest="blend"/>
+		<widget name="VKeyIcon" position="0,0" size="0,0"/>
+	</screen>
+	
+	<!-- MyTubePlayer MyTubeHistoryScreen OKK -->
+	<screen name="MyTubeHistoryScreen" title="MyTube History" position="20,130" size="765,483" zPosition="2" flags="wfNoBorder">
+		<widget source="historylist" render="Listbox" position="10,10" zPosition="7" size="720,490" transparent="0" backgroundColor="blak">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 1), size = (710, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 19)],
+				"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!-- MyTubePlayer MyTubeSuggestionsListScreen OKK -->
+	<screen name="MyTubeSuggestionsListScreen" title="MyTube ListScreen" position="60,130" size="765,483" zPosition="2" flags="wfNoBorder">
+		<widget source="suggestionslist" render="Listbox" position="10,10" zPosition="2" size="720,490" transparent="0">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 1), size = (450, 25), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (480, 1), size = (240, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 19)],
+				"itemHeight": 30
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!-- MyTubePlayer MyTubeVideoHelpScreen OKK -->
+	<screen name="MyTubeVideoHelpScreen" position="0,0" size="1280,720" title="MyTube Player HelpScreen" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="nR"/>
+		<ePixmap pixmap="menu/ico_mytube.png" position="940,440" size="300,325" zPosition="-1" alphatest="blend"/>
+		<widget name="detailtext" position="50,100" size="730,500" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" backgroundColor="darkgrey"/>
+	</screen>
+	
+	<!-- MyTubePlayer MyTubeTasksScreen - Active Download OKK -->
+	<screen name="MyTubeTasksScreen" position="0,0" size="1280,720" title="MyTubeTasksScreen" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<panel name="nR"/>
+		<ePixmap pixmap="menu/ico_mytube.png" position="940,440" size="300,325" zPosition="-1" alphatest="blend"/>
+		<widget source="tasklist" render="Listbox" position="50,100" size="730,500" zPosition="7" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (10, 3), size = (210, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+						MultiContentEntryText(pos = (230, 3), size = (160, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+						MultiContentEntryProgress(pos = (400, 3), size = (110, 24), percent = -3), # index 3 should be progress
+						MultiContentEntryText(pos = (520, 3), size = (110, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 36
+				}
+		    </convert>
+		</widget>
+	</screen>
+	<!-- MyTubePlayer MyTubeSettingsScreen OKK -->
+	<screen name="MyTubeSettingsScreen" position="0,0" size="1280,720" title="MyTubeSettingsScreen" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="nR"/>
+		<ePixmap pixmap="menu/ico_mytube.png" position="940,440" size="300,325" zPosition="-1" alphatest="blend"/>
+		<widget name="config" zPosition="2" position="50,90" size="730,500" scrollbarMode="showOnDemand" font="Regular;22" transparent="1"/>
+	</screen>
+	
+	<!-- MyTubePlayer MyTubeVideoInfoScreen OKK -->
+	<screen name="MyTubeVideoInfoScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<panel name="nR"/>
+		<ePixmap pixmap="menu/ico_mytube.png" position="940,440" size="300,325" zPosition="-1" alphatest="blend"/>
+		<widget name="author" position="60,100" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<widget name="duration" position="60,130" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<widget name="published" position="60,160" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<widget name="views" position="60,190" size="300,25" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top"/>
+		<widget name="tags" position="370,100" size="350,100" zPosition="10" font="Regular;22" transparent="1" halign="right" valign="top" foregroundColor="bluette"/>
+		<widget name="detailtext" position="60,270" size="730,300" zPosition="10" font="Regular;22" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget source="infolist" render="Listbox" position="50,480" size="730,135" zPosition="6" scrollbarMode="showNever" selectionDisabled="1">
+		    <convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (135,[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail
+					]),
+				"state": (135,[
+						MultiContentEntryText(pos = (0, 35), size = (730, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+					])
+				},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"itemHeight": 135
+			}
+		    </convert>
+		</widget>
+		<widget name="starsbg" position="710,450" size="120,20" pixmap="dvr/starsbar_empty.png" zPosition="5" transparent="1" alphatest="on"/>
+		<widget name="stars" position="710,450" size="120,20" pixmap="dvr/starsbar_filled.png" zPosition="6" transparent="1"/>
+		<widget name="thumbnail" position="500,110" size="120,135" alphatest="on"/> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+	</screen>
+
+	<!-- Mytube Player OKK -->
+	<screen name="MyTubePlayer" position="0,560" size="1280,720" title="MyTube Player" backgroundColor="transparent2" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,150" pixmap="dvr/moviebar.png"/>
+		<widget source="global.CurrentTime" render="Label" position="67,18" size="125,22" font="Regular;19" halign="left" backgroundColor="black" foregroundColor="white" transparent="1">
+		    <convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="190,18" size="200,26" zPosition="2" font="Regular;19" halign="left" foregroundColor="#538eff" backgroundColor="#333333" transparent="1">
+		    <convert type="ClockToText">Format %H:%M:%S</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="dvr/dvd_dolby.png" position="206,97" size="100,26" zPosition="2" alphatest="blend">
+		    <convert type="ServiceInfo">IsMultichannel</convert>
+		    <convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel text="Rec" position="1130,95" size="80,22" font="Regular;20" halign="right" foregroundColor="#404040" backgroundColor="black" zPosition="0" transparent="1"/>
+		<ePixmap pixmap="icons/icon_rec_off.png" position="1140,95" size="44,26" zPosition="2" alphatest="blend"/>
+		<widget source="session.RecordState" render="Pixmap" pixmap="/icons/icon_rec.png" position="1140,95" size="44,26" zPosition="5" alphatest="blend">
+		    <convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<eLabel text="Res" font="Regular;20" position="560,95" size="50,20" halign="left" backgroundColor="black" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" font="Regular;20" position="595,95" size="55,20" halign="right" foregroundColor="bluette" backgroundColor="black" transparent="1">
+		    <convert type="ServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel text="x" font="Regular;14" position="665,97" size="15,22" halign="center" backgroundColor="black" transparent="1"/>
+		<widget source="session.CurrentService" render="Label" font="Regular;20" position="695,95" size="55,22" halign="left" foregroundColor="bluette" backgroundColor="black" transparent="1">
+		    <convert type="ServiceInfo">VideoHeight</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="210,74" size="890,14" zPosition="2" pointer="dvr/pointerdvd.png:890,0" transparent="1">
+		    <convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="220,13" size="900,25" zPosition="2" font="Regular;22" halign="center" noWrap="1" foregroundColor="white" transparent="1" backgroundColor="background">
+		    <convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="88,48" size="100,26" font="Regular;22" halign="left" foregroundColor="#538eff" backgroundColor="black" transparent="1">
+		    <convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1150,48" size="120,26" font="Regular;22" halign="left" foregroundColor="yellow" backgroundColor="black" transparent="1">
+		    <convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="950,48" size="120,26" font="Regular;22" halign="right" foregroundColor="#538eff" backgroundColor="black" transparent="1">
+		    <convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+	</screen>
+	
+	<!-- OpenWebIf Config OKK -->
+	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<ePixmap pixmap="menu/network_lan.png" position="980,485" size="256,256" zPosition="-1" alphatest="blend"/>
+		<widget name="config" position="50,90" size="580,400" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<widget name="lab1" position="60,610" size="520,30" zPosition="10" font="Regular;20" halign="left" foregroundColor="bakground" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+	<!-- PLUGIN FileBrowser OKK -->
+	<screen name="FilebrowserScreen" position="0,0" size="1280,720" title="Menu Sort" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<panel name="tMenu"/>
+ 		<widget name="list_left" position="60,100" size="370,500" transparent="1"/>
+ 		<widget name="list_right" position="425,100" size="370,500" transparent="1"/>
+	</screen>
+
+	<!-- FileBrowser Config OKK -->
+	<screen name="FilebrowserConfigScreen" position="0,0" size="1280,720" title="FileBrowser Config" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+	    <widget name="config" position="60,100" size="520,360" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+	
+	<!-- Web Browser Launcher OKK -->
+	<screen name="BrowserLauncher" position="0,0" size="1280,720" title="Web Browser" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRG"/>
+		<widget name="config" position="60,90" size="520,100" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1"/>
+		<widget name="info" position="60,560" size="520,50" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+</skin>

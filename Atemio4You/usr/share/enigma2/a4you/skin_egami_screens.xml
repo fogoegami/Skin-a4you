@@ -1,0 +1,908 @@
+<skin>
+	<!--  EGAMI PANEL  OKK -->
+	<screen name="EgamiMainPanel" position="0,0" size="1280,720" title="EGAMI Panel - Main Menu" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+	    <panel name="PigTemplate"/>
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="1110,420" size="256,256" zPosition="2" alphatest="blend"/>
+	    <ePixmap pixmap="icons/info_on.png" position="905,525" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="560,80" size="46,520" zPosition="2" alphatest="blend"/>
+		<widget name="description" position="670,565" size="560,160" zPosition="10" font="Regular;24" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+	<!--  EGAMI EmuManager OKK -->
+	<screen name="EmuManager" position="0,0" size="1280,720" title="EGAMI Blue Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+	    <panel name="PigTemplate"/>
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="890,520" size="256,256" zPosition="2" alphatest="blend"/>
+		<ePixmap position="60,90" zPosition="3" size="51,51" pixmap="icons/ccc.png" alphatest="blend" transparent="1"/>
+		<ePixmap position="430,151" zPosition="2" size="250,35" pixmap="icons/selectcam.png" alphatest="blend" transparent="1"/>
+		<widget name="choose_cam" position="130,100" size="230,25" font="Regular;24" foregroundColor="red" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+ 		<eLabel text="OK to Start" position="130,190" size="250,35" font="Regular;26" halign="right" foregroundColor="green" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<widget name="config" position="60,150" size="515,26" scrollbarMode="showOnDemand" font="Regular;22" zPosition="2" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="560,150" size="24,100" zPosition="2" alphatest="blend"/>
+	<!-- is crypted ? -->
+		<ePixmap position="60,250" size="45,22" pixmap="icons/ico_crypt_off.png" alphatest="blend"/>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_icrypt_on.png" position="56,246" zPosition="4" size="45,22" alphatest="blend">
+		    <convert type="ServiceInfo">IsCrypted</convert>
+		    <convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="lb_channel" position="120,240" size="350,30" font="Regular;26" zPosition="2" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="lb_provider" position="120,276" size="350,28" font="Regular;24" zPosition="2" backgroundColor="bkwall" transparent="1"/>
+		<widget name="lb_aspectratio" position="120,306" size="350,28" font="Regular;24" zPosition="2" backgroundColor="bkwall" transparent="1"/>
+		<widget name="lb_videosize" position="120,336" size="350,28" font="Regular;24" zPosition="2" backgroundColor="bkwall" transparent="1"/>
+		<widget name="ecminfo" position="120,366" size="440,300" font="Regular;20" zPosition="2" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="menu/ico_emulator.png" position="1020,470" size="256,256" zPosition="2" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI StartEmu OKK -->
+	<screen name="EGEmuManagerStarting" position="35,630" size="630,70" title="EGAMI StartCam" backgroundColor="bkwall">
+	    <widget name="starting" position="0,0" size="620,70" zPosition="-1" pixmaps="icons/sc1.png,icons/sc2.png,icons/sc3.png,icons/sc9.png,icons/sc10.png,icons/sc4.png,icons/sc5.png,icons/sc6.png,icons/sc7.png,icons/sc8.png,icons/sc11.png,icons/sc11.png,icons/sc11.png" alphatest="blend"/>
+	    <widget name="text" position="60,10" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" foregroundColor="bluette" transparent="1"/>
+	</screen>
+		
+	<!--  EGAMI Animation OKK -->
+	<screen name="EGConnectionAnimation" position="390,100" size="484,220" title="EGAMI" flags="wfNoBorder">
+		<widget name="connect" position="0,0" size="484,250" zPosition="-1" pixmaps="icons/connection_1.png,icons/connection_2.png,icons/connection_3.png,icons/connection_4.png,icons/connection_5.png" transparent="1"/>
+		<widget name="lab1" position="10,180" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI News About OKK -->
+	<screen name="EGAMIMainNews" position="0,0" size="1280,720" title="EGAMI News" backgroundColor="bkwall">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	-    
+	    <!--panel name="sRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget source="key_red" render="Label" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_green" render="Label" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_yellow" render="Label" position="590,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_blue" render="Label" position="840,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="900,290" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="header" position="830,550" size="420,120" font="Regular;24" halign="left" backgroundColor="bkwall" transparent="1"/>
+		<widget name="status" position="10,60" size="550,45" font="Regular;18" transparent="1"/>
+        <widget name="key_blue" render="Label" position="580,660" size="150,25" alphatest="blend" font="Regular;20" halign="center" valign="center" backgroundColor="white" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="770,80" size="46,520" zPosition="2" alphatest="blend"/>
+		<widget source="menu" render="Listbox" position="28,100" size="757,495" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" transparent="1">
+		    <convert type="TemplatedMultiContent" transparent="1">
+				{"template": [
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (50, 50), png = 2), # index 4 is the status pixmap
+					MultiContentEntryText(pos = (65, 6), size = (700, 44), font=0, color=0xdddddd, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+					],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+					"itemHeight": 55
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+		<!--  EGAMI News Updates Info OKK -->
+	<screen name="EGAMIUpdateInfo" position="fill" title="EGAMI News">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	    
+	    <!--panel name="sRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget source="key_red" render="Label" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_green" render="Label" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_yellow" render="Label" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="key_blue" render="Label" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="update" position="60,100" size="720,500" font="Regular;20" halign="left" backgroundColor="#101010" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="765,80" size="52,520" zPosition="3" alphatest="blend"/>
+		<widget name="header" position="840,505" size="420,120" font="Regular;24" halign="center" backgroundColor="#101010" transparent="1"/>
+	</screen>
+		
+	<!--  EGAMI News Updates OKK -->
+	<screen name="UpdateEGAMI" position="center,center" size="550,200" title="Software update" backgroundColor="bkwall">
+		<widget name="activityslider" position="10,10" size="530,15" backgroundColor="bluette"/>
+		<eLabel position="9,89" size="532,32" backgroundColor="bluette"/>
+		<widget name="slider" position="10,90" size="530,30" zPosition="1"/>
+		<widget source="package" render="Label" position="10,45" size="530,24" font="Regular;20" halign="center" valign="center" backgroundColor="#101010" transparent="1"/>
+		<widget source="status" render="Label" position="10,115" size="530,100" font="Regular;20" halign="center" valign="center" backgroundColor="#101010" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI Plugins-Complementos OKK -->
+	<screen name="EGGreenPanel" position="0,0" size="1280,720" title="EGAMI Green Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	    
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="1100,490" size="256,256" zPosition="2" alphatest="blend"/>
+	    <ePixmap pixmap="buttons/maxbar.png" position="770,80" size="46,520" zPosition="2" alphatest="blend"/>
+		<widget source="list" render="Listbox" position="55,100" size="730,500" scrollbarMode="showOnDemand" transparent="1">
+		    <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (125, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (125, 24), size = (650, 24), font=1, color = 0x6da6ff, text = 1),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (100, 40), png = 2),
+			      ],
+			      "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+			      "itemHeight": 50
+			      }
+		    </convert>
+		</widget>
+	</screen>
+	
+		<!-- Download Addons OK -->
+   	<screen name="EGAddonMenu" position="0,0" size="1280,720" title="EGAMI Addons Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nR"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/picon_default.png" position="950,520" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="40,80" size="525,500" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" itemHeight="50" backgroundColor="bkwall"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="550,80" size="52,560" zPosition="2" alphatest="blend"/>
+    </screen>
+
+	<!--  EGAMI Plugin Downloads OKK -->
+	<screen name="EG_PrzegladaczAddonow" position="0,0" size="1280,720" title="EGAMI Internet Addons" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="WallTemplate"/>
+	    <panel name="PigTemplate"/>
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <ePixmap pixmap="menu/plugin.png" position="1000,500" size="300,300" alphatest="blend"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="880,560" size="256,256" zPosition="2" alphatest="blend"/>
+	    <widget name="status" position="60,90" size="520,30" font="Regular;24" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	    <widget name="menu" position="55,130" size="530,500" scrollbarMode="showOnDemand" transparent="1"/>
+	    <ePixmap pixmap="buttons/maxbar.png" position="570,80" size="52,520" zPosition="2" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI Internet Addons OKK -->
+	<screen name="EG_InternetAddons" position="0,0" size="1280,720" title="EGAMI Internet Addons" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="WallTemplate"/>
+	    <panel name="PigTemplate"/>
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <widget name="status" position="60,90" size="520,30" font="Regular;24" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	    <widget name="menu" position="55,130" size="530,500" scrollbarMode="showOnDemand" transparent="1"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="880,560" size="256,256" zPosition="2" alphatest="blend"/>
+	    <ePixmap pixmap="buttons/maxbar.png" position="570,80" size="52,560" zPosition="2" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI Remove Addons OKK -->
+	<screen name="EGAddonRemove" position="0,0" size="1280,720" title="EGAMI Remove Addons" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	    
+	    <!--panel name="nR"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="remove" position="55,130" size="525,500" transparent="1"/>
+	</screen>
+
+	<!--  EGAMI Manual Addons Install OKK -->
+	<screen name="EG_Manual_installation" position="0,0" size="1280,720" title="EGAMI Manual Addons Installation" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nR"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="status" position="60,90" size="515,30" font="Regular;24" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="listaaddonow" position="55,130" size="525,500" transparent="1"/>
+	</screen>
+	
+	<!-- EGSoftCamInfo OK -->
+    <screen name="EGSoftCamInfo" position="0,0" size="1280,720" title="EGAMI Softcam Info" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+      	<widget name="menu" position="60,90" itemHeight="30" size="515,510" foregroundColor="white" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" zPosition="1" transparent="1"/>
+	</screen>
+
+	<!--  EGAMI EmuInfo Scripts OKK -->
+	<screen name="EGEmuInfoScript" position="0,0" size="1280,720" title="EGAMI Emu Info Scripts" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget name="list" position="60,90" size="515,510" zPosition="1" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/info_on.png" position="360,460" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="statuslab" position="100,500" size="560,160" zPosition="10" font="Regular;24" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+	<!--  EGAMI EGS Script OKK -->
+    <!--screen name="EGScript" position="fill" title="EGAMI Script Tool" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    
+		<widget name="list" position="60,100" size="520,500" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap name="border" pixmap="skin_default/div-h.png" position="10,365" size="540,4"/>
+		<widget name="statuslab" position="73,340" size="560,160" zPosition="10" font="Regular;24" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+    </screen-->
+		
+	<!-- EGAMI Devices Panels OK -->
+	<screen name="EGDeviceManager" position="0,0" size="1280,720" title="EGAMI Devices Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/devices.png" position="850,480" size="300,300" alphatest="blend"/>
+		<widget source="list" render="Listbox" position="40,80" size="585,425" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+				 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, color=0x73c6ff, text = 0),
+				 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
+				],
+				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+				"itemHeight": 85
+				}
+		    </convert>
+		</widget>
+		<widget name="lab1" position="40,580" size="560,40" font="Regular;22" halign="left" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+	</screen>	
+	
+	<!--  EGAMI Choose Mount OKK -->
+	<screen name="EGDeviceManager_Setup" position="0,0" size="1280,720" title="EGAMI Devices Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+	</screen>
+	
+        <!--  EGAMI Backup Panel OKK -->
+	<screen name="EGAMIBackupPanel" position="0,0" size="1280,720" title="EGAMI Image Backup Panel - STEP 1" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	    
+		<!--panel name="nRGY"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="label1" position="50,90" size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="label2" position="50,130" size="515,300" zPosition="1" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="label3" position="50,190" size="515,290" zPosition="1" halign="center" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="list" position="60,250" size="515,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="menu/backup.png" position="920,500" size="300,300" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI Backup Panel Step 2 OKK -->
+	<screen name="EGAMIBackupPanel_Step2" position="0,0" size="1280,720" title="EGAMI Image Backup Panel - STEP 2" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>    
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="label1" position="50,90" size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="label2" position="50,130" size="515,290" zPosition="1" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="config" position="60,250" size="515,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="menu/backup.png" position="920,500" size="300,300" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI Full Backup Panel OKK -->
+	<screen name="EGFullBackup" position="0,0" size="1280,720" title="EGAMI Full Image Backup Panel - STEP 1" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>    
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="label1" position="50,90" size="515,30" zPosition="1" halign="center" font="Regular;25" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="label2" position="50,130" size="515,290" zPosition="1" halign="center" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="config" position="60,250" size="515,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="menu/backup.png" position="920,500" size="300,300" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI Restore Panel Step 1 OKK -->
+	<screen name="EGAMIRestorePanel_Step1" position="0,0" size="1280,720" title="EGAMI Image Restore Panel - STEP 1" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="config" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="menu/backup.png" position="920,500" size="300,300" alphatest="blend"/>
+	</screen>
+		
+	<!--  EGAMI Backup Panel Step 3 OKK -->
+	<screen name="EGAMIBackupPanel_Step3" position="center,center" size="484,240" title="EGAMI Backup in progress..." backgroundColor="bkwall" flags="wfNoBorder">
+		<widget name="status" position="0,0" size="484,240" zPosition="-1" pixmaps="icons/connection_1.png,icons/connection_2.png,icons/connection_3.png,icons/connection_4.png,icons/connection_5.png,icons/connection_6.png"/>
+		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1"/>
+	</screen>
+	
+	<!--  EGAMI Restore Panel Step 2 OKK -->
+	<screen name="EGAMIRestorePanel_Step2" position="center,center" size="484,240" title="EGAMI Restore in progress..." backgroundColor="bkwall" flags="wfNoBorder">
+		<widget name="status" position="0,0" size="484,240" zPosition="-1"
+		pixmaps="icons/connection_1.png,icons/connection_2.png,icons/connection_3.png,icons/connection_4.png,icons/connection_5.png,icons/connection_6.png"/>
+		<widget name="label" position="10,150" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI DropBear OKK -->
+	<screen name="EGDropbearConfig" position="0,0" size="1280,720" title="EGAMI DropBear Setup" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="state" position="60,90" size="515,25" font="Regular;22" halign="center" noWrap="1" backgroundColor="bkwall" foregroundColor="white"/>
+		<widget name="config" position="60,140" size="515,200" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+
+		<!--  EGAMI EGS StreamInfo OKK  -->
+	<screen name="EGStreamInfo" position="fill" title="EGAMI Stream Informations" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+		<widget name="menu" position="60,100" size="520,500" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI EGS NetBrowser OKK -->
+	<screen name="EGNetBrowser" position="fill" title="Select Network Interface" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="list" render="Listbox" position="60,100" size="575,500" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1">
+			<convert type="StringList"/>
+		</widget>
+		<ePixmap pixmap="menu/picon_default.png" position="820,500" size="256,256" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="menu/network_lan.png" position="920,500" size="256,256" zPosition="2" alphatest="blend"/>
+	</screen>
+	
+		<!--  EGAMI EGS EGSwapManager OKK -->
+	<screen name="EGSwapManager" position="fill" title="EGAMI Swap File Manager" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="config" position="60,100" size="730,180" scrollbarMode="showOnDemand" backgroundColor="#101010" transparent="1"/>
+		<widget name="state" position="70,320" size="730,80" font="Regular;22" halign="center" noWrap="1" backgroundColor="red" foregroundColor="white"/>
+ 	 </screen>
+	 
+	<!--  EGAMI Smart Script OKK -->
+ 	<screen name="EGScript" title="EGAMI Script Tool" position="fill" size="1280,720" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="ButtonExit"/>
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="580,80" size="15,525" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,72" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,118" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,162" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,208" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,254" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,300" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,346" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,392" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="icons/info_on.png" position="920,500" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="statuslab" position="650,550" size="560,160" zPosition="2" font="Regular;24" halign="center" valign="top" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+		<!--  system informations -->
+	<screen name="EGEnigma2ConfigInfo" position="fill" title="EGAMI Enigma2 Config" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget name="menu" position="35,100" size="750,500" zPosition="1" halign="center" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="770,100" size="24,500" zPosition="1" alphatest="blend"/>
+	</screen>
+	
+		<!--  EGAMI Kernel Info OKK FALTA -->
+	<screen name="EGKernelInfo" position="fill" title="EGAMI Kernel Informations" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget name="menu" position="60,100" size="710,500" zPosition="1" halign="center" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="755,100" size="24,500" zPosition="1" alphatest="blend"/>
+	</screen>
+	
+		<!--  EGAMI Process Info OKK-->
+	<screen name="EGProcessInfo" position="fill" title="EGAMI Process Informations" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="menu" position="60,100" size="720,500" halign="center" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="765,100" size="24,500" zPosition="1" alphatest="blend"/>
+	</screen>
+	
+	<!--  EGAMI FAQ List OKK -->
+	<screen name="EGAMIFaq_YTChannel" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+	    <!--panel name="nR"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/picon_default.png" position="990,520" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="title" position="60,100" size="520,28" halign="left" font="Regular;24" zPosition="4" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="genreList" position="60,150" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="name" position="60,190" size="520,40" font="Regular;26" valign="top" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" zPosition="0"/>
+		<widget name="ContentTitle" position="60,240" size="520,80" halign="left" font="Regular;24" foregroundColor="white" backgroundColor="bkwall" transparent="1" zPosition="4"/>
+	</screen>
+	
+		<!--  EGAMI Weather Plugin OKK -->
+	<screen name="ForecaWeatherPlugin" position="0,0" size="1280,720" title="AccuWeather - foreca.com" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="sWallTemplateSimple"/>
+		<panel name="sPigTemplate"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="menu/bkdown_old.png"/>
+		<widget name="statustext" position="60,43" size="730,550" font="Regular;24" halign="center" valign="center" backgroundColor="#10000000" zPosition="2"/>
+		<ePixmap position="60,68" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5"/>
+		<widget name="ico_left" position="60,68" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" alphatest="blend" zPosition="5"/>
+		<widget name="lugar" position="90,68" size="350,30" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="#000000" transparent="1" zPosition="2"/>
+		<widget name="ico_right" position="450,68" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5"/>
+		<ePixmap position="450,68" size="16,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" alphatest="blend" zPosition="5"/>
+		<ePixmap pixmap="menu/picon_default.png" position="580,100" size="256,256" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/icono1-fs8.png" position="600,200" size="250,256" zPosition="2" alphatest="blend"/>
+		<widget name="ico_menu" position="450,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="ico_red" position="500,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="ico_r" position="550,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="infosat" position="600,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="ico_l" position="620,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="ico_blue" position="630,150" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="info_entradas" position="480,68" zPosition="3" size="300,23" font="Regular;23" halign="right" foregroundColor="white" backgroundColor="#000000" transparent="1"/>
+		<widget name="current_icon" position="60,90" zPosition="1" size="74,74" alphatest="blend"/>
+		<widget name="condicion" position="250,100" size="370,500" font="Regular;19" foregroundColor="white" backgroundColor="#000000" valign="top" transparent="1" zPosition="5"/>
+		<widget name="ico_temp" position="60,180" zPosition="2" size="74,74" alphatest="blend"/>
+		<widget name="temperatura" position="115,210" zPosition="3" size="98,30" font="Regular;26" transparent="1" noWrap="1" halign="left" backgroundColor="#000000"/>
+		<widget name="barra" position="50,300" size="730,330" alphatest="blend" zPosition="2"/>
+		<widget name="detallado" position="0,10" size="1280,720" zPosition="8" backgroundColor="bkwall"/>
+		<widget name="fondo_detalle" position="0,10" size="1280,720" alphatest="blend" zPosition="10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png"/>
+		<widget name="viento" position="860,210" size="191,65" font="Regular;22" transparent="1" backgroundColor="#000000" valign="top" zPosition="5"/>
+		<widget name="satelite" position="232,79" size="720,480" alphatest="blend" zPosition="10" transparent="1"/>
+		<widget name="statustext2" position="100,23" size="970,627" font="Regular;20" halign="center" valign="center" transparent="0" zPosition="8"/>
+		<widget name="info_barra" position="162,328" zPosition="1" size="600,290" font="Regular;20" halign="center" valign="center" transparent="0"/>
+		<widget name="le_barra" position="232,562" zPosition="10" size="600,35" alphatest="blend"/>
+		<widget name="ico_vie" position="60,150" zPosition="2" size="29,40" alphatest="blend"/>
+		<widget name="barrapix_abj" position="60,20" zPosition="9" size="20,20" alphatest="blend" transparent="1"/>
+		<widget name="barrapix_arr" position="60,51" zPosition="9" size="730,500" alphatest="blend" transparent="1"/>
+		<widget name="dia1" position="901,300" zPosition="1" size="340,25" halign="left" valign="center" font="Regular;24" transparent="1" backgroundColor="#000000"/>
+		<widget name="icono_dia1" position="819,300" zPosition="1" size="79,79" alphatest="blend"/>
+		<widget name="info_dia1" position="901,324" zPosition="1" size="340,70" halign="left" valign="top" font="Regular;22" transparent="1" backgroundColor="#000000"/>
+		<widget name="dia2" position="901,416" zPosition="1" size="340,25" halign="left" valign="center" font="Regular;24" transparent="1" backgroundColor="#000000"/>
+		<widget name="icono_dia2" position="819,416" zPosition="1" size="79,79" alphatest="blend"/>
+		<widget name="info_dia2" position="901,440" zPosition="1" size="340,70" halign="left" valign="top" font="Regular;22" transparent="1" backgroundColor="#000000"/>
+		<widget name="dia3" position="901,527" zPosition="1" size="340,25" halign="left" valign="center" font="Regular;24" transparent="1" backgroundColor="#000000"/>
+		<widget name="icono_dia3" position="819,535" zPosition="1" size="79,79" alphatest="blend"/>
+		<widget name="info_dia3" position="901,551" zPosition="1" size="340,75" halign="left" valign="top" font="Regular;22" transparent="1" backgroundColor="#000000"/>
+		<ePixmap position="1100,668" size="40,22" zPosition="3" pixmap="buttons/key_menu1.png" transparent="1" alphatest="blend"/>
+		<widget position="1150,668" size="210,21" name="key_menu" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="bkwall" zPosition="1" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI Weather Plugin Setup OKK -->
+	<screen name="WeatherPluginEntriesListConfigScreenfore" position="0,0" size="1280,720" title="WeatherPlugin: List of Entries" backgroundColor="bkwall" flags="wfNoBorder">
+		<widget name="city" position="60,90" size="150,50" font="Regular;20" halign="left"/>
+		<widget name="language" position="210,90" size="150,50" font="Regular;20" halign="left"/>
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/info.png" position="850,465" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="entrylist" position="60,140" size="299,550" scrollbarMode="showOnDemand" backgroundColor="bkwall" halign="left" font="Regular;24" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI ExtraMenu OKK -->
+	<screen name="EGExtrasMenu" position="0,0" size="1280,720" title="EGAMI Extras Panel" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget source="list" render="Listbox" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1">
+		    <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (70, 0), size = (650, 24), font=0, text = 0),
+			      MultiContentEntryText(pos = (70, 24), size = (650, 24), font=1, text = 3),
+			      MultiContentEntryPixmapAlphaTest(pos = (6, 5), size = (40, 40), png = 1),
+			      ],
+			      "fonts": [gFont("Regular", 23),gFont("Regular", 17)],
+			      "itemHeight": 50
+			      }
+		    </convert>
+		</widget>
+	</screen>
+	
+		<!--  FileManager OKK -->
+	<screen name="EGFileManager" position="0,0" size="1280,720" title="EGAMI File Manager" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplateSimple"/>
+		<widget name="list_left_text" font="Regular;28" position="90,80" size="150,35" zPosition="1" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="list_right_text" font="Regular;28" position="655,80" size="150,35" zPosition="1" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<widget name="list_left" position="40,120" size="590,490" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="background"/>
+		<widget name="list_right" position="645,120" size="580,490" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="background"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap position="1030,663" size="40,22" zPosition="3" pixmap="buttons/key_menu1.png" transparent="1" alphatest="on"/>
+		<widget position="1120,667" size="210,21" name="key_menu" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="bkwall" zPosition="1" transparent="1"/>
+	</screen>
+	
+		<!--  EGAMI Permanent Clock OKK -->
+    <screen name="EGPermanentClock" position="610,40" size="110,52" flags="wfNoBorder" title="Egami Permanent Clock" backgroundColor="#55000000">
+        <widget source="global.CurrentTime" render="Label" position="10,10" size="90,34" font="LCD;32" foregroundColor="#d0d0d0" valign="center" halign="center" transparent="1">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+    </screen>
+	
+		<!--  EGAMI ListChannel OKK -->
+	<screen name="EGAMIFaq_ListChannel_ListScreen" position="0,0" size="1280,720" title="EGAMI FAQ List" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="ContentTitle" position="60,80" size="515,25" backgroundColor="bkwall" zPosition="0" foregroundColor="#00000000" font="Regular;22" halign="center"/>
+		<widget name="liste" position="60,120" size="515,500" transparent="1"/>
+		<widget name="coverArt" pixmap="~/original/images/no_coverArt.png" position="720,90" size="410,300" transparent="1" alphatest="blend" borderWidth="2" borderColor="#00555556"/>
+		<widget name="name" position="640,420" size="580,30" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="1" font="Regular;26" valign="top" zPosition="0"/>
+		<widget name="handlung" position="640,460" size="580,170" backgroundColor="#00101214" transparent="1" font="Regular;19" valign="top" zPosition="0"/>
+		<widget name="VideoPrio" position="1070,665" size="105,24" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular;20" valign="center" halign="right" zPosition="1"/>
+		<widget name="vPrio" position="1200,665" size="25,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="center" zPosition="1" foregroundColor="#00bab329"/>
+		<widget name="Page" position="1065,665" size="56,25" backgroundColor="#00101214" transparent="1" foregroundColor="#00555556" font="Regular;20" valign="center" halign="right" zPosition="0"/>
+		<widget name="page" position="1100,665" size="95,25" backgroundColor="#00101214" transparent="1" font="Regular;20" valign="center" halign="right" zPosition="0"/>
+	</screen>
+
+	<!-- EGAMI ButtonSetup OKK -->
+	<screen name="ButtonSetup" position="0,0" size="1280,720" title="EGAMI Quick Button Setup" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/picon_default.png" position="990,520" size="256,256" zPosition="2" alphatest="blend"/>
+	    <widget name="description" position="420,350" size="350,180" font="Regular;24" halign="center" backgroundColor="bkwall" foregroundColor="bluette" transparent="1"/>
+	    <ePixmap pixmap="icons/info_on.png" position="560,300" size="50,50" zPosition="2" alphatest="blend"/>
+		<!--ePixmap position="400,80" zPosition="14" size="13,500" selectionPixmap="buttons/listselect.png" alphatest="blend" transparent="1"/-->
+		<widget name="list" position="20,80" size="360,550" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="365,80" size="15,550" zPosition="2" alphatest="blend"/>
+		<widget name="choosen" position="420,120" size="325,550" foregroundColor="red" transparent="1"/>
+	</screen>
+	
+	<!-- EGAMI ButtonSetupSelect OKK -->
+	<screen name="ButtonSetupSelect" position="0,0" size="1280,720" title="EGAMI Quick Button Select" backgroundColor="bkwall" flags="wfNoBorder">
+	    <panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<ePixmap pixmap="menu/picon_default.png" position="990,520" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="description" position="375,300" size="420,160" font="Regular;24" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="icons/info_on.png" position="560,250" size="50,50" zPosition="2" alphatest="blend"/>
+		<widget name="list" position="20,80" size="360,550" scrollbarMode="showOnDemand" transparent="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="365,80" size="15,550" zPosition="2" alphatest="blend"/>
+		<widget name="choosen" position="420,100" size="345,550" foregroundColor="red" transparent="1"/>
+	</screen>
+	
+	<!--  EGAMI BootManager OKK -->
+	<screen name="EGAMIBootImageChoose" position="0,0" size="1280,720" title="EGAMI Multiboot Image Choose" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <ePixmap pixmap="menu/picon_default.png" position="990,520" size="256,256" zPosition="2" alphatest="blend"/>
+		<widget name="label1" position="50,80" size="515,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label2" position="110,120" size="315,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label6" position="260,120" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="device_icon" position="40,120" size="80,80" alphatest="on"/>
+		<widget name="config" position="60,230" size="515,500" transparent="1"/>
+		<widget name="label3" position="60,435" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label4" position="60,460" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label5" position="60,485" size="270,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label7" position="335,435" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label8" position="335,460" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label9" position="335,485" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="label10" position="60,510" size="440,30" zPosition="1" font="Regular;20" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="label11" position="335,510" size="270,30" zPosition="1" halign="right" font="Regular;20" backgroundColor="#9f1313" foregroundColor="#00389416" transparent="1"/>
+		<widget name="free_space_progressbar" position="180,442" size="300,13" borderWidth="1" zPosition="3"/>
+	</screen>
+	
+	<!--  EGAMI Select Images OKK -->
+	<screen name="EGAMIChooseOnLineImage" position="0,0" size="1280,720" title="EGAMIBoot - Download OnLine Images" backgroundColor= "bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>
+	    <ePixmap pixmap="buttons/key_ok.png" position="360,657" size="250,28" zPosition="2" alphatest="blend"/>
+	    <eLabel text="Select image" position="280,657" size="250,35" font="Regular;20" halign="right" foregroundColor="white" backgroundColor="#0045a6" transparent="1" zPosition="2"/>
+		<widget source="list" render="Listbox" position="35,80" size="730,540" scrollbarMode="showOnDemand" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (0, 10), size = (730, 30), font=0, flags = RT_HALIGN_RIGHT, text = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (480, 60), png = 1),
+					MultiContentEntryText(pos = (0, 35), size = (730, 30), font=1, flags = RT_VALIGN_TOP | RT_HALIGN_RIGHT, text = 3),
+					],
+					"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+					"itemHeight": 60
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!--  EGAMI Download Images OKK -->
+	<screen name="DownloadOnLineImage" position="0,0" size="1280,720" title="EGAMIBoot - Download Image">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="imageList" position="60,100" size="530,450" font="Regular;20" transparent="1" zPosition="1"/>
+	</screen>
+	
+	<!--  EGAMI EGAMI Multiboot Installation OKK -->
+	<screen name="EGAMIBootInstallation" position="0,0" size="1280,720" title="EGAMI Multiboot Installation" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+	    <panel name="PigTemplate"/>
+	    <!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="label1" position="50,100" size="515,30" zPosition="1" font="Regular;25" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="label2" position="50,140" size="515,290" zPosition="1" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
+		<widget name="config" position="60,250" size="515,500" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+	<!--  EGAMI Image Installation OKK -->
+	<screen name="EGAMIBootImageInstall" position="center,center" size="1280,720" backgroundColor="bkwall" title="EGAMIBoot - Image Installation" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+	    <panel name="sPigTemplate"/>	    
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="config" position="40,100" size="730,440" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="HelpWindow" position="80,450" zPosition="5" size="1,1" transparent="1" alphatest="on"/>
+	</screen>
+	
+	<!--  EGAMI File Commander OKK -->
+	<screen name="FileCommanderScreen" position="0,0" size="1280,720" title="File Commander" flags="wfNoBorder">
+		<panel name="WallTemplateSimple"/>
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget source="Title" render="Label" zPosition="1" position="340,35" size="1200,30" halign="center" font="xRegular;24" foregroundColor="bluette" transparent="1" backgroundColor="background"/>
+		<widget name="list_left" position="62,110" size="563,325" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="background"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="610,80" size="52,520" zPosition="1" alphatest="blend"/>
+		<widget name="list_left_head" position="60,560" size="570,120" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="list_right" position="665,110" size="550,400" transparent="1" foregroundColor="white" backgroundColor="background" zPosition="1"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="1200,80" size="46,520" zPosition="1" alphatest="blend"/>
+		<eLabel position="660,555" size="565,60" backgroundColor="bkwall" zPosition="1"/>
+		<widget name="list_right_head" position="670,560" size="565,50" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<ePixmap position="1020,660" size="40,22" zPosition="3" pixmap="buttons/key_menu1.png" transparent="1" alphatest="blend"/>
+		<ePixmap pixmap="buttons/key_info.png" position="1100,660" size="40,22" alphatest="blend" zPosition="2"/>
+		<ePixmap pixmap="buttons/key_text.png" position="1180,660" size="40,22" alphatest="blend" zPosition="2"/>
+	</screen>		
+		
+	<!--  EGAMI File Commander Setup OKK -->
+	<screen name="FileCommanderConfigScreen" position="0,0" size="1280,720" title="File Commander - Settings" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="config" position="60,100" itemHeight="30" size="515,510" zPosition="1" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="help" position="60,340" size="515,330" zPosition="10" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+	
+    <!--  File Comander Select Files OKK -->
+	<screen name="FileCommanderScreenFileSelect" position="0,0" size="1280,720" title=" " flags="wfNoBorder">
+		<!--panel name="nRGYB"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/yellow.png" position="560,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="810,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="list_left" position="62,110" size="270,325" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="background"/>		
+		<widget name="list_left_head" position="60,480" size="570,120" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="list_right" position="665,110" size="550,400" transparent="1" foregroundColor="white" backgroundColor="background" zPosition="1"/>
+		<eLabel position="660,555" size="565,60" backgroundColor="bkwall" zPosition="1"/>
+		<widget name="list_right_head" position="670,560" size="565,50" font="Regular;18" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="2"/>
+		<widget position="1160,667" size="210,21" name="key_menu" font="Regular;19" halign="left" foregroundColor="white" backgroundColor="bkwall" zPosition="1" transparent="1"/>
+	</screen>
+	
+	<!-- EGAMI Downloadable Plugins  -->
+	<screen name="PluginDownloadBrowser" position="0,0" size="1280,720" title="Downloadable plugins" backgroundColor="bkwall" flags="wfNoBorder">
+	     <panel name="WallTemplate"/>
+	     <panel name="PigTemplate"/>
+	     <ePixmap pixmap="menu/plugin.png" position="1000,500" size="300,300" alphatest="blend"/>
+	     <widget name="list" position="30,100" zPosition="2" size="600,500" scrollbarMode="showOnDemand" font="Regular;24" foregroundColor="white" transparent="1"/>
+		 <ePixmap pixmap="buttons/maxbar.png" position="615,80" size="52,520" zPosition="2" alphatest="blend"/>
+		 <widget name="text" position="620,570" size="380,160" zPosition="10" font="Regular;20" halign="right" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+	</screen>	
+	
+	<!-- EgamiBootLogo OKK -->
+	<screen name="EgamiBootLogoSelector" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
+		<ePixmap pixmap="menu/ico_egami.png" position="850,490" size="256,256" zPosition="2" alphatest="blend"/>
+	    <panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+	    <!--panel name="nRG"/-->
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	    <widget name="config" position="60,90" itemHeight="30" scrollbarMode="showOnDemand" size="520,210" zPosition="1" transparent="1"/>
+	    <eLabel position="70,355" size="512,279" backgroundColor="#10303030" zPosition="2"/>
+	    <widget name="Preview" position="70,355" size="512,275" alphatest="blend" transparent="1" zPosition="3"/>
+ 	</screen>
+	
+	<!-- EgamiUsbformat OKK -->
+	<screen name="EGAMI_UsbFormat" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
+		<ePixmap pixmap="menu/usb.png" position="1010,490" size="256,256" zPosition="2" alphatest="blend"/>
+	    <panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
+		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<widget name="lab1" position="60,90" backgroundColor="bkwall" size="520,270" halign="center" font="Regular;20" zPosition="2"/>
+	</screen>
+	
+	<screen name="EGAMISwap" position="0,0" size="1280,720" backgroundColor="bkwall" title="EGAMI Swap" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGB"/>
+		<widget name="lab1" position="60,90" font="Regular;24" zPosition="2" backgroundColor="bkwall" transparent="1" size="520,210"/>
+		<!-- eLabel name="DEBUG" text="PANEL P055" position="20,20" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="99"/-->
+	</screen>
+	
+	<screen name="XBMCMeteoMain" position="center,center" size="1280,720" title="Weather" flags="wfNoBorder">
+		<ePixmap position="0,0" size="1280,720" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/xbmcweather/100.png" />
+		<!--<widget source="global.CurrentTime" render="Label" position="1180,5" size="80,22" zPosition="1" font="Regular;16" valign="top" halign="left" foregroundColor="white" backgroundColor="transparent" transparent="1">
+		<convert type="ClockToText">Default</convert>
+		</widget>-->
+		<widget name="lab1" position="150,100" halign="right" size="220,20" zPosition="1" font="Regular;16" foregroundColor="#dcdcdc" backgroundColor="transparent" valign="top"  transparent="1" />
+		<widget name="lab1b" position="373,100" halign="left" size="210,20" zPosition="1" font="Regular;16" foregroundColor="#ffa500" backgroundColor="transparent" valign="top"  transparent="1" />
+		<widget name="lab2" position="150,120" halign="center" size="440,26" zPosition="1" font="Regular;24" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1" />
+		<widget name="lab3" position="150,146" halign="center" size="440,20" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab4" position="140,220" halign="right" size="180,80" zPosition="1" font="Regular;80" foregroundColor="white" backgroundColor="transparent" valign="top"  transparent="1" />
+		<widget name="lab4b" position="310,220" halign="right" size="40,30" zPosition="1" font="Regular;24" foregroundColor="white" backgroundColor="transparent" valign="top"  transparent="1" />
+		<widget name="lab5" position="350,185" size="250,180" zPosition="3" transparent="1" alphatest="blend"/>
+		<widget name="lab6" position="150,367" halign="center" size="440,30" zPosition="1" font="Regular;23" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1" />
+		<widget name="lab7" position="140,420" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab7b" position="305,420" halign="left" size="280,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab8" position="140,450" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab8b" position="305,450" halign="left" size="285,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab9" position="140,480" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab9b" position="305,480" halign="left" size="285,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab10" position="140,510" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab10b" position="305,510" halign="left" size="285,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab11" position="140,540" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab11b" position="305,540" halign="left" size="285,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab12" position="140,570" halign="right" size="150,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab12b" position="305,570" halign="left" size="285,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab13" position="700,120" halign="center" size="430,26" zPosition="1" font="Regular;24" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1"  />
+		<widget name="lab14" position="730,170" halign="left" size="65,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab14b" position="795,170" halign="left" size="90,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab15" position="895,170" halign="left" size="60,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab15b" position="955,170" halign="left" size="60,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab16" position="730,200" halign="left" size="220,26" zPosition="1" font="Regular;22" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1"  />
+		<widget name="lab17" position="1010,150" size="100,100" zPosition="1" alphatest="blend" transparent="1" />
+		<widget name="lab18" position="700,300" halign="center" size="430,26" zPosition="1" font="Regular;24" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1"  />
+		<widget name="lab19" position="730,350" halign="left" size="65,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab19b" position="795,350" halign="left" size="90,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab20" position="895,350" halign="left" size="60,24" zPosition="1" font="Regular;19" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab20b" position="955,350" halign="left" size="60,24" zPosition="1" font="Regular;19" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab21" position="730,380" halign="left" size="220,26" zPosition="1" font="Regular;22" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1"  />
+		<widget name="lab22" position="1010,320" size="100,100" zPosition="1" alphatest="blend" transparent="1" />
+		<widget name="lab23" position="700,470" halign="center" size="430,26" zPosition="1" font="Regular;24" valign="top" foregroundColor="white" backgroundColor="transparent" transparent="1" />
+		<widget name="lab24" position="730,510" halign="right" size="90,22" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab24b" position="830,510" halign="left" size="100,22" zPosition="1" font="Regular;18" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab25" position="930,510" halign="left" size="100,22" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab25b" position="1040,510" halign="left" size="115,22" zPosition="1" font="Regular;18" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab26" position="730,535" halign="right" size="90,22" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab26b" position="830,535" halign="left" size="330,22" zPosition="1" font="Regular;18" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab27" position="730,560" halign="right" size="90,22" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab27b" position="830,560" halign="left" size="330,22" zPosition="1" font="Regular;18" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+		<widget name="lab28" position="790,595" size="16,16" zPosition="1" alphatest="blend" transparent="1" />
+		<widget name="lab28a" position="800,590" halign="right" size="20,20" zPosition="1" font="Regular;18" valign="top" foregroundColor="#8F8F8F" backgroundColor="transparent" transparent="1" />
+		<widget name="lab28b" position="830,590" halign="left" size="330,22" zPosition="1" font="Regular;18" foregroundColor="white" backgroundColor="transparent" valign="top" transparent="1" />
+	</screen>
+</skin>

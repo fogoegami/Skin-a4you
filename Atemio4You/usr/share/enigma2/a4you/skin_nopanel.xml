@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!--
+	##################### mmark_A4Y_ATEMIO v.1.0.0 ########################
+	#                                                                     #
+	Author mmark	       Version 1.0 released                 10-05-2014#
+	EGAMI MOD and additions Edit by fogo v4.1 07-10-2015                  #
+	#                                                                     #
+	#######################################################################
+	The Atemio4you skin has been build for Atemio 4you STB's by MMARK.
+	This skin is Freeware. Everyone can modify and use it in other images.
+	BUT DO NOT REMOVE OR CHANGE THIS HEADER !!!
+	Do whatever you want with this skin, but don't tell it's yours,
+	or your idea, and leave the credentials in the "About-box" as they are
+	-->
+	<screen name="SelectBouquet" position="fill" title="Choose bouquet" flags="wfNoBorder">
+		<widget name="menu" position="590,110" size="600,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N004" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- RecordPathSettings -->
+	<screen name="RecordPathsSettings" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RGS"/>
+		<eLabel text="Recording paths" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget name="config" position="530,110" size="690,525" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N005" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- Minute input -->
+	<screen name="MinuteInput" position="center,center" size="240,55" flags="wfNoBorder">
+		<ePixmap alphatest="off" pixmap="infobar/bl80.png" position="0,0" size="240,55" zPosition="-1"/>
+		<eLabel text="Seek" position="20,15" size="100,25" backgroundColor="secondBG" foregroundColor="secondFG" transparent="1" font="Regular;23"/>
+		<widget name="minutes" transparent="1" position="120,15" size="100,25" halign="right" font="Regular;23" zPosition="1"/>
+		<eLabel name="DEBUG" text="PANEL N006" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- MovieContextMenu -->
+	<screen name="MovieContextMenu" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_YB"/>
+		<eLabel text="Movielist menu" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget name="menu" position="575,110" size="600,510" itemHeight="30" font="Regular;24" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<widget source="description" render="Label" position="15,500" size="640,200" font="Regular;21" valign="center" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
+	</screen>
+
+	<!-- MovieBrowserConfig -->
+	<screen name="MovieBrowserConfiguration" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RG"/>
+		<eLabel text="Movie list configuration" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget name="config" position="575,110" size="600,480" itemHeight="24" font="Regular;20" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N008" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="FileBrowser" title="DVD File Browser" position="fill" flags="wfNoBorder">
+		<widget name="filelist" position="590,110" size="630,500" itemHeight="28" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N009" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- Softwaremanager -->
+	<screen name="SoftwareUpdateChoices" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="bkwall">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget name="list" position="60,107" size="503,200" itemHeight="28" font="Regular;22" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" foregroundColor="white" backgroundColor="bkwall" transparent="1" enableWrapAround="1"/>
+		<widget name="text" position="65,310" size="495,200" font="Regular;22" foregroundColor="white" backgroundColor="bkwall" halign="center" transparent="1"/>
+	</screen>
+	<screen flags="wfNoBorder" name="SoftwareManagerSetup" position="fill" title="SoftwareManager setup">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="sRG"/>
+		<widget name="config" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" font="Regular;22" position="60,110" size="600,500" transparent="1"/>
+		<widget source="introduction" render="Label" position="200,310" size="417,200" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<eLabel name="DEBUG" size="300,60" font="Regular;40" backgroundColor="bkwall" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="BackupScreen" title="Backup is running" position="fill" flags="wfNoBorder">
+		<widget name="config" position="590,110" size="600,500" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N011" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="BackupSelection" title="Select files/folders to backup" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RGYS"/>
+		<widget name="checkList" position="590,110" size="600,500" backgroundColor="darkgrey" zPosition="3" transparent="1" selectionPixmap="buttons/listselect.png"/>
+	</screen>
+	
+	<!--  Sotfware Manaager OK -->
+	<screen name="UpdatePluginMenu" title="Softwaremanager" position="fill" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget source="menu" render="Listbox" position="40,80" size="595,500" font="Regular;24" enableWrapAround="1" backgroundPixmap="buttons/menuback.png" scrollbarMode="showOnDemand" selectionPixmap="buttons/menuselect.png" backgroundColor="bkwall" transparent="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (45,6),size = (565,30),flags = RT_HALIGN_LEFT,text = 1) ],
+					"fonts": [gFont("Regular",24)],
+					"itemHeight": 45
+				}
+		    </convert>
+		</widget>
+		<ePixmap pixmap="buttons/key_menu1.png" position="1100,657" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="icons/info_on.png" position="300,485" size="50,50" zPosition="2" alphatest="blend"/>
+		<eLabel text="Menu-Info" position="1135,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" foregroundColor="#a0a0a0" font="Regular;22"/>
+		<widget source="menu" render="Listbox" position="150,520" size="600,370" backgroundColor="darkgrey" zPosition="3" selectionDisabled="1" transparent="1" foregroundColor="bluette" scrollbarMode="showNever" selectionPixmap="buttons/listselect.png">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (1, 6), size = (635, 65), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 270
+				}
+		    </convert>
+		</widget>
+	</screen>
+	
+	<!--UpdatePlugin-->
+	<screen name="UpdatePlugin" position="center,center" size="550,200" flags="wfNoBorder" backgroundColor="bkwall">
+		<widget name="activityslider" position="10,140" size="503,5"/>
+		<widget source="package" render="Label" position="10,160" size="503,20" font="Regular;18" halign="center" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<widget source="status" render="Label" position="10,190" size="503,95" font="Regular;20" halign="center" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<widget name="slider" position="10,300" size="503,30"/>
+	</screen>
+	<screen name="PluginManagerInfo" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="sRG"/>
+		<widget source="list" render="Listbox" position="60,90" size="550,500" backgroundColor="bkwall" scrollbarMode="showOnDemand" foregroundColor="white" selectionDisabled="1">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (50, 0), size = (150, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (50, 27), size = (550, 23), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
+						MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0, 48), size = (550, 2), png = 3), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 24),gFont("Regular", 22)],
+				"itemHeight": 50
+				}
+		    </convert>
+		</widget>
+		<widget source="status" render="Label" position="60,600" zPosition="2" size="580,22" halign="left" font="Regular;20" foregroundColor="bluette" transparent="1"/>
+	</screen>
+	
+	<!--PluginManager-->
+	<screen name="PluginManager" title="Plugin manager" position="fill" flags="wfNoBorder">
+	    <panel name="MenuTemplate"/>
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+	    <panel name="sRGY"/>
+		<widget source="list" render="Listbox" position="60,100" size="565,459" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png">
+		<ePixmap pixmap="buttons/maxbar.png" position="580,90" size="15,510" zPosition="2" alphatest="blend"/>
+		    <convert type="TemplatedMultiContent">
+				{"templates":
+					{"default": (51,[
+						MultiContentEntryText(pos = (5,1), size = (480,24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (5,27), size = (480,24), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (500,0), size = (48,48), png = 5), # index 5 is the status pixmap
+						MultiContentEntryPixmapAlphaTest(pos = (0,49), size = (600,2), png = 6), # index 6 is the div pixmap
+						]),
+						"category": (40,[
+						MultiContentEntryText(pos = (5,0), size = (595,22), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (5,22), size = (595,16), font=2, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (0,38), size = (600,2), png = 3), # index 3 is the div pixmap
+						])
+					},
+					"fonts": [gFont("Regular",22),gFont("Regular",18),gFont("Regular",16)],
+					"itemHeight": 52
+				}
+		    </convert>
+		</widget>
+		<widget source="status" render="Label" position="30,580" size="600,25" foregroundColor="bluette" shadowOffset="-2,-2" transparent="1" font="Regular;20" halign="center"/>
+	</screen>
+	<screen name="PluginManagerHelp" title="Plugin manager help" position="fill" flags="wfNoBorder">
+		<panel name="MenuTemplate"/>
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<widget source="list" render="Listbox" position="590,110" size="600,450" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (90,5),size = (565,26),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the name
+						MultiContentEntryText(pos = (90,33),size = (565,38),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the state
+						MultiContentEntryPixmapAlphaTest(pos = (15,5),size = (48,48),png = 2),# index 2 is the status pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",17)],
+				"itemHeight": 75
+				}
+		    </convert>
+		</widget>
+		<widget source="status" render="Label" position="60,90" size="480,25" backgroundColor="background" transparent="1" font="Regular;22" halign="center"/>
+		<eLabel name="DEBUG" text="PANEL N016" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="bkwall" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="PluginDetails" flags="wfNoBorder" position="fill" title="Plugin Details">
+		<panel name="ButtonTemplate_RS"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<widget name="statuspic" position=" 610,635" size=" 48,48" alphatest="on"/>
+		<widget source="author" render="Label" position="100,110" size="570,30" zPosition="10" font="Regular;24" backgroundColor="background" transparent="1"/>
+		<ePixmap pixmap="buttons/sel.png" position=" 590,140" size="630,30" alphatest="on"/>
+		<widget name="detailtext" position=" 100,175" size="630,260" font="Regular;20" backgroundColor="background" transparent="1"/>
+		<widget name="screenshot" position="250,450" size="350,150" alphatest="on" halign="left"/>
+		<widget name="divpic" position="0,0" size="0,0"/>
+		<eLabel name="DEBUG" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- Restore screen -->
+	<screen name="RestoreScreen" title="Restore is running" position="fill" flags="wfNoBorder">
+		<widget name="config" position="530,110" size="690,500" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N017" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- Restore -->
+		<screen name="RestoreMenu" position="0,0" size="1280,720" title="Restore Backups" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="sRGY"/>
+		<widget name="filelist" position="60,90" size="520,500" selectionPixmap="buttons/listselect.png" transparent="1"/>
+	</screen>
+
+	<screen name="SoftwareManagerInfo" title="SoftwareManager information" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RS"/>
+		<widget source="list" render="Listbox" position="530,110" size="720,450" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" selectionDisabled="0">
+		    <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (720, 26), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 20),gFont("Regular", 20)],
+				"itemHeight": 25
+		}
+		    </convert>
+		</widget>
+		<widget source="introduction" render="Label" position="530,580" size="720,50" zPosition="10" font="Regular;18" halign="left" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<eLabel name="DEBUG" text="PANEL N019" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- PPanel -->
+
+	<screen  name="ToplevelPPanel" flags="wfNoBorder" position="fill" title="Toplevel PPanel">
+		<widget name="nodelist" selectionPixmap="buttons/listselect.png" position="590,110" size="600,500"/>
+		<widget name="helptext" position="85,370" size="500,260" valign="center" halign="left" font="Regular;20"/>
+		<eLabel name="DEBUG" text="PANEL N020" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="PPanel" flags="wfNoBorder" position="fill" title="PPanel">
+		<widget name="nodelist" position="590,110" font="Regular;22" size="600,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<widget name="helptext" position="85,370" size="500,260" valign="center" halign="left" font="Regular;20"/>
+		<eLabel name="DEBUG" text="PANEL N021" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="File" flags="wfNoBorder" position="fill" title="PPanel File">
+		<widget name="progress" position="44,560" size="1194,6" pixmap="window/slider100.png" transparent="1"/>
+		<eLabel name="DEBUG" text="PANEL N022" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="Tarball" flags="wfNoBorder" position="fill" title="PPanel Entry">
+		<widget name="progress" position="44,560" size="1194,6" pixmap="window/slider100.png" transparent="1"/>
+		<eLabel name="DEBUG" text="PANEL N023" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="Execute" flags="wfNoBorder" position="fill" title="PPanel Entry">
+		<panel name="BasicTemplate"/>
+		<panel name="ButtonTemplate_YB"/>
+		<widget name="linelist" font="Fixed;16" position="50,110" size="1180,500" transparent="1" foregroundColor="white"/>
+		<eLabel name="DEBUG" text="PANEL N024" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- TextBox -->
+	<screen name="TextBox" title="Message" position="fill" flags="wfNoBorder">
+		<widget name="text" position="590,110" size="600,500" font="Regular;24"/>
+		<eLabel text="'Exit' = Leave message" backgroundColor="secondBG" font="Regular;22" halign="left" position="145,645" size="220,26" transparent="1" zPosition="1"/>
+		<eLabel name="DEBUG" text="PANEL N025" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- TimeDateInput -->
+	<screen name="TimeDateInput" title="Time/Date Input" position="fill" flags="wfNoBorder">
+		<panel name="CancelOKTemplate"/>
+		<widget name="config" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" position="590,110" font="Regular;22" size="600,500" transparent="1"/>
+		<eLabel name="DEBUG" text="PANEL N026" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="About" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RG"/>
+		<eLabel text="About" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget name="AboutScrollLabel" font="Regular;22" position="635,125" size="580,500" zPosition="2" halign="center"/>
+		<eLabel name="DEBUG" text="PANEL N027" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen name="CommitInfo" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<eLabel text="Latest Commits" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget name="AboutScrollLabel" font="Regular;22" position="85,125" size="1130,500" zPosition="2" halign="left"/>
+		<eLabel name="DEBUG" text="PANEL N028" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<screen flags="wfNoBorder" name="TranslationInfo" position="fill">
+		<eLabel text="Translation" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" valign="center" halign="left"/>
+		<widget source="TranslatorName" render="Label" position="590,110" size="590,110" font="Regular;22" halign="center" backgroundColor="background" transparent="1"/>
+		<widget source="TranslationInfo" render="Label" position="590,180" size="590,380" font="Regular;22" halign="center" backgroundColor="background" transparent="1"/>
+		<eLabel name="DEBUG" text="PANEL N029" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+
+	<!-- AutoBackup -->
+	<screen name="Config" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<panel name="nRGYB"/>
+		<panel name="Epg_Search"/>
+		<ePixmap pixmap="buttons/key_menu1.png" position="1100,665" size="40,22" alphatest="blend" zPosition="2"/>
+		<widget name="config" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
+		<widget name="status" position="45,300" size="560,50" font="Regular;20" backgroundColor="bkwall"/>
+		<widget name="statusbar" position="45,350" size="560,50" font="Regular;20" backgroundColor="bkwall"/>
+	</screen>
+
+	<screen name="BackupSelection" position="fill" flags="wfNoBorder">
+		<panel name="ButtonTemplate_RGYS"/>
+		<widget name="checkList" position="590,110" size="540,350" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png"/>
+		<eLabel name="DEBUG" text="PANEL N031" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+	</screen>
+</skin>
