@@ -207,9 +207,7 @@
 	<!--  Virtual Keyboard OK -->
 	<screen name="VirtualKeyBoard" title="Metro Virtual KeyBoard" position="center,center" size="825,300" zPosition="99" backgroundColor="bkwall">
 		<widget name="list" position="5,70" size="700,300" scrollbarMode="showOnDemand" selectionDisabled="1" backgroundColor="bkwall"/>
-		<ePixmap pixmap="vkey_text.png" position="588,145" size="542,52" zPosition="-4" alphatest="on"/>
-		<eLabel position="5,5" size="690,50" backgroundColor="#4D5375"/>
-		<eLabel position="7,7" size="686,46" backgroundColor="#4D5375" zPosition="1"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="5,70" size="45,45" transparent="0" alphatest="blend"/>
 		<widget name="header" position="5,52" size="730,26" font="Regular;18" transparent="1" noWrap="1" foregroundColor="#00ff4a3c" backgroundColor="bkwall"/>
 		<widget name="text" position="10,10" size="670,40" font="Regular;36" transparent="1" noWrap="1" halign="right" foregroundColor="#ffffff" backgroundColor="#10101010" zPosition="5"/>
 		<ePixmap pixmap="buttons/red.png" position="575,70" size="20,25" alphatest="blend"/>
