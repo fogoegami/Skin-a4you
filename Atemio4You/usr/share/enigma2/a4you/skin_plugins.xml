@@ -82,6 +82,7 @@
 
 	<!-- AutoTimer Wizard OK -->
 	<screen name="AutoTimerWizard" title="AutoTimer Wizard" position="fill" flags="wfNoBorder">
+		<panel name="ButtonExit"/>
 		<panel name="sWallTemplateSimple"/>
 		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Default</convert>
