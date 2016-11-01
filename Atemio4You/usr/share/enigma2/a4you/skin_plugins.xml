@@ -86,10 +86,10 @@
 		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Default</convert>
 		</widget>
-		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="xRegular;15" halign="right" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Format:%A</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="xRegular;16" halign="right" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Format:%e. %b</convert>
 		</widget>
 		<widget name="text" position="40,90" size="720,260" font="Regular;22" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
@@ -106,7 +106,7 @@
 		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
 		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
 		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="80,410" zPosition="1" size="40,22" transparent="1" alphatest="on">
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="80,410" zPosition="1" size="40,22" transparent="0" alphatest="blend">
 		    <convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
