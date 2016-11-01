@@ -156,6 +156,10 @@
 		<panel name="PigTemplate"/>
 		<panel name="sRGYB"/>
 		<widget name="config" position="40,90" size="585,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="0" alphatest="on"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="80,410" zPosition="1" size="40,22" transparent="0" alphatest="blend">
+		    <convert type="ConditionalShowHide"/>
+		</widget>		
 	</screen>
 
 	<!-- MPHelp -->
