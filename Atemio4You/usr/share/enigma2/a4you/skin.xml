@@ -431,15 +431,9 @@
 		<widget source="session.CurrentService" render="Label" position="205,155" size="280,30" font="Regular;20" valign="top" halign="left" foregroundColor="foreground" backgroundColor="bkwall" transparent="1" zPosition="1">
 		    <convert type="PliExtraInfo">TransponderName</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="60,180" size="250,24" font="xRegular;16" valign="top" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="10">
-		    <convert type="PliExtraInfo">CryptoSpecial</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="60,200" size="330,20" font="xRegular;16" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="11">
-			<convert type="EGExtraInfo">CamName</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="60,220" size="350,80" font="xRegular;12" halign="left" noWrap="1" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1">
-			<convert type="EGExtraInfo">NetInfo</convert>
-		</widget>			
+		<widget source="session.CurrentService" render="Label" position="60,180" size="350,40" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
+		    <convert type="PliExtraInfo">ServiceInfoFreq</convert>
+		</widget>		
 	<!--  BER -->
 		<eLabel text="BER :" position="60,237" size="60,24" font="Regular;20" halign="left" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<widget source="session.FrontendStatus" render="Progress" position="120,245" size="190,10" pixmap="infobar/pbar_snr_agc.png" backgroundColor="bkwall" zPosition="1" borderWidth="1" borderColor="grey">
@@ -507,8 +501,14 @@
 		    <convert type="ClockToText">Date</convert>
 		</widget>
 	<!--  sid-encriptado -->
-		<widget source="session.CurrentService" render="Label" position="60,480" size="350,40" font="Regular;20" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
-		    <convert type="PliExtraInfo">ServiceInfoFreq</convert>
+		<widget source="session.CurrentService" render="Label" position="60,470" size="250,24" font="xRegular;16" valign="top" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="10">
+		    <convert type="PliExtraInfo">CryptoSpecial</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="60,490" size="330,20" font="xRegular;16" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="11">
+			<convert type="EGExtraInfo">CamName</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="60,510" size="350,80" font="xRegular;12" halign="left" noWrap="1" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1">
+			<convert type="EGExtraInfo">NetInfo</convert>
 		</widget>		
 	<!--  Screen -->
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="120,415" size="40,21" zPosition="3" alphatest="on">
