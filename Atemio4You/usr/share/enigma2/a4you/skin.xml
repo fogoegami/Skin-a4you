@@ -126,7 +126,7 @@
 	</screen>	
 		
 	<!--  AutoRes-Pers-Fuso-Tast-Disp-Parental Customize Setup OKK -->
-	<screen name="Setup" position="0,0" foregroundColor="bluette" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
+	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="on" zPosition="2" />
