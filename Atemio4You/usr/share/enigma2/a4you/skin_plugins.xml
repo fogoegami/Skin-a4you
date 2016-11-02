@@ -24,7 +24,8 @@
 		<widget name="newversion" position="400,230" size="100,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#00ff4a3c"/>
 		<widget source="status" render="Label" position="100,290" size="503,25" backgroundColor="bkwall" foregroundColor="bluette" font="Regular;20" zPosition="5" valign="top"/>
 	</screen>
-<!-- ********** AutoTimer ********** -->
+	
+        <!-- ********** AutoTimer ********** -->
 	<!-- AutoTimer OK -->
 	<screen name="AutoTimer" title="Auto Timer" position="fill" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
@@ -35,16 +36,16 @@
 	
      <!-- AutoTimerServiceEditor OK -->
 	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRGYB"/>
 		<widget name="config" position="40,90" size="560,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 	</screen>
 
 	<!-- Auto Timer OK -->
 	<screen name="AutoTimerOverview" title="AutoTimer Overview" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRGYB"/>
 		<widget name="entries" position="40,80" size="585,500" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="1100,667" size="40,22" alphatest="blend"/>
@@ -53,8 +54,8 @@
 
 	<!-- dont saw this screen, may be later -->
 	<screen name="AutoTimerOverviewSummary" title="AutoTimer Overview Summary" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<widget source="parent.Title" render="Label" position="40,25" size="580,24" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
 		<widget source="entry" render="Label" position="40,90" size="560,24" scrollbarMode="showOnDemand" font="Regular;20" backgroundColor="bkwall" transparent="1"/>
 		<widget source="global.CurrentTime" render="Label" position="40,120" size="82,18" font="Regular;16" backgroundColor="bkwall" transparent="1">
@@ -64,25 +65,25 @@
 
 	<!-- AutoTimer Help OK -->
 	<screen name="AutoTimerHelp" title="AutoTimer Help" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRYB"/>
 		<widget render="Label" source="title" position="40,80" size="585,60" zPosition="5" valign="center" halign="center" font="Regular;26" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
-		<widget name="detailtext" font="Regular;22" position="40,150" size="585,460" halign="center" backgroundColor="bkwall" transparent="1"/>
+		<widget name="detailtext" font="Regular;22" position="80,150" size="585,460" halign="center" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="870,500" size="300,300" pixmap="menu/info.png" alphatest="blend"/>
 	</screen>
 	
 	<!-- AutoTimer Import OK -->
 	<screen name="AutoTimerImporter" title="Import AutoTimer" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRG"/>
 		<widget name="list" position="40,80" size="585,450" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 	</screen>
 
 	<!-- AutoTimer Wizard OK -->
 	<screen name="AutoTimerWizard" title="AutoTimer Wizard" position="fill" flags="wfNoBorder">
-		<panel name="ButtonExit"/>
+	<panel name="ButtonExit"/>
 		<panel name="sWallTemplateSimple"/>
 		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Default</convert>
@@ -106,7 +107,7 @@
 		<widget name="wizard" pixmap="menu/wizard.png" position="840,430" size="300,300" alphatest="blend" zPosition="10" transparent="1"/>
 		<ePixmap position="60,665" pixmap="buttons/red.png" size="30,40" alphatest="blend"/>
 		<widget name="languagetext" position="90,663" size="210,24" font="Regular;21" backgroundColor="bkwall" transparent="1"/>
-		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="1" alphatest="on"/>
+		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="0" alphatest="on"/>
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="80,410" zPosition="1" size="40,22" transparent="0" alphatest="blend">
 		    <convert type="ConditionalShowHide"/>
 		</widget>
@@ -114,17 +115,34 @@
 
 	<!-- AutoTimer Setting OK -->
 	<screen name="AutoTimerSettings" title="AutoTimer Settings" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplateSimple"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRG"/>
-		<widget name="config" position="40,90" size="585,504" itemHeight="28" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
-		<widget source="help" render="Label" position="680,470" size="560,140" transparent="1" font="Regular;20" valign="bottom" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
+		<ePixmap position="830,290" zPosition="1" size="120,120" pixmap="menu/clock.png" alphatest="on"/>
+		<widget source="global.CurrentTime" render="Watches" position="849,310" size="80,80" zPosition="4" alphatest="blend" foregroundColor="red">
+		    <convert type="ExtraNumText">secHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="854,315" size="70,70" zPosition="3" foregroundColor="grey" alphatest="blend">
+		    <convert type="ExtraNumText">minHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="862,323" size="55,55" zPosition="2" foregroundColor="grey" alphatest="blend">
+		    <convert type="ExtraNumText">hourHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="970,300" size="400,60" font="Regular;58" zPosition="2" foregroundColor="#a0a0a0" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format %H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="980,360" size="400,50" font="Regular;24" zPosition="2" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format %A %d.%m.%Y</convert>
+		</widget>
+		<widget source="Title" render="Label" zPosition="1" position="40,30" size="730,30" halign="center" font="Regular;28" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="config" position="40,90" size="730,504" itemHeight="28" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+		<widget source="help" render="Label" position="800,370" size="460,200" transparent="1" font="Regular;20" valign="bottom" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
 	</screen>
 
 	<!-- AutoTimer Preview OK -->
 	<screen name="AutoTimerPreview" title="Preview AutoTimer" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRY"/>
 		<widget source="timerlist" render="Listbox" position="40,90" size="585,510" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1">
 		    <convert type="TemplatedMultiContent">
@@ -143,17 +161,33 @@
 
 	<!-- AutoTimer Editor OK -->
 	<screen name="AutoTimerEditor" title="Edit AutoTimer" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplateSimple"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRGYB"/>
-		<widget name="config" position="40,90" size="585,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
-		<widget source="help" render="Label" position="680,520" size="560,140" transparent="1" font="Regular;20" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
+		<widget name="config" position="40,90" size="730,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
+		<widget source="help" render="Label" position="800,470" size="460,200" transparent="1" font="Regular;20" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall"/>
+		<ePixmap position="830,290" zPosition="1" size="120,120" pixmap="menu/clock.png" alphatest="on"/>
+		<widget source="global.CurrentTime" render="Watches" position="849,310" size="80,80" zPosition="4" alphatest="blend" foregroundColor="red">
+		    <convert type="ExtraNumText">secHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="854,315" size="70,70" zPosition="3" foregroundColor="grey" alphatest="blend">
+		    <convert type="ExtraNumText">minHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Watches" position="862,323" size="55,55" zPosition="2" foregroundColor="grey" alphatest="blend">
+		    <convert type="ExtraNumText">hourHand</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="970,300" size="400,60" font="Regular;58" zPosition="2" foregroundColor="#a0a0a0" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format %H:%M:%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="980,360" size="400,50" font="Regular;24" zPosition="2" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
+		    <convert type="ClockToText">Format %A %d.%m.%Y</convert>
+		</widget>		
 	</screen>
 
 	<!-- AutoTimer Filter Editor OK -->
 	<screen name="AutoTimerFilterEditor" title="Edit AutoTimer Filters" position="fill" flags="wfNoBorder">
-		<panel name="WallTemplate"/>
-		<panel name="PigTemplate"/>
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
 		<panel name="sRGYB"/>
 		<widget name="config" position="40,90" size="585,480" itemHeight="30" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall"/>
 		<widget name="HelpWindow" pixmap="buttons/key_text.png" position="80,440" zPosition="1" size="1,1" transparent="0" alphatest="on"/>
