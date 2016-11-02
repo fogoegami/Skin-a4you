@@ -2359,8 +2359,8 @@
 		</widget>
 		<eLabel position="815,330" size="420,1" backgroundColor="#101010" zPosition="5"/>
 		<eLabel position="815,332" size="420,1" backgroundColor="#808080" zPosition="5"/>
-		<widget source="Event" render="Label" position="815,265" size="420,24" font="Regular;22" halign="center" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="5">
-		    <convert type="EventName">Name</convert>
+		<widget font="Regular;22" halign="center" noWrap="1" position="815,265" render="DRRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="420,265" source="Event" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
 		</widget>
 		<!--widget source="Event" render="EGScrollLabel" position="815,340" size="425,275" font="Regular;20" halign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1">
 		    <convert type="EventName">FullDescription</convert>
