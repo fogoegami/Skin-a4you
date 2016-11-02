@@ -341,14 +341,14 @@
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/red20s.png" position="1105,23" size="20,20" zPosition="3" alphatest="blend" transparent="1">
 		    <convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="800,63" size="100,22" foregroundColor="green" backgroundColor="#000000" transparent="1" font="xRegular;15" valign="center" halign="right">
+		<widget source="session.CurrentService" render="Label" position="810,63" size="100,22" foregroundColor="green" backgroundColor="#000000" transparent="1" font="xRegular;15" valign="center" halign="right">
 		    <convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="Service" render="Label" position="860,50" size="80,24" foregroundColor="grey" font="xRegular;15" halign="left" transparent="1">
 		    <convert type="ServiceTime">Duration</convert>
 		    <convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="800,65" size="150,40" font="xRegular;15" halign="right" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="1" >
+		<widget source="session.CurrentService" render="Label" position="810,65" size="150,40" font="xRegular;15" halign="right" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="1" >
 			<convert type="ServicePosition">Length</convert>
 		</widget>			
 	</screen>
@@ -370,14 +370,14 @@
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/red20s.png" position="1105,23" size="20,20" zPosition="3" alphatest="blend" transparent="1">
 		    <convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="805,63" size="100,22" foregroundColor="green" backgroundColor="#000000" transparent="1" font="xRegular;15" valign="center" halign="right">
+		<widget source="session.CurrentService" render="Label" position="810,63" size="100,22" foregroundColor="green" backgroundColor="#000000" transparent="1" font="xRegular;15" valign="center" halign="right">
 		    <convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget source="Service" render="Label" position="860,50" size="80,24" foregroundColor="grey" font="xRegular;15" halign="left" transparent="1">
 		    <convert type="ServiceTime">Duration</convert>
 		    <convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="800,65" size="150,40" font="xRegular;15" halign="right" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="1" >
+		<widget source="session.CurrentService" render="Label" position="805,65" size="150,40" font="xRegular;15" halign="right" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="1" >
 			<convert type="ServicePosition">Length</convert>
 		</widget>		
 	</screen>
