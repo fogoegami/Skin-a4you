@@ -674,7 +674,7 @@
 	
 	<!-- Weather-->
 	<screen name="weatPanel">
-	    <widget source="session.MSNWeather" render="Label" position="435,40" size="390,40" font="xRegular;16" halign="left" foregroundColor="yellow" backgroundColor="bkwall" transparent="1" zPosition="2">
+	    <widget source="session.MSNWeather" render="Label" position="455,35" size="390,40" font="xRegular;16" halign="left" foregroundColor="yellow" backgroundColor="bkwall" transparent="1" zPosition="2">
 	    <convert type="MSNWeather">winddisplay</convert>
 	    </widget>
 		<widget noWrap="1" backgroundColor="bkwall" font="xRegular;16" foregroundColor="bluette" render="Label" position="695,35" size="110,26" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
