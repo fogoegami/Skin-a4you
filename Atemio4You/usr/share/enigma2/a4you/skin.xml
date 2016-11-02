@@ -404,7 +404,7 @@
 		<panel name="InfoBar"/>
 		<panel name="weatPanel"/>
 		<panel name="SecondInfobarPanelEvents"/>		
-        <ePixmap pixmap="msn/wind.png" position="370,30" size="60,60" alphatest="blend"/>
+        <ePixmap pixmap="msn/wind.png" position="390,25" size="60,60" alphatest="blend"/>
 		<ePixmap pixmap="buttons/red20.png" position="63,55" size="20,25" alphatest="blend"/>
 		<ePixmap pixmap="buttons/green20.png" position="93,55" size="20,25" alphatest="blend"/>
 		<ePixmap pixmap="buttons/yellow20.png" position="123,55" size="20,25" alphatest="blend"/>
