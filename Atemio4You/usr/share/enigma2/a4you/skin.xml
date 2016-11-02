@@ -775,7 +775,7 @@
 		    <convert type="EventTime">Remaining</convert>
 		    <convert type="RemainingToText">Noseconds</convert>
 		</widget>
-		<widget source="ServiceEvent" render="SingleEpgList" position="795,537" size="480,85" font="xRegular;15" halign="left" transparent="1" noWrap="1" foregroundColor="bluette" backgroundColor="bkwall" zPosition="2" valign="top"/>
+		<widget source="ServiceEvent" render="SingleEpgList" position="795,540" size="480,80" font="xRegular;14" halign="left" transparent="1" noWrap="1" foregroundColor="bluette" backgroundColor="bkwall" zPosition="2" valign="top"/>
 	</screen>		
 		
 	<!-- ChannelList Menu OK -->
