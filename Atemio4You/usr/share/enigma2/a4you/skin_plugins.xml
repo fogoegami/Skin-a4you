@@ -517,7 +517,8 @@
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRGYB"/>
-		<panel name="KeyInfoTemplate"/>
+		<panel name="Menu_EPG"/>
+		<panel name="ButtonInfo"/>
 		<widget name="config" position="40,90" size="585,500" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 		<widget name="status" position="45,500" size="560,50" foregroundColor="#73c6ff" font="Regular;20" backgroundColor="bkwall"/>
 		<widget name="statusbar" position="45,550" size="560,50" foregroundColor="#73c6ff" font="Regular;20" backgroundColor="bkwall"/>
