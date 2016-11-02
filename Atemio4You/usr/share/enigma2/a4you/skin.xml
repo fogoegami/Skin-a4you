@@ -2283,9 +2283,10 @@
 			pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png"/>
 		<widget name="speed" position="35,5" size="80,18" font="Regular;17" halign="left" backgroundColor="transpBlack" foregroundColor="white"  transparent="1" zPosition="4"/>
 	</screen-->
-    <screen name="PVRState" position="240,593" zPosition="2" size="80,22" backgroundColor="black" flags="wfNoBorder" transparent="0">
-		<widget name="statusicon" position="10,3" zPosition="3" size="50,50" alphatest="on" pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png"/>
-		<widget name="speed" position="32,5" size="80,15" font="xRegular;17" halign="left" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1" zPosition="4"/>
+	
+        <screen name="PVRState" position="240,593" zPosition="2" size="80,25" backgroundColor="black" flags="wfNoBorder" transparent="0">
+		<widget name="statusicon" position="10,0" zPosition="3" size="50,55" alphatest="blend" transparent="0" pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png"/>
+		<widget name="speed" position="32,2" size="80,15" font="xRegular;17" halign="left" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1" zPosition="4"/>
 	</screen>	
 		
 	<!-- EPG Selection OK -->
