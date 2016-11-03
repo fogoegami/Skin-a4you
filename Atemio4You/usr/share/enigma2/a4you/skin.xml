@@ -1991,7 +1991,8 @@
 		<ePixmap pixmap="menu/bkmedia.png" position="0,0" size="1280,720" zPosition="-1"/>
 		<ePixmap pixmap="menu/mediashadow.png" position="0,0" size="1280,720" zPosition="10" alphatest="blend"/>
 		<widget source="Title" render="Label" zPosition="1" position="480,40" size="390,30" font="xRegular;26" foregroundColor="#808080" backgroundColor="bkwall" transparent="1"/>
-		<ePixmap pixmap="buttons/key_menu1.png" position="1175,37" size="40,22" alphatest="blend"/>		
+		<ePixmap pixmap="buttons/key_menu1.png" position="1130,37" size="40,22" alphatest="blend"/>
+                <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
 		
 	<!-- Pig -->
 		<eLabel position="30,108" size="350,200" backgroundColor="#808080"/>
