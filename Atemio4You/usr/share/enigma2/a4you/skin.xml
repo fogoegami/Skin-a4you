@@ -1866,7 +1866,7 @@
         <widget name="timeline4" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
         <widget name="timeline5" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>	
 	<!-- Time -->
-		<widget name="bouquetlist" position="40,80" size="1150,110" itemHeight="28" scrollbarMode="showNever" foregroundColor="#00ff4a3c" backgroundColor="bkwall" transparent="0" zPosition="4"/>
+		<widget name="bouquetlist" position="60,225"  size="1160,395" itemHeight="28" scrollbarMode="showNever" foregroundColor="#00ff4a3c" backgroundColor="bkwall" transparent="0" zPosition="4"/>
 		<widget name="timeline_now" position="0,95" size="19,585" pixmap="epg/timeline-now.png" alphatest="on" zPosition="3"/>
 		<!--widget source="global.CurrentTime" render="Label" position="300,44" size="450,50" font="Regular;20" foregroundColor="red" halign="right" transparent="1" zPosition="10">
 		    <convert type="ClockToText">Format:%A %d %B</convert>
