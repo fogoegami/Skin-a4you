@@ -1780,7 +1780,7 @@
 		<widget name="lab1" position="0,65" size="1280,615" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,70" size="1280,30" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="0"/>
 		<widget name="bouquetlist" position="0,95" size="1280,590" foregroundColorSelected="black" scrollbarMode="showNever" zPosition="2" transparent="0"/>
-		<widget name="list" position="0,90" size="1280,585" RecordForegroundColorSelected="#00ff4a3c" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
+		<widget name="list" position="0,90" size="1280,585" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<widget name="timeline_now" position="0,90" zPosition="3" size="25,593" pixmap="epg/timeline-now.png" alphatest="on"/>
 		<widget name="timeline0" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
                 <widget name="timeline1" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
@@ -1847,7 +1847,7 @@
 		
 	<!-- Channels + Bar -->
 		<widget name="timeline_text" position="60,200" selectionDisabled="1" size="1160,25" foregroundColor="bluette" backgroundColor="black" transparent="1"/>
-		<widget name="list" position="60,225" size="1160,395" backgroundColor="black" RecordForegroundColorSelected="#00ff4a3c" scrollbarMode="showNever" zPosition="1" transparent="0"/>
+		<widget name="list" position="60,225" size="1160,395" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<ePixmap pixmap="buttons/key_8_epg.png" position="60,617" size="60,25" alphatest="blend" zPosition="2"/>
 		<widget name="page" position="110,617" size="200,25" font="xRegular;17" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/key_9_epg.png" position="360,617" size="60,25" alphatest="blend" zPosition="2"/>
@@ -1917,7 +1917,7 @@
 		<widget name="lab1" position="0,50" size="1280,115" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,50" size="1280,30" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="0"/>
 		<widget name="bouquetlist" position="10,75" size="1280,85" itemHeight="42" backgroundColor="black" foregroundColorSelected="#00ff4a3c" scrollbarMode="showNever" zPosition="4" transparent="0"/>
-		<widget name="list" position="0,75" size="1280,85" RecordForegroundColorSelected="#00ff4a3c" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="1" EntryFontWrap="no"/>
+		<widget name="list" position="0,75" size="1280,85" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="1" EntryFontWrap="no"/>
 		<widget name="timeline_now" position="0,75" size="22,85" pixmap="epg/timeline-now-infobarEPG.png" alphatest="blend" zPosition="2"/>
 		<widget name="timeline0" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
                 <widget name="timeline1" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
