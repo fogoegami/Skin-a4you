@@ -1745,7 +1745,7 @@
 		<ePixmap position="1000,490" size="300,300" pixmap="menu/speaker.png" alphatest="blend"/>
 	</screen>
 
-    <screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
+        <screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
 		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,20" size="1280,50" zPosition="-1"/>
 		<ePixmap pixmap="icons/clock.png" position="1130,30" zPosition="1" size="20,20" alphatest="blend"/>
 		<widget source="global.CurrentTime" render="Label" position="1148,28" size="100,28" font="xRegular;22" foregroundColor="#a0a0a0" backgroundColor="bkwall" halign="right" transparent="1" zPosition="1">
@@ -1777,19 +1777,17 @@
 		<ePixmap pixmap="buttons/key_ch.png" position="920,55" size="60,25" alphatest="blend" zPosition="2"/>
 		<widget name="jump" position="960,55" size="200,25" font="xRegular;15" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<widget name="number" position="0,193" size="100,25" foregroundColor="#73c6ff" transparent="1"/>
-		<widget name="lab1" position="0,50" size="1280,115" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
-		<widget name="number" position="20,82" size="660,592" zPosition="5" backgroundColor="transparent" transparent="0" borderColor="black" borderWidth="2" valign="center" halign="center"/>
-		<widget name="lab1" position="0,70" size="1280,620" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
+		<widget name="lab1" position="0,65" size="1280,615" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget name="timeline_text" position="0,70" size="1280,30" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="0"/>
 		<widget name="bouquetlist" position="0,95" size="1280,590" foregroundColorSelected="black" scrollbarMode="showNever" zPosition="2" transparent="0"/>
 		<widget name="list" position="0,90" size="1280,585" RecordForegroundColorSelected="#00ff4a3c" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<widget name="timeline_now" position="0,90" zPosition="3" size="25,593" pixmap="epg/timeline-now.png" alphatest="on"/>
 		<widget name="timeline0" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-        <widget name="timeline1" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-        <widget name="timeline2" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-        <widget name="timeline3" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-        <widget name="timeline4" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-        <widget name="timeline5" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+                <widget name="timeline1" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+                <widget name="timeline2" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+                <widget name="timeline3" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+                <widget name="timeline4" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+                <widget name="timeline5" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
 		<ePixmap pixmap="buttons/key_help.png" position="20,683" size="40,22" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_menu1.png" position="1125,683" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1170,683" size="40,22" alphatest="blend"/>
@@ -1806,7 +1804,7 @@
 	</screen>	
 		
 	<!-- GraphicalEPG OK -->
-	<screen name="GraphicalEPGPIG" title="E.P Guide" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GraphicalEPGPIG" title="E.P Guide" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
 	    <panel name="nRGYB"/>
 	    <panel name="Epg_Search"/>
 		<ePixmap pixmap="menu/bkdown_epg-pig.png" position="0,0" size="1280,720" zPosition="-1"/>		
@@ -1849,7 +1847,7 @@
 		
 	<!-- Channels + Bar -->
 		<widget name="timeline_text" position="60,200" selectionDisabled="1" size="1160,25" foregroundColor="bluette" backgroundColor="black" transparent="1"/>
-		<widget name="list" position="60,225"  size="1160,395" EntryBackgroundColor="#2f4974" EntryBackgroundColorSelected="#688cbf" EntryBorderColor="grey" RecordForegroundColorSelected="#00ff4a3c" backgroundColor="black" itemHeight="60" scrollbarMode="showNever" transparent="1"/>
+		<widget name="list" position="60,225" size="1160,395" backgroundColor="black" RecordForegroundColorSelected="#00ff4a3c" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<ePixmap pixmap="buttons/key_8_epg.png" position="60,617" size="60,25" alphatest="blend" zPosition="2"/>
 		<widget name="page" position="110,617" size="200,25" font="xRegular;17" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/key_9_epg.png" position="360,617" size="60,25" alphatest="blend" zPosition="2"/>
@@ -1859,12 +1857,12 @@
 		<ePixmap pixmap="buttons/key_ch.png" position="1025,617" size="60,25" alphatest="blend" zPosition="2"/>
 		<widget name="jump" position="1080,616" size="200,25" font="xRegular;17" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<widget name="number" position="60,193" size="100,25" foregroundColor="#73c6ff" transparent="1"/>
-        <widget name="timeline0" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-        <widget name="timeline1" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-        <widget name="timeline2" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-        <widget name="timeline3" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-        <widget name="timeline4" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-        <widget name="timeline5" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>	
+                <widget name="timeline0" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+                <widget name="timeline1" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+                <widget name="timeline2" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+                <widget name="timeline3" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+                <widget name="timeline4" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+                <widget name="timeline5" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>	
 	<!-- Time -->
 		<widget name="bouquetlist" position="60,225"  size="1160,395" itemHeight="28" scrollbarMode="showNever" foregroundColor="#00ff4a3c" backgroundColor="bkwall" transparent="0" zPosition="4"/>
 		<widget name="timeline_now" position="0,95" size="19,585" pixmap="epg/timeline-now.png" alphatest="on" zPosition="3"/>
@@ -1880,7 +1878,7 @@
 		</widget>		
 		
 	<!-- Bouquet -->
-		<widget name="lab1" position="70,225" size="1150,390" halign="center" transparent="0" valign="center" zPosition="20"/>
+		<widget name="lab1" position="60,198" size="1280,425" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
 		<widget alphatest="blend" name="timeline_now" pixmap="epg/timeline-now-pig.png" position="80,224" zPosition="3" size="19,395"/>
 	</screen>
 	
@@ -1917,17 +1915,16 @@
 		<widget name="jump" position="985,35" size="200,25" font="xRegular;15" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<widget name="number" position="0,193" size="100,25" foregroundColor="#73c6ff" transparent="1"/>
 		<widget name="lab1" position="0,50" size="1280,115" font="Regular;24" halign="center" valign="center" zPosition="20" backgroundColor="black" transparent="0"/>
-		<widget name="number" position="20,82" size="660,592" zPosition="5" backgroundColor="transparent" transparent="0" borderColor="black" borderWidth="2" valign="center" halign="center"/>
 		<widget name="timeline_text" position="0,50" size="1280,30" backgroundColor="black" foregroundColor="bluette" transparent="1" zPosition="0"/>
 		<widget name="bouquetlist" position="10,75" size="1280,85" itemHeight="42" backgroundColor="black" foregroundColorSelected="#00ff4a3c" scrollbarMode="showNever" zPosition="4" transparent="0"/>
 		<widget name="list" position="0,75" size="1280,85" RecordForegroundColorSelected="#00ff4a3c" backgroundColor="black" scrollbarMode="showNever" zPosition="1" transparent="1" EntryFontWrap="no"/>
 		<widget name="timeline_now" position="0,75" size="22,85" pixmap="epg/timeline-now-infobarEPG.png" alphatest="blend" zPosition="2"/>
 		<widget name="timeline0" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-        <widget name="timeline1" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-        <widget name="timeline2" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-        <widget name="timeline3" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-        <widget name="timeline4" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-        <widget name="timeline5" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+                <widget name="timeline1" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+                <widget name="timeline2" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+                <widget name="timeline3" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+                <widget name="timeline4" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+                <widget name="timeline5" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
 		<ePixmap pixmap="buttons/key_help.png" position="20,162" size="60,25" alphatest="blend"/>
 		<ePixmap pixmap="buttons/red.png" position="100,163" size="20,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget name="key_red" position="130,160" size="240,25" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
@@ -1937,11 +1934,11 @@
 		<widget name="key_yellow" position="645,160" size="240,25" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<ePixmap pixmap="buttons/blue.png" position="840,163" size="240,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget name="key_blue" position="870,160" size="440,25" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-        <ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,160" size="1280,40" zPosition="-1"/>
-	    <ePixmap pixmap="buttons/key_menu1.png" position="1130,162" size="40,22" alphatest="blend"/>
+                <ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,160" size="1280,40" zPosition="-1"/>
+	        <ePixmap pixmap="buttons/key_menu1.png" position="1130,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1175,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1220,162" size="40,22" alphatest="blend"/>		
-    </screen>
+        </screen>
 	<!-- QuickEPG -->
 		<screen name="QuickEPG" position="0,e-200" size="1280,200" backgroundColor="bkwall" title="InfoBar" transparent="0" flags="wfNoBorder">
 		<ePixmap pixmap="buttons/key_help.png" position="20,162" size="40,22" alphatest="blend" transparent="1" zPosition="1"/>
