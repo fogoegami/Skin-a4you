@@ -2485,7 +2485,7 @@
 		<panel name="sPigTemplate"/>
 		<panel name="nRGYB"/>
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
-		<ePixmap pixmap="buttons/maxbar.png" position="685,80" size="25,510" zPosition="3" alphatest="blend"/>
+		<!--ePixmap pixmap="buttons/maxbar.png" position="685,80" size="25,510" zPosition="3" alphatest="blend"/-->
 		<widget name="timerlist" position="40,82" size="660,245" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 		<widget name="description" position="80,350" size="610,390" font="xRegular;16" backgroundColor="bkwall" transparent="1"/>	
 		<ePixmap position="950,500" size="300,300" pixmap="menu/timer.png" alphatest="blend"/>
