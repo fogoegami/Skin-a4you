@@ -281,7 +281,7 @@
 	<screen name="InfoBar" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,580" size="1280,140" pixmap="infobar/infobar.png" zPosition="-1" alphatest="off"/>
 	<!--  SNR-->	
-	    <eLabel text="SNR :" position="800,613" size="60,22" font="xRegular;8" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+	        <eLabel text="SNR :" position="800,613" size="60,22" font="xRegular;8" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<widget source="session.FrontendStatus" render="Progress" position="820,616" size="190,5" pixmap="infobar/pbar_snr_snr.png" backgroundColor="bkwall" zPosition="1" borderWidth="1" borderColor="grey">
 		    <convert type="FrontendInfo">SNR</convert>
 		</widget>
@@ -326,9 +326,14 @@
 		<!--widget source="session.CurrentService" render="Label" text="Emu Info" position="550,661" size="250,24" font="Regular;12" valign="top" halign="right" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="10">
 		    <convert type="PliExtraInfo">CryptoSpecial</convert>
 		</widget-->
-		<widget source="session.CurrentService" render="Label" position="400,661" size="250,24" font="xRegular;12" valign="top" halign="right" foregroundColor="bluette" backgroundColor="bkwall"  transparent="1" zPosition="10">
- 			<convert type="EGExtraInfo">EcmInfo</convert>
+		
+	<!--  Info Crypto -->		
+		<widget source="session.CurrentService" render="Label" position="400,655" size="250,24" font="xRegular;12" valign="top" halign="right" foregroundColor="bluette" backgroundColor="bkwall"  transparent="1" zPosition="10">
+ 			<convert type="PliExtraInfo">CryptoSpecial</convert>
  		</widget>
+		<widget source="session.CurrentService" render="Label" position="680,632" size="400,60" font="xRegular;12" valign="center" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
+		    <convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>		
 		
 	<!--  Progress Bar -->
 		<widget source="session.Event_Now" render="Progress" position="205,622" size="588,2" pixmap="infobar/pbar.png" backgroundColor="#20000000" transparent="0" zPosition="2" borderWidth="0">
@@ -392,9 +397,6 @@
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1127,655" size="40,18" zPosition="1" alphatest="blend">
 		    <convert type="ServiceInfo">IsMultichannel</convert>
 		    <convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="680,632" size="400,60" font="xRegular;11" valign="center" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
-		    <convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 	</screen>
 	
