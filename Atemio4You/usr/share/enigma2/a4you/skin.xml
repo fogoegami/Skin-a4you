@@ -2486,7 +2486,7 @@
 		<panel name="nRGYB"/>
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
 		<widget name="timerlist" position="40,80" size="730,145" font="Regular;23" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
-		<widget name="description" position="35,250" size="748,380" font="Regular;18" backgroundColor="bkwall" transparent="1"/>	
+		<widget name="description" position="35,250" size="748,380" font="xRegular;18" backgroundColor="bkwall" transparent="1"/>	
 		<ePixmap position="950,500" size="300,300" pixmap="menu/timer.png" alphatest="blend"/>
 	</screen>		
 		
