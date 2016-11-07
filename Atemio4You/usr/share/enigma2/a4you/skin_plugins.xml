@@ -852,19 +852,17 @@
 	<screen name="TranscodingSetup" position="fill" title="Transcoding Setup" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
-		<panel name="nRG"/>
+		<panel name="sRG"/>
 		<widget name="config" zPosition="2" position="50,100" size="730,300" scrollbarMode="showOnDemand" transparent="1"/>
-		<eLabel text="exit" position="85,660" size="60,25" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1" zPosition="2"/>
-		<eLabel text="save" position="335,660" size="60,25" font="Regular;20" foregroundColor="white" backgroundColor="bkwall" transparent="1" zPosition="2"/>
-		<widget name="description" position="50,245" size="730,70" font="Regular;17" halign="center" valign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
-		<widget name="HelpTextHeader1" position="50,320" size="730,22" font="Regular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
-		<widget name="HelpText1" position="50,350" size="730,150" font="Regular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
-		<widget name="HelpTextHeader2" position="50,510" size="730,22" font="Regular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
-		<widget name="HelpText2" position="50,540" size="730,50" font="Regular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="description" position="50,245" size="730,70" font="xRegular;17" halign="center" valign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpTextHeader1" position="50,320" size="730,22" font="xRegular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpText1" position="50,350" size="730,150" font="xRegular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpTextHeader2" position="50,510" size="730,22" font="xRegular;19" halign="center" valign="center" foregroundColor="#ff0000" backgroundColor="bkwall" transparent="1"/>
+		<widget name="HelpText2" position="50,540" size="730,50" font="xRegular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
 	</screen>
 	
-    <!-- ADD MyTubePlayer MainScreen OKK -->
-    <screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
+        <!-- ADD MyTubePlayer MainScreen OKK -->
+        <screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGY"/>
