@@ -328,7 +328,7 @@
 		</widget-->
 		
 	<!--  Info Crypto -->		
-		<widget source="session.CurrentService" render="Label" position="400,655" size="250,24" font="xRegular;12" valign="top" halign="right" foregroundColor="bluette" backgroundColor="bkwall"  transparent="1" zPosition="10">
+		<widget source="session.CurrentService" render="Label" position="400,655" size="250,24" font="xRegular;12" valign="top" halign="right" foregroundColor="yellow" backgroundColor="bkwall"  transparent="1" zPosition="10">
  			<convert type="PliExtraInfo">CryptoSpecial</convert>
  		</widget>
 		<widget source="session.CurrentService" render="Label" position="680,632" size="400,60" font="xRegular;12" valign="center" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
