@@ -510,7 +510,7 @@
 			<convert type="EGExtraInfo">CamName</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="60,510" size="350,80" font="xRegular;12" halign="left" noWrap="1" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1">
-			<convert type="EGExtraInfo">NetInfo</convert>
+			<convert type="EGExtraInfo">E-C-N</convert>
 		</widget>		
 	<!--  Screen -->
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="120,415" size="40,21" zPosition="3" alphatest="on">
