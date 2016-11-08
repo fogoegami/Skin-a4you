@@ -208,9 +208,9 @@
 	<screen name="VirtualKeyBoard" title="Metro Virtual KeyBoard" position="center,center" size="825,300" zPosition="99" backgroundColor="bkwall">
 		<widget name="list" position="5,70" transparent="1" size="700,300" scrollbarMode="showOnDemand" selectionDisabled="1" backgroundColor="bkwall"/>
 		<eLabel position="5,5" size="690,50" backgroundColor="#4D5375"/>
-		<eLabel position="7,7" size="686,46" backgroundColor="#4D5375" zPosition="1"/>
-		<eLabel position="3,65" size="4,25" backgroundColor="bkwall" zPosition="0"/>
-		<eLabel position="3,68" size="45,4" backgroundColor="bkwall" zPosition="0"/>
+		<eLabel position="7,7" size="686,46" backgroundColor="#4D5375"/>
+		<eLabel position="3,65" size="4,25" backgroundColor="bkwall"/>
+		<eLabel position="3,68" size="45,4" backgroundColor="bkwall"/>
 	        <ePixmap pixmap="buttons/vkey_esc_keyboard.png" zPosition="2" position="8,73" size="38,38" transparent="1" alphatest="blend"/>
 		<widget name="header" position="10,42" size="735,26" transparent="0" noWrap="1" foregroundColor="#00ff4a3c" backgroundColor="bkwall"/>
 		<widget name="text" position="13,10" size="670,40" font="Regular;36" transparent="1" noWrap="1" halign="right" foregroundColor="#ffffff" backgroundColor="#10101010" zPosition="5"/>
