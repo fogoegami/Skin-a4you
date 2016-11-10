@@ -141,7 +141,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="footnote" position="480,430" size="300,50" zPosition="1" font="Regular;20" foregroundColor="bluette" backgroundColor="bkwall" halign="left" transparent="1" valign="top"/>
-		<ePixmap pixmap="menu/setup_selection.png" position="920,500" size="300,300" alphatest="blend"/>
+		<ePixmap pixmap="mainmenu/setup.png" position="980,530" size="300,300" alphatest="blend"/>
 		<ePixmap pixmap="icons/info_on.png" position="360,445" size="50,50" zPosition="2" alphatest="blend"/>
 	</screen>
 		
