@@ -57,7 +57,7 @@
 	    <ePixmap pixmap="buttons/blue.png" position="540,667" size="20,25" alphatest="blend"/>
 	</screen>	
 	
-	<!--LIST MENUS AND ICON RIGHT-->		
+	<!--LIST MENUS AND ICON LEFT-->		
 	<screen name="MenuTemplate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="bkwall">
 	    <panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
