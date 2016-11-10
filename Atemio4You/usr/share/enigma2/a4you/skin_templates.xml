@@ -66,7 +66,7 @@
  		<widget source="menu" render="Listbox" position="40,80" size="585,495" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 		    <convert type="TemplatedMultiContent">
 			    {"template": [ MultiContentEntryText(pos = (45,6), size = (535,30), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ),
-				MultiContentEntryPixmapAlphaBlend(pos=(10,2),size=(35,35),png=5,)],
+				MultiContentEntryPixmapAlphaBlend(pos=(5,2),size=(35,35),png=5,)],
 				"fonts": [gFont("Regular",24)],
 				"itemHeight": 45
 		        }
