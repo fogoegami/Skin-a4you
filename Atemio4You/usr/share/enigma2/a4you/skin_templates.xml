@@ -57,14 +57,16 @@
 	    <ePixmap pixmap="buttons/blue.png" position="540,667" size="20,25" alphatest="blend"/>
 	</screen>	
 	
+	<!--LIST MENUS AND ICON RIGHT-->		
 	<screen name="MenuTemplate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="bkwall">
 	    <panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="buttons/maxbar.png" position="610,80" size="15,520" zPosition="2" alphatest="blend"/>
- 		<widget source="menu" render="Listbox" position="40,80" size="585,495" backgroundPixmap="buttons/menuback.png" selectionPixmap="buttons/menuselect.png" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
+ 		<widget source="menu" render="Listbox" position="40,80" size="585,495" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 		    <convert type="TemplatedMultiContent">
-			    {"template": [ MultiContentEntryText(pos = (45,6), size = (535,30), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ) ],
+			    {"template": [ MultiContentEntryText(pos = (45,6), size = (535,30), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0 ),
+				MultiContentEntryPixmapAlphaBlend(pos=(10,2),size=(35,35),png=5,)],
 				"fonts": [gFont("Regular",24)],
 				"itemHeight": 45
 		        }
@@ -73,85 +75,20 @@
         <panel name="sort_menu"/>
 	</screen>
 	
+        <!--MAIN MENU-->
 	<screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 	     <panel name="MenuTemplate"/>
-	</screen>
-	
-    <screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="MenuTemplate"/>
-        <widget source="menu" render="Pixmap" pixmap="menu/ico_egami.png" position="800,450" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">egami_selection</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/setup.png" position="700,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">egami_boot</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>	
-		<widget source="menu" render="Pixmap" pixmap="menu/choice.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">egami_boot</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-        <widget source="menu" render="Pixmap" pixmap="menu/info.png" position="700,500" size="150,256" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">EGAMINews</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="FixedLabel" text="Check if updates available and changes, open Menu EGAMI-News." position="850,550" zPosition="1" size="360,130" font="Regular;22" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
-		<convert type="MenuEntryCompare">EGAMINews</convert>
-		<convert type="ConditionalShowHide"/>
-		</widget>
-  		<widget source="menu" render="Pixmap" pixmap="menu/mediaplayer.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">media_player</convert>
-  		    <convert type="ConditionalShowHide"/>
-  		</widget>
-		<widget source="menu" render="FixedLabel" text="You can read the pictures inside this menu." position="850,550" zPosition="1" size="360,130" font="Regular;22" foregroundColor="bluette" backgroundColor="bkwall" transparent="1">
-			<convert type="MenuEntryCompare">picture_player</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		 <widget source="menu" render="Pixmap" pixmap="menu/plugin.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">plugin_selection</convert>
-  		    <convert type="ConditionalShowHide"/>
-  		</widget>
-  		<widget source="menu" render="Pixmap" pixmap="menu/timer.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">timer_menu</convert>
-  		    <convert type="ConditionalShowHide"/>
-  		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/setup_selection.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">setup_selection</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/info.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">info_screen</convert>
-  		    <convert type="ConditionalShowHide"/>
-  		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/power.png" position="870,500" size="256,256" alphatest="blend" transparent="1" zPosition="1">
-  		    <convert type="MenuEntryCompare">standby_restart_list</convert>
-  		    <convert type="ConditionalShowHide"/>
-  		</widget>
- 	</screen>
-    <screen name="menu_setup" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="MenuTemplate"/>
-		<widget source="menu" render="Pixmap" pixmap="menu/setup.png" position="870,500" size="300,300" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">system_selection</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-	    <widget source="menu" render="Pixmap" pixmap="menu/setup_selection.png" position="870,500" size="300,300" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">tv_selection</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/storage.png" position="870,500" size="300,300" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">hardisk_selection</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/setup_selection.png" position="870,500" size="300,300" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">parental_setup</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menu/wizard.png" position="1025,460" size="300,300" alphatest="blend" transparent="1" zPosition="1">
-			<convert type="MenuEntryCompare">factory_reset</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
 	</screen>	
-    <screen name="menu_system" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	     <panel name="MenuTemplate"/>
+	</screen>	
+        <screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="MenuTemplate"/>
+ 	</screen>
+        <screen name="menu_setup" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="MenuTemplate"/>
+	</screen>	
+        <screen name="menu_system" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
 	</screen>		
 	<screen name="menu_information" flags="wfNoBorder" position="fill">
@@ -162,15 +99,14 @@
 	</screen>	
 	<screen name="menu_harddisk" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
-		<ePixmap position="870,500" size="300,300" pixmap="menu/storage.png" alphatest="blend"/>
 	</screen>	
 	<screen name="menu_shutdown" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
-		<ePixmap position="870,500" size="300,300" pixmap="menu/power.png" alphatest="blend"/>
 	</screen>	
-    <screen name="menu_network" position="0,0" size="1280,720" flags="wfNoBorder">	
+        <screen name="menu_network" position="0,0" size="1280,720" flags="wfNoBorder">	
 	     <panel name="MenuTemplate"/>
-    </screen>	
+        </screen>
+	
 	<screen name="SelectionTemplate">
 		<panel name="BasicTemplate"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,110" size="417,243" backgroundColor="transparent" zPosition="1"/>
