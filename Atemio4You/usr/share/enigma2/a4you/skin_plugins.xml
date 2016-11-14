@@ -1076,4 +1076,18 @@
 		<widget name="config" position="60,90" size="520,100" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1"/>
 		<widget name="info" position="60,560" size="520,50" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 	</screen>
+	
+	<!-- Transmission -->
+	<screen name="Transmission" position="0,0" size="1280,720" title="Transmission Menu" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,72" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,118" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,162" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,208" size="50,50" zPosition="2" alphatest="blend"/>
+	        <ePixmap pixmap="buttons/menuback.png" position="30,254" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/menuback.png" position="30,300" size="50,50" zPosition="2" alphatest="blend"/>
+		<ePixmap pixmap="buttons/key_ok.png" position="300,657" size="250,28" zPosition="1" alphatest="blend"/>
+		<widget name="menu" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+	</screen>
 </skin>
