@@ -129,7 +129,7 @@
 	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
-		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="on" zPosition="2" />
+		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="blend" zPosition="2"/>
 		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
 		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
