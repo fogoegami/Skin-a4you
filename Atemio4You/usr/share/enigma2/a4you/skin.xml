@@ -615,7 +615,8 @@
 	<screen name="Console" title="Command Console" size="1280,720" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
-		<widget name="text" position="35,85" size="1280,720" font="Console;15" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="770,85" size="15,540" zPosition="2" alphatest="blend"/>
+		<widget name="text" position="35,85" size="750,540" font="Console;14" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2"/>
 	</screen>
 		
 	<!--  Simple channelselection OK -->
