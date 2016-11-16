@@ -2254,7 +2254,8 @@
 	</screen-->
 
 	<screen name="DVDPlayer" flags="wfNoBorder" position="71,580" size="1280,700" backgroundColor="transparent">
-	<panel name="PlayerDVD"/>
+	        <panel name="PlayerDVD"/>
+                <panel name="PVRState"/>	
 		<ePixmap position="0,0" pixmap="dvr/mplayer.png" zPosition="-1" size="1138,88" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="225,11" size="845,24" font="Regular;22" halign="center" foregroundColor="#73c6ff" backgroundColor="#000000" transparent="1" zPosition="1">
 		    <convert type="ServiceName">Name</convert>
