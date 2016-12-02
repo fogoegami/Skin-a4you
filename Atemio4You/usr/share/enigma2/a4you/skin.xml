@@ -246,19 +246,19 @@
 		<widget source="global.CurrentTime" render="Label" position="1103,28" size="140,60" font="Regular;50" halign="left" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Default</convert>
 		</widget>
-		<widget  source="global.CurrentTime" render="Label" position="931,37" size="161,27" font="Regular;15" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		<widget  source="global.CurrentTime" render="Label" position="750,40" size="161,60" font="Regular;35" halign="right" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Format:%A</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="931,60" size="161,29" font="Regular;16" halign="right" foregroundColor="#808080" backgroundColor="bkwall" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="895,40" size="161,60" font="Regular;35" halign="right" backgroundColor="bkwall" transparent="1">
 		    <convert type="ClockToText">Format:%e. %b</convert>
 		</widget>
 		<widget name="list" position="40,90" size="730,510" itemHeight="30" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<ePixmap pixmap="buttons/maxbar.png" position="755,90" size="15,510" zPosition="2" alphatest="blend"/>
 		<widget name="rc" pixmaps="rc.png,rcold.png" position="1120,110" size="154,500" alphatest="blend" zPosition="10"/>
-		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on"/>
-		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="mega32/skin_default/arrowup.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend"/>
+		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="arrowdown.png" zPosition="11" alphatest="blend"/>
+		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend"/>
+		<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="arrowup.png" zPosition="11" alphatest="blend"/>
 		<widget name="long_key" position="1016,670" size="250,20" foregroundColor="yellow" font="Regular;16" halign="center" backgroundColor="bkwall" transparent="1"/>
 	</screen>	
 		
