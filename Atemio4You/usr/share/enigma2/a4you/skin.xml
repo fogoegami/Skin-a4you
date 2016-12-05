@@ -1293,7 +1293,7 @@
 				MultiContentEntryText(pos = (10, 3), size = (670, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
 				MultiContentEntryText(pos = (50, 26), size = (630, 50), font = 1, color=0x73c6ff, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 				],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"fonts": [gFont("xRegular", 18), gFont("xRegular", 16)],
 				"itemHeight": 70
 				}
 		    </convert>
