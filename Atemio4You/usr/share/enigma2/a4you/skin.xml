@@ -159,7 +159,7 @@
 	<screen name="SubtitleDisplay" title="SubTitle" position="fill" backgroundColor="bkwall" zPosition="-1" flags="wfNoBorder"/>
 	
         <!--  QuickSubtitlesConfigMenu OK -->
-		<screen name="QuickSubtitlesConfigMenu" position="350,500" size="600,320" title="Subtitle settings" backgroundColor="bkwall" flags="wfNoBorder">
+		<screen name="QuickSubtitlesConfigMenu" position="350,450" size="600,320" title="Subtitle settings" backgroundColor="bkwall" flags="wfNoBorder">
 		<widget name="config" position="20,5" size="570,250" font="xRegular;16" foregroundColor="bluette" zPosition="1" transparent="1" valign="center"/>
 		<widget name="videofps" position="20,255" size="570,20" backgroundColor="bkwall" transparent="1" zPosition="1" font="xRegular;14" valign="center" halign="left" foregroundColor="bluette"/>
 	</screen>
