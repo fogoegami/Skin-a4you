@@ -375,7 +375,13 @@
 		<ePixmap pixmap="buttons/grey20.png" position="1050,610" size="20,22" zPosition="1" alphatest="blend"/>
 		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/red20.png" position="1050,610" size="20,20" zPosition="3" alphatest="blend">
 		    <convert type="ConditionalShowHide">Blink</convert>
-		</widget>	
+		</widget>
+		
+	<!--  Stream Online -->	
+		<widget source="session.CurrentService" render="Pixmap" pixmap="buttons/stream_online.png" position="1050,650" size="20,20" zPosition="1" alphatest="on">
+			<convert type="ClientsStreaming"/>
+			<convert type="ConditionalShowHide"/>
+		</widget>		
 		
 	<!--  Ico Crypt -->
 		<ePixmap pixmap="infobar/cryptoff_ico.png" position="1220,590" size="17,25" zPosition="1" alphatest="blend"/>
