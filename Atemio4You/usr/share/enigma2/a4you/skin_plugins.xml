@@ -1090,6 +1090,7 @@
 		<ePixmap pixmap="buttons/key_ok.png" position="300,657" size="250,28" zPosition="1" alphatest="blend"/>
 		<widget name="menu" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
+	
 		<!-- Foreca -->
 	<screen name="ForecaPreview" position="0,0" size="1280,720" title="Foreca Weather Forecast" backgroundColor="#201b3c85" >
 		<eLabel text="Foreca El Tiempo 1 Semana" position="300,15" size="600,26" scrollbarMode="showOnDemand" font="xRegular;24" halign="center" foregroundColor="yellow" backgroundColor="#201b3c85" transparent="1"/>
