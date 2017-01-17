@@ -1119,8 +1119,8 @@
 	
 		<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
-		<panel name="EMC" /> 
-		<widget name="list" position="480,75" size="750,428" itemHeight="40" CoolFont="Regular;30" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#3486F4" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1" />
+		<panel name="EMC"/> 
+		<widget name="list" position="480,75" size="750,428" itemHeight="40" CoolFont="Regular;30" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="bluette" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1" />
 		<!-- Panel Info -->
 		<widget source="Service" render="Label" position="70,890" size="505,40" font="Regular; 32" halign="left" foregroundColor="white" backgroundColor="bluette" transparent="1"> 
 			<convert type="EMCServiceTime">StartTime</convert> <convert type="EMCClockToText">Date</convert>
