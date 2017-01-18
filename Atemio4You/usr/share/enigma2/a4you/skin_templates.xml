@@ -720,13 +720,14 @@
 		    <convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
-		<!-- Templates Plugin EMC -->
+	
+	<!-- Templates Plugin EMC -->
 	<screen name="EMC" title="Movie Selection" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="menu/bkmedia.png" position="0,0" size="1280,720" zPosition="-1"/>
 		<ePixmap pixmap="menu/mediashadow.png" position="0,0" size="1280,720" zPosition="10" alphatest="blend"/>
-		<widget source="Title" render="Label" zPosition="1" position="480,40" size="390,30" font="xRegular;26" foregroundColor="#808080" backgroundColor="bkwall" transparent="1"/>
+		<widget source="Title" render="Label" zPosition="1" position="480,35" size="390,30" font="xRegular;26" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="1130,37" size="40,22" alphatest="blend"/>
-                <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
+        <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
 		
 	<!-- Pig -->
 		<eLabel position="30,108" size="350,200" backgroundColor="#808080"/>
@@ -752,17 +753,17 @@
 		    <convert type="ServicePosition">Remaining,Negate</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="610,607" size="120,26" font="Regular;22" halign="left" foregroundColor="#73c6ff" backgroundColor="black" transparent="1">
-		    <convert type="ServicePosition">Length</convert>
+		  <convert type="ServicePosition">Length</convert>
 		</widget>		
 		
 	<!-- Time -->
 		<widget source="session.CurrentService" render="Label" position="600,642" size="90,22" font="Regular;19" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="4">
-		    <convert type="ServicePosition">Position,ShowHours</convert>
+		  <convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>		
 		
 	<!-- Gauge Position -->
 		<widget source="session.CurrentService" render="PositionGauge" position="720,646" size="450,13" transparent="1" zPosition="4" pointer="dvr/pointerdvd.png:460,0">
-		    <convert type="ServicePosition">Gauge</convert>
+		  <convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<ePixmap pixmap="icons/storage.png" position="40,330" size="64,64" zPosition="1" alphatest="blend"/>
 		<widget name="freeDiskSpace" position="115,340" size="300,50" font="Regular;22" foregroundColor="#73c6ff" transparent="1"/>		
@@ -833,11 +834,11 @@
         <screen name="EMCPlaylistSetup" position="fill" title="EMC Playlist Setup" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
-                <widget name="config" position="70,180" size="820,720" font="Regular;30" itemHeight="40" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-		<ePixmap position="70,988" pixmap="buttons/red20.png" size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="cancel" position="120,955" size="210,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
-		<ePixmap position="360,988" pixmap="buttons/green20.png" size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="save" position="400,955" size="210,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+                <widget name="config" position="20,100" size="580,430" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+		<ePixmap pixmap="buttons/red.png" position="60,667" size="20,25" alphatest="blend"/>
+		<widget name="cancel" position="90,630" font="Regular;20" size="210,95" zPosition="1" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/green.png" position="270,667" size="20,25" alphatest="blend"/>
+		<widget name="save" position="300,630" font="Regular;20" size="210,95" zPosition="1" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
         </screen>
 
         <screen name="MovieInfoSetup" position="fill" title="Movie Information Download Setup" backgroundColor="transparent" flags="wfNoBorder">
@@ -853,15 +854,15 @@
 		<panel name="nRGYB"/>
 	        <widget source="title" render="Label" position="10,10" size="580,35" font="Regular;27" halign="center"/>
 	        <widget source="menu" render="Listbox" position="10,55" size="580,430" scrollbarMode="showOnDemand" enableWrapAround="1">
-	            <convert type="StringList"/>
-	  </widget>
+		    <convert type="StringList"/>
+	        </widget>
         </screen>
 	<screen name="EnhancedMovieCenterMenu" position="fill" title="EnhancedMovieCenter Menu" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGYB"/>
-	<ePixmap pixmap="buttons/maxbar.png" position="760,65" size="15,550" zPosition="2" alphatest="blend"/>	
-	  <widget name="config" position="30,65" size="745,550" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1" zPosition="1"/> 
-	  <widget source="help" render="Label" position="850,510" font="Regular;18" size="400,400" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
-	</screen>
+	        <ePixmap pixmap="buttons/maxbar.png" position="760,65" size="15,550" zPosition="2" alphatest="blend"/>	
+	        <widget name="config" position="30,65" size="745,550" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1" zPosition="1"/> 
+	        <widget source="help" render="Label" position="850,510" font="Regular;18" size="400,400" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
+        </screen>
 </skin>
