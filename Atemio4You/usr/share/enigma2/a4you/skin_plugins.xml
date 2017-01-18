@@ -1065,7 +1065,7 @@
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRG"/>
-	    <widget name="config" position="60,100" size="520,360" scrollbarMode="showOnDemand" transparent="1"/>
+	        <widget name="config" position="60,100" size="520,360" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	
 	<!-- Web Browser Launcher OKK -->
@@ -1120,30 +1120,31 @@
 		<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
 		<panel name="EMC"/> 
-		<widget name="list" position="480,75" size="750,428" itemHeight="40" CoolFont="Regular;30" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
-		<!-- Panel Info -->
-		<widget source="Service" render="Label" position="70,890" size="505,40" font="Regular; 32" halign="left" foregroundColor="white" backgroundColor="bluette" transparent="1"> 
-			<convert type="EMCServiceTime">StartTime</convert> <convert type="EMCClockToText">Date</convert>
-		</widget> 
-		<widget source="Service" render="Label" position="551,890" size="150,40" font="Regular; 36" halign="left" foregroundColor="white" backgroundColor="bluette" transparent="1">
-			<convert type="EMCServiceTime">StartTime</convert> <convert type="EMCClockToText">Format:%H:%M </convert>
-		</widget> 
-		<widget source="Service" render="Label" position="664,890" size="150,40" font="Regular; 36" foregroundColor="yellow" backgroundColor="bluette" transparent="1"> 
-			<convert type="EMCServiceTime">EndTime</convert> <convert type="EMCClockToText">Format:- %H:%M </convert> 
-		</widget>
-		<widget source="Service" render="Label" position="997,890" size="300,40" font="Regular; 36" halign="left" foregroundColor="ltbluette" backgroundColor="bluette" transparent="1"> 
-			<convert type="EMCServiceTime">Duration</convert> <convert type="EMCClockToText">Format:%Hh:%Mmin</convert> 
-		</widget>
-		<!-- Code -->
-		<ePixmap position="48,28" size="52,52" pixmap="buttons/angle30.png" alphatest="blend" zPosition="2" />
-		<ePixmap position="75,50" size="52,70" pixmap="icons/list.png" alphatest="blend" zPosition="2" />
-		<!-- Clock %d.%m.%Y - %H:%M:%S --> 
-		<ePixmap position="1018,51" size="90,60" pixmap="icons/select.png" alphatest="blend" zPosition="2" />
-		<widget source="global.CurrentTime" render="Label" position="1265,32" size="264,95" font="Regular;55" halign="right" valign="center" foregroundColor="#505050" backgroundColor="#10101010" transparent="1" zPosition="1">
-			<convert type="ClockToText">Format:%H:%M:%S</convert>
-		</widget>	
-		<widget source="global.CurrentTime" render="Label" position="1550,30" size="300,95" font="Regular;35" halign="right" valign="center" foregroundColor="#505050" backgroundColor="#101010" transparent="1" zPosition="1">
-			<convert type="ClockToText">Format %A %d %B</convert>
-		</widget>
-	</screen>	
+		<widget name="list" position="465,75" size="750,428" itemHeight="40" CoolFont="Regular;20" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
+	</screen>
+	<screen name="EMCImdbScan" position="fill" title="EMC Cover search" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<!-- Movie Listbox --> 
+		<widget name="menulist" position="70,80" size="680,500" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on"/>
+		<!-- Info: Amount of searched Covers -->
+		<widget name="info" position="50,600" size="480,80" font="Regular;36" halign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<!-- aktual movie name -->
+		<widget name="m_info" position="850,280" size="400,290" font="Regular;20" halign="center" foregroundColor="ltbluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="done_msg" position="850,510" size="400,460" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<!-- Cover picture -->
+		<widget name="no_poster" position="50,100" size="300,428" zPosition="3" alphatest="on"/>
+		<widget name="poster"    position="450,100" size="300,428" zPosition="4" alphatest="on"/>
+		<ePixmap pixmap="buttons/key_menu1.png" position="850,667" size="40,22" alphatest="blend"/>
+		<widget name="Setup" position="900,635" size="300,80" font="Regular;20" halign="left" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap pixmap="buttons/key_ok.png" position="1050,667" size="40,22" alphatest="blend"/>
+		<widget name="Single search" position="1100,635" size="300,80" font="Regular;20" halign="left" valign="center" backgroundColor="bkwall" transparent="1"/>
+		<!-- Buttons  -->
+		<ePixmap position="70,665"  pixmap="buttons/red.png"    size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="ButtonRedText" position="120,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="360,665" pixmap="buttons/green.png"  size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="ButtonGreenText"  position="400,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="640,665" pixmap="buttons/yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="Manage Cover" position="680,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+	</screen>		
 </skin>
