@@ -1091,7 +1091,7 @@
 		<widget name="menu" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	
-		<!-- Foreca -->
+	<!-- Foreca -->
 	<screen name="ForecaPreview" position="0,0" size="1280,720" title="Foreca Weather Forecast" backgroundColor="#201b3c85" >
 		<eLabel text="Foreca El Tiempo 10 Días" position="300,15" size="600,26" scrollbarMode="showOnDemand" font="xRegular;24" halign="center" foregroundColor="yellow" backgroundColor="#201b3c85" transparent="1"/>
 		<widget name="MainList" position="0,75" size="1280,530" zPosition="3" backgroundColor="#40000000" enableWrapAround="1" scrollbarMode="showOnDemand" />
@@ -1117,36 +1117,38 @@
 		<ePixmap position="1200,672" size="40,22" pixmap="buttons/key_help.png" transparent="1" alphatest="blend" />
         </screen>
 	
-		<!-- PLugin EMC EnhacedMovieCenter --> 
+	<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
 		<panel name="EMC"/> 
 		<widget name="list" position="465,75" size="750,428" itemHeight="40" CoolFont="Regular;20" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
-	</screen>
+		
+        <!-- Scan IMDB -->	
 	<screen name="EMCImdbScan" position="fill" title="EMC Cover search" backgroundColor="bkwall" flags="wfNoBorder">
-		<panel name="sWallTemplate"/>
-		<panel name="sPigTemplate"/>
-		<!-- Movie Listbox --> 
-		<widget name="menulist" position="70,80" size="680,500" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on"/>
+                <ePixmap pixmap="menu/bkdown_old.png" position="0,0" size="1280,720" zPosition="-1"/>
+	<!-- Movie Listbox -->
+                <ePixmap pixmap="buttons/maxbar.png" position="1225,80" size="15,510" zPosition="2" alphatest="blend"/>		
+		<widget name="menulist" position="40,100" size="1200,310" font="Regular;18" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on"/>
 		<!-- Info: Amount of searched Covers -->
-		<widget name="info" position="50,600" size="480,80" font="Regular;36" halign="center" foregroundColor="#ffffff" backgroundColor="bluette" transparent="1" zPosition="1"/>
+		<widget name="info" position="800,610" size="480,80" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bluette" transparent="1" zPosition="1"/>
 		<!-- aktual movie name -->
-		<widget name="m_info" position="850,280" size="400,290" font="Regular;20" halign="center" foregroundColor="ltbluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
-		<widget name="done_msg" position="850,510" size="400,460" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="m_info" position="200,20" size="400,290" font="Regular;20" halign="center" foregroundColor="ltbluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="done_msg" position="625,20" size="400,460" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<!-- Cover picture -->
-		<widget name="no_poster" position="50,100" size="300,428" zPosition="3" alphatest="on"/>
-		<widget name="poster"    position="450,100" size="300,428" zPosition="4" alphatest="on"/>
+		<widget name="no_poster" position="470,420" size="150,180" zPosition="1" alphatest="blend" transparent="1"/>
+		<widget name="poster"    position="600,420" size="300,210" zPosition="1" alphatest="on"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="850,667" size="40,22" alphatest="blend"/>
 		<widget name="Setup" position="900,635" size="300,80" font="Regular;20" halign="left" valign="center" backgroundColor="bkwall" transparent="1"/>
-		<ePixmap pixmap="buttons/key_ok.png" position="1050,667" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/key_ok.png" position="1050,667" size="45,22" alphatest="blend"/>
 		<widget name="Single search" position="1100,635" size="300,80" font="Regular;20" halign="left" valign="center" backgroundColor="bkwall" transparent="1"/>
 		<!-- Buttons  -->
-		<ePixmap position="70,665"  pixmap="buttons/red.png"    size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="ButtonRedText" position="120,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+		<ePixmap position="70,665" pixmap="buttons/red.png" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget name="ButtonRedText" position="120,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="360,665" pixmap="buttons/green.png"  size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="ButtonGreenText"  position="400,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+		<widget name="ButtonGreenText" position="400,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="640,665" pixmap="buttons/yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
-		<widget name="Manage Cover" position="680,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
+		<widget name="Manage Cover" position="680,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 	</screen>
+		
 	<!-- Busqueda Caratula OK -->
 	<screen name="getCover" position="fill" title="EMC Cover Selecter" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
