@@ -1146,5 +1146,14 @@
 		<widget name="ButtonGreenText"  position="400,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="640,665" pixmap="buttons/yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
 		<widget name="Manage Cover" position="680,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="bkwall" transparent="1"/>
-	</screen>		
+	</screen>
+	<!-- Busqueda Caratula OK -->
+	<screen name="getCover" position="fill" title="EMC Cover Selecter" backgroundColor="bkwall" flags="wfNoBorder">
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="725,80" size="15,510" zPosition="2" alphatest="blend"/>
+		<widget name="menulist" position="40,80" size="700,250" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on"/>
+		<widget name="poster" position="150,335" size="500,280" alphatest="on" zPosition="2" />
+		<widget name="info" position="830,260" size="430,300" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+	</screen>	
 </skin>
