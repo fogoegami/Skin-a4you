@@ -414,7 +414,7 @@
 	
 	<screen name="sRB">
 		<panel name="sR"/>
-		<ePixmap pixmap="buttons/blue.png" position="310,657" size="20,25" alphatest="blend"/>
+		<ePixmap pixmap="buttons/blue.png" position="310,660" size="20,25" alphatest="blend"/>
 		<widget source="key_blue" render="Label" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 	</screen>
 	
