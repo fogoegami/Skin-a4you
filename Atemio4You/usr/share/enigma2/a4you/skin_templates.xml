@@ -730,9 +730,9 @@
         <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
 		
 	<!-- Pig -->
-		<eLabel position="30,108" size="350,200" backgroundColor="#808080"/>
-		<widget source="session.VideoPicture" render="Pig" position="32,110" size="346,196" backgroundColor="#ff272e43" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="50,90" size="296,20" zPosition="2" foregroundColor="bluette" font="Regular;13" valign="center" halign="center" transparent="1">
+		<eLabel position="30,38" size="350,200" backgroundColor="#808080"/>
+		<widget source="session.VideoPicture" render="Pig" position="32,40" size="346,196" backgroundColor="#ff272e43" zPosition="1"/>
+		<widget source="session.CurrentService" render="Label" position="50,20" size="296,20" zPosition="2" foregroundColor="bluette" font="xRegular;13" valign="center" halign="center" transparent="1">
 		    <convert type="ServiceName">Name</convert>
 		</widget>
 		<widget name="waitingtext" position="480,90" size="740,500" font="Regular;22" halign="center" valign="center" zPosition="4" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
@@ -753,19 +753,18 @@
 		    <convert type="ServicePosition">Remaining,Negate</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="610,607" size="120,26" font="Regular;22" halign="left" foregroundColor="#73c6ff" backgroundColor="black" transparent="1">
-		  <convert type="ServicePosition">Length</convert>
+		    <convert type="ServicePosition">Length</convert>
 		</widget>		
 		
 	<!-- Time -->
 		<widget source="session.CurrentService" render="Label" position="600,642" size="90,22" font="Regular;19" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="4">
-		  <convert type="ServicePosition">Position,ShowHours</convert>
+		    <convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>		
 		
 	<!-- Gauge Position -->
 		<widget source="session.CurrentService" render="PositionGauge" position="720,646" size="450,13" transparent="1" zPosition="4" pointer="dvr/pointerdvd.png:460,0">
-		  <convert type="ServicePosition">Gauge</convert>
+		    <convert type="ServicePosition">Gauge</convert>
 		</widget>
-		<ePixmap pixmap="icons/storage.png" position="40,330" size="64,64" zPosition="1" alphatest="blend"/>
 		<widget name="freeDiskSpace" position="115,340" size="300,50" font="Regular;22" foregroundColor="#73c6ff" transparent="1"/>		
 		
 	<!-- File Name -->
@@ -773,7 +772,7 @@
 		<eLabel position="461,511" size="770,1" backgroundColor="#808080"/>
 		<eLabel position="461,511" size="1,61" backgroundColor="#808080"/>
 		<widget source="Service" render="Label" position="1100,532" size="100,25" font="Regular;20" valign="center" foregroundColor="grey" backgroundColor="#203e69" transparent="1" zPosition="4">
-		    <convert type="MovieInfo">FileSize</convert>
+		  <convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<widget source="Service" render="Label" position="800,532" size="290,25" font="Regular;20" foregroundColor="grey" backgroundColor="#203e69" transparent="1" zPosition="4">
 		    <convert type="ServiceTime">StartTime</convert>
