@@ -842,7 +842,7 @@
 		<widget name="save" position="405,655" size="300,44" font="Regular;20" halign="left" valign="center" transparent="1"/>
 	</screen>
 
-        <screen name="MovieInfoSetup" position="fill" title="Movie Information Download Setup" backgroundColor="transparent" flags="wfNoBorder">
+        <screen name="MovieInfoSetup" position="fill" title="Movie Information Download Setup" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRG"/>
@@ -866,4 +866,11 @@
 	        <widget name="config" position="30,65" size="745,550" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1" zPosition="1"/> 
 	        <widget source="help" render="Label" position="850,510" font="Regular;18" size="400,400" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
         </screen>
+	<screen name="imdbSetup" position="fill" title="EMC Cover search setup" backgroundColor="bkwall" flags="wfNoBorder" >
+		<panel name="sWallTemplate"/>
+		<panel name="sPigTemplate"/>
+		<panel name="nRG"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="765,300" size="15,300" zPosition="2" alphatest="blend"/>
+                <widget name="config" position="40,70" size="725,300" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
+	</screen>
 </skin>
