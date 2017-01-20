@@ -129,11 +129,8 @@
 	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
+		<panel name="sRG"/>
 		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="blend" zPosition="2"/>
-		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
-		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
-		<widget source="key_red" render="Label" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-		<widget source="key_green" render="Label" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<widget name="config" position="30,70" itemHeight="40" size="754,360" zPosition="1" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="buttons/listselect.png" transparent="1"/>
 		<widget name="description" position="100,470" size="560,180" font="Regular;24" halign="center" valign="center" foregroundColor="bluette" transparent="1" zPosition="1"/>
 		<widget name="HelpWindow" position="705,525" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
