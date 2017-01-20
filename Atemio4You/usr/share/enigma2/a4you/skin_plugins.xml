@@ -1120,7 +1120,7 @@
 	<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
 		<panel name="EMC"/>
-		<widget name="Cover" position="150,246" size="100,150" zPosition="1" alphatest="on"/>	
+		<widget name="Cover" position="10,246" font="Regular;36" size="400,320" zPosition="1" alphatest="on"/>	
 		<widget name="list" position="465,75" size="750,428" itemHeight="40" CoolFont="Regular;20" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
 	</screen>	
         <!-- Scan IMDB -->	
