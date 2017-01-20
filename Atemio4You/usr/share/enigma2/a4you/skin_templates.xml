@@ -831,8 +831,9 @@
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<widget name="movie_name" position="40,60" size="540,50"  font="Regular;20" valign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="0"/>
+		<ePixmap pixmap="buttons/maxbar.png" position="565,140" size="15,450" zPosition="2" alphatest="blend"/>
 		<widget name="movielist"  position="40,140" size="540,450" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-		<widget name="resulttext" position="40,500" size="300,320" font="Regular;20" foregroundColor="ltbluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+		<widget name="resulttext" position="830,590" size="300,320" font="Regular;20" foregroundColor="ltbluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="813,667" size="71,44" alphatest="blend"/>
 		<widget name="movieinfo" position="880,655" size="300,44" font="Regular;20" halign="left" valign="center" transparent="1"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="60,667" size="71,44" alphatest="on"/>
