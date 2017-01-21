@@ -2,17 +2,12 @@
 	<!--  EGAMI PANEL  OKK -->
 	<screen name="EgamiMainPanel" position="0,0" size="1280,720" title="EGAMI Panel - Main Menu" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
-	    <panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/red.png" position="60,660" size="20,25" alphatest="blend"/>
-		<ePixmap pixmap="buttons/green.png" position="310,660" size="20,25" alphatest="blend"/>
-		<widget name="key_red" position="90,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-		<widget name="key_green" position="340,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-		<widget name="key_yellow" position="583,657" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-		<widget name="key_blue" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+	        <panel name="PigTemplate"/>
+	        <panel name="sRGYB"/>		
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
-	    <ePixmap pixmap="menu/picon_default.png" position="1110,420" size="256,256" zPosition="2" alphatest="blend"/>
-	    <ePixmap pixmap="icons/info_on.png" position="905,525" size="50,50" zPosition="2" alphatest="blend"/>
-		<widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
+	        <ePixmap pixmap="menu/picon_default.png" position="1110,420" size="256,256" zPosition="2" alphatest="blend"/>
+	        <ePixmap pixmap="icons/info_on.png" position="905,525" size="50,50" zPosition="2" alphatest="blend"/>
+	        <widget name="list" position="60,90" size="515,500" scrollbarMode="showOnDemand" transparent="1"/>
 		<ePixmap pixmap="buttons/maxbar.png" position="560,80" size="46,520" zPosition="2" alphatest="blend"/>
 		<widget name="description" position="670,565" size="560,160" zPosition="10" font="Regular;24" halign="center" foregroundColor="bluette" backgroundColor="bkwall" transparent="1"/>
 	</screen>
