@@ -130,7 +130,7 @@
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="sRG"/>
-		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="blend" zPosition="2"/>
+		<ePixmap position="1175,660" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="blend" zPosition="2"/>
 		<widget name="config" position="30,70" itemHeight="40" size="754,360" zPosition="1" scrollbarMode="showOnDemand" enableWrapAround="1" selectionPixmap="buttons/listselect.png" transparent="1"/>
 		<widget name="description" position="100,470" size="560,180" font="Regular;24" halign="center" valign="center" foregroundColor="bluette" transparent="1" zPosition="1"/>
 		<widget name="HelpWindow" position="705,525" size="1,1" transparent="1" zPosition="1" alphatest="on"/>
@@ -1721,7 +1721,7 @@
 	<screen name="AudioSelection" title="Audio Selection" position="fill" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
-		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,660" size="40,22" alphatest="blend"/>
 		<widget name="config" position="90,90" size="535,120" scrollbarMode="showOnDemand" itemHeight="30" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/maxbar.png" position="620,90" size="15,130" zPosition="2" alphatest="blend"/>
 		<widget source="key_red" render="Pixmap" pixmap="buttons/red20.png" position="40,95" size="26,26" alphatest="on">
@@ -2469,7 +2469,7 @@
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGYB"/>
-		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,660" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="menu/cron.png" position="870,525" size="300,300" zPosition="2" alphatest="blend"/>
 		<widget name="lab1" position="25,85" size="150,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="labdisabled" position="197,85" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1"/>
@@ -2503,7 +2503,7 @@
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGYB"/>
-		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/vkey_esc.png" position="1190,660" size="40,22" alphatest="blend"/>
 		<!--ePixmap pixmap="buttons/maxbar.png" position="685,80" size="25,510" zPosition="3" alphatest="blend"/-->
 		<widget name="timerlist" position="40,82" size="660,245" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
 		<widget name="description" position="80,350" size="610,270" font="xRegular;16" backgroundColor="bkwall" transparent="1"/>	
@@ -2726,7 +2726,7 @@
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGYB"/>
-        <ePixmap pixmap="buttons/vkey_esc.png" position="1190,667" size="40,22" alphatest="blend"/>
+        <ePixmap pixmap="buttons/vkey_esc.png" position="1190,660" size="40,22" alphatest="blend"/>
 		<widget name="infolist" position="30,90" size="785,500" selectionDisabled="1" backgroundColor="bkwall" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="40,550" size="585,20" font="Regular;20" transparent="1" zPosition="1">
 		    <convert type="ServiceInfo">HasHBBTV</convert>
@@ -2801,7 +2801,7 @@
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="300,657" size="250,28" zPosition="1" alphatest="blend"/>
-		<ePixmap position="1175,667" size="40,22"  pixmap="buttons/vkey_esc.png"  alphatest="on" zPosition="2" />
+		<ePixmap position="1175,660" size="40,22" pixmap="buttons/vkey_esc.png"  alphatest="on" zPosition="2" />
 		<ePixmap pixmap="buttons/maxbar.png" position="770,80" size="46,520" zPosition="2" alphatest="blend"/>
   		<widget source="menu" render="Listbox" position="30,90" size="755,495" scrollbarMode="showOnDemand" backgroundColor="bkwall" transparent="1" zPosition="1">
   		    <convert type="TemplatedMultiContent">
