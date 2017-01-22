@@ -48,7 +48,7 @@
 		<panel name="sPigTemplate"/>
 		<panel name="sRGYB"/>
 		<widget name="entries" position="40,80" size="585,500" itemHeight="30" enableWrapAround="1" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" transparent="1"/>
-		<ePixmap pixmap="buttons/key_menu1.png" position="1100,667" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/key_menu1.png" position="1100,660" size="40,22" alphatest="blend"/>
 		<ePixmap position="870,500" size="300,300" pixmap="menu/timer.png" alphatest="blend"/>
 	</screen>
 
