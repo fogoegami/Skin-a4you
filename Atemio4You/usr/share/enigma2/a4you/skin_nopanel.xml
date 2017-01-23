@@ -267,9 +267,11 @@
 
 	<!-- TimeDateInput -->
 	<screen name="TimeDateInput" title="Time/Date Input" position="fill" flags="wfNoBorder">
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
 		<panel name="CancelOKTemplate"/>
-		<widget name="config" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" position="590,110" font="Regular;22" size="600,500" transparent="1"/>
-		<eLabel name="DEBUG" text="PANEL N026" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/>
+		<widget name="config" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" position="10,110" font="Regular;22" size="600,500" transparent="1"/>
+		<!--eLabel name="DEBUG" text="PANEL N026" position="200,400" size="300,60" font="Regular;40" foregroundColor="red" backgroundColor="#10202020" transparent="1" zPosition="90"/-->
 	</screen>
 
 	<screen name="About" position="fill" flags="wfNoBorder">
