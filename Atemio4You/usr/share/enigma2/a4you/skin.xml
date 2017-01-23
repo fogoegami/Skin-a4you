@@ -1806,7 +1806,8 @@
                 <widget name="timeline3" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
                 <widget name="timeline4" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
                 <widget name="timeline5" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-		<ePixmap pixmap="buttons/key_help.png" position="20,683" size="40,22" alphatest="blend" />
+	        <ePixmap pixmap="buttons/key_help.png" position="8,683" size="40,22" alphatest="blend" />
+		<ePixmap pixmap="buttons/key_text.png" position="48,683" size="40,22" alphatest="blend"/>	
 		<ePixmap pixmap="buttons/key_menu1.png" position="1125,683" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1170,683" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1215,683" size="40,22" alphatest="blend"/>
