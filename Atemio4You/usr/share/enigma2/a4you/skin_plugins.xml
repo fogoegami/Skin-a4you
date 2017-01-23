@@ -1117,11 +1117,17 @@
 		<ePixmap position="1200,672" size="40,22" pixmap="buttons/key_help.png" transparent="1" alphatest="blend" />
         </screen>
 	
-	<!-- PLugin EMC EnhacedMovieCenter --> 
+		<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
 		<panel name="EMC"/>
-		<widget name="Cover" position="10,246" font="Regular;36" size="400,320" zPosition="1" alphatest="on"/>	
-		<widget name="list" position="465,75" size="750,428" itemHeight="40" CoolFont="Regular;20" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
+        <widget name="Cover" position="10,246" font="Regular;36" size="400,320" zPosition="1" alphatest="on"/>		
+		<widget name="list" position="465,75" size="750,475" itemHeight="40" CoolFont="Regular;20" CoolSelectFont="Regular;30" CoolDateFont="Regular;30" CoolMoviePos="35" CoolMovieSize="990" CoolFolderSize="990" CoolTitleColor="0" CoolDatePos="1000" CoolDateWidth="160" CoolDateColor="0" CoolHighlightColor="0" CoolProgressPos="1600" CoolBarPos="890" CoolBarHPos="8" CoolBarSize="55,10" CoolBarSizeSa="110,16" DefaultColor="#FFFFFF" UnwatchedColor="#ffffff" WatchingColor="#ffffff" FinishedColor="red" RecordingColor="#9F1313" BackColorSel="bluette" foregroundColorSelected="#ffffff" backgroundColor="bkwall" scrollbarMode="showNever" transparent="1" zPosition="1"/>
+		<eLabel position="462,502" size="770,70" backgroundColor="#203e69" zPosition="-1"/>
+		<eLabel position="461,573" size="771,1" backgroundColor="#808080"/>
+		<eLabel position="461,501" size="1,72" backgroundColor="#808080"/>
+		<eLabel position="1232,30" size="1,544" backgroundColor="#808080"/>
+		<eLabel position="461,30" size="771,1" backgroundColor="#808080"/>
+		<eLabel position="461,545" size="771,1" backgroundColor="#808080"/>
 	</screen>	
         <!-- Scan IMDB -->	
 	<screen name="EMCImdbScan" position="fill" title="EMC Cover search" backgroundColor="bkwall" flags="wfNoBorder">
