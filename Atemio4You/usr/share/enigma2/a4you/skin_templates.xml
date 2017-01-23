@@ -773,7 +773,7 @@
 		</widget>		
 		
 	<!-- Record Name -->
-        <widget source="Service" render="DRRunningText" options="movetype=running,startpoint=0,startdelay=1000,wrap=0,always=0,repeat=2,oneshot=1" position="465,540" size="765,25" font="Regular;20" foregroundColor="white" transparent="1" halign="center" valign="top">
+        <widget source="Service" render="DRRunningText" options="movetype=running,startpoint=0,startdelay=1000,wrap=0,always=0,repeat=2,oneshot=1" position="465,548" size="765,25" font="Regular;20" foregroundColor="yellow" transparent="1" halign="center" valign="top">
             <convert type="EventName">ExtendedDescription</convert>
         </widget>		
 		<widget source="session.Event_Now" render="Label" position="460,627" size="120,26" font="Regular;22" halign="left" foregroundColor="#73c6ff" backgroundColor="#000000" transparent="1" zPosition="1">
