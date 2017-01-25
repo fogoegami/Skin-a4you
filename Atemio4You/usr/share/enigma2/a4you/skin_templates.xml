@@ -61,7 +61,7 @@
 	<screen name="MenuTemplate" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="bkwall">
 	 <panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
-		<ePixmap position="1175,660" size="40,22" pixmap="buttons/vkey_esc.png" alphatest="blend" zPosition="1"/>
+		<ePixmap position="1175,660" size="40,22" pixmap="buttons/vkey_esc.png" alphatest="blend"/>
 		<ePixmap pixmap="buttons/maxbar.png" position="610,80" size="15,520" zPosition="2" alphatest="blend"/>
  		<widget source="menu" render="Listbox" position="40,80" size="585,495" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1">
 		 <convert type="TemplatedMultiContent">
