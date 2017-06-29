@@ -24,8 +24,7 @@
 		<widget name="newversion" position="400,230" size="100,25" font="Regular;20" backgroundColor="bkwall" foregroundColor="#00ff4a3c"/>
 		<widget source="status" render="Label" position="100,290" size="503,25" backgroundColor="bkwall" foregroundColor="bluette" font="Regular;20" zPosition="5" valign="top"/>
 	</screen>
-	
-        <!-- ********** AutoTimer ********** -->
+<!-- ********** AutoTimer ********** -->
 	<!-- AutoTimer OK -->
 	<screen name="AutoTimer" title="Auto Timer" position="fill" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
@@ -861,8 +860,8 @@
 		<widget name="HelpText2" position="50,540" size="730,50" font="xRegular;16" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="bkwall" transparent="1"/>
 	</screen>
 	
-        <!-- ADD MyTubePlayer MainScreen OKK -->
-        <screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
+    <!-- ADD MyTubePlayer MainScreen OKK -->
+    <screen name="MyTubePlayerMainScreen" position="0,0" size="1280,720" title="MyTube Player MainScreen" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
 		<panel name="nRGY"/>
@@ -1065,7 +1064,7 @@
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRG"/>
-	        <widget name="config" position="60,100" size="520,360" scrollbarMode="showOnDemand" transparent="1"/>
+	    <widget name="config" position="60,100" size="520,360" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	
 	<!-- Web Browser Launcher OKK -->
@@ -1085,37 +1084,37 @@
 		<ePixmap pixmap="buttons/menuback.png" position="30,118" size="50,50" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="buttons/menuback.png" position="30,162" size="50,50" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="buttons/menuback.png" position="30,208" size="50,50" zPosition="2" alphatest="blend"/>
-	        <ePixmap pixmap="buttons/menuback.png" position="30,254" size="50,50" zPosition="2" alphatest="blend"/>
+	    <ePixmap pixmap="buttons/menuback.png" position="30,254" size="50,50" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="buttons/menuback.png" position="30,300" size="50,50" zPosition="2" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_ok.png" position="300,657" size="250,28" zPosition="1" alphatest="blend"/>
 		<widget name="menu" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
 	</screen>
 	
-	<!-- Foreca -->
+		<!-- Foreca -->
 	<screen name="ForecaPreview" position="0,0" size="1280,720" title="Foreca Weather Forecast" backgroundColor="#201b3c85" >
 		<eLabel text="Foreca El Tiempo 10 Días" position="300,15" size="600,26" scrollbarMode="showOnDemand" font="xRegular;24" halign="center" foregroundColor="yellow" backgroundColor="#201b3c85" transparent="1"/>
-		<widget name="MainList" position="0,75" size="1280,530" zPosition="3" backgroundColor="#40000000" enableWrapAround="1" scrollbarMode="showOnDemand" />
+		<widget name="MainList" position="0,75" size="1280,530" zPosition="3" backgroundColor="#40000000" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="Titel" render="Label" position="381,25" zPosition="3" size="978,60" font="Regular;24" valign="center" halign="left" transparent="1" foregroundColor="bluette"/>
 		<widget source="Titel2" render="Label" position="412,30" zPosition="2" size="900,60" font="Regular;26" valign="center" halign="center" transparent="1" foregroundColor="bluette"/>
-		<eLabel position="5,70" zPosition="2" size="1280,2" foregroundColor="#c3c3c9" backgroundColor="#FFFFFF" />
-		<eLabel position="5,660" zPosition="2" size="1280,2" foregroundColor="#c3c3c9" backgroundColor="#FFFFFF" />
-		<eLabel position="0,660" zPosition="-1" size="1280,100" foregroundColor="black" backgroundColor="black" />
-		<widget source="key_red" render="Label" position="139,663" zPosition="2" size="102,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_green" render="Label" position="277,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_yellow" render="Label" position="425,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_blue" render="Label" position="573,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_ok" render="Label" position="721,663" zPosition="2" size="70,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_menu" render="Label" position="829,663" zPosition="2" size="85,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-		<widget source="key_info" render="Label" position="952,663" zPosition="2" size="85,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white" />
-	        <ePixmap position="105,672" size="36,25" pixmap="buttons/red20.png" transparent="1" alphatest="blend" />
-	        <ePixmap position="245,672" size="36,25" pixmap="buttons/green20.png" transparent="1" alphatest="blend" />
-		<ePixmap position="390,672" size="36,25" pixmap="buttons/yellow20.png" transparent="1" alphatest="blend" />
-		<ePixmap position="540,672" size="36,25" pixmap="buttons/blue20.png" transparent="1" alphatest="blend" />
-		<ePixmap position="670,672" size="45,22" pixmap="buttons/key_ok.png" transparent="1" alphatest="blend" />
-		<ePixmap position="780,672" size="40,22" pixmap="buttons/key_menu1.png" transparent="1" alphatest="blend" />
-		<ePixmap position="900,672" size="40,22" pixmap="buttons/key_info.png" transparent="1" alphatest="blend" />
-		<ePixmap position="1200,672" size="40,22" pixmap="buttons/key_help.png" transparent="1" alphatest="blend" />
-        </screen>
+		<eLabel position="5,70" zPosition="2" size="1280,2" foregroundColor="#c3c3c9" backgroundColor="#FFFFFF"/>
+		<eLabel position="5,660" zPosition="2" size="1280,2" foregroundColor="#c3c3c9" backgroundColor="#FFFFFF"/>
+		<eLabel position="0,660" zPosition="-1" size="1280,100" foregroundColor="black" backgroundColor="black"/>
+		<widget source="key_red" render="Label" position="139,663" zPosition="2" size="102,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_green" render="Label" position="277,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_yellow" render="Label" position="425,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_blue" render="Label" position="573,663" zPosition="2" size="110,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_ok" render="Label" position="721,663" zPosition="2" size="70,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_menu" render="Label" position="829,663" zPosition="2" size="85,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+		<widget source="key_info" render="Label" position="952,663" zPosition="2" size="85,40" font="xRegular;16" valign="center" halign="left" transparent="1" foregroundColor="white"/>
+	    <ePixmap position="105,672" size="36,25" pixmap="buttons/red20.png" transparent="1" alphatest="blend"/>
+	    <ePixmap position="245,672" size="36,25" pixmap="buttons/green20.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="390,672" size="36,25" pixmap="buttons/yellow20.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="540,672" size="36,25" pixmap="buttons/blue20.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="670,672" size="45,22" pixmap="buttons/key_ok.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="780,672" size="40,22" pixmap="buttons/key_menu1.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="900,672" size="40,22" pixmap="buttons/key_info.png" transparent="1" alphatest="blend"/>
+		<ePixmap position="1200,672" size="40,22" pixmap="buttons/key_help.png" transparent="1" alphatest="blend"/>
+	</screen>
 	
 		<!-- PLugin EMC EnhacedMovieCenter --> 
  	<screen name="EMCSelection" position="fill" flags="wfNoBorder"> 
@@ -1128,12 +1127,13 @@
 		<eLabel position="1232,30" size="1,544" backgroundColor="#808080"/>
 		<eLabel position="461,30" size="771,1" backgroundColor="#808080"/>
 		<eLabel position="461,545" size="771,1" backgroundColor="#808080"/>
-	</screen>	
-        <!-- Scan IMDB -->	
+	</screen>
+	
+	<!-- Scan IMDB -->
 	<screen name="EMCImdbScan" position="fill" title="EMC Cover search" backgroundColor="bkwall" flags="wfNoBorder">
-                <ePixmap pixmap="menu/bkdown_old.png" position="0,0" size="1280,720" zPosition="-1"/>
-	<!-- Movie Listbox -->
-                <ePixmap pixmap="buttons/maxbar.png" position="1225,80" size="15,510" zPosition="2" alphatest="blend"/>		
+        <ePixmap pixmap="menu/bkdown_old.png" position="0,0" size="1280,720" zPosition="-1"/>
+		<!-- Movie Listbox -->
+        <ePixmap pixmap="buttons/maxbar.png" position="1225,80" size="15,510" zPosition="2" alphatest="blend"/>		
 		<widget name="menulist" position="40,100" size="1200,310" font="Regular;18" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on"/>
 		<!-- Info: Amount of searched Covers -->
 		<widget name="info" position="800,610" size="480,80" font="Regular;20" halign="center" foregroundColor="bluette" backgroundColor="bluette" transparent="1" zPosition="1"/>
@@ -1154,8 +1154,7 @@
 		<widget name="ButtonGreenText" position="400,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="640,665" pixmap="buttons/yellow.png" size="30,30" alphatest="blend" zPosition="2"/>
 		<widget name="Manage Cover" position="680,630" size="210,95" zPosition="1" font="Regular;20" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
-	</screen>
-		
+	</screen>	
 	<!-- Busqueda Caratula OK -->
 	<screen name="getCover" position="fill" title="EMC Cover Selecter" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>

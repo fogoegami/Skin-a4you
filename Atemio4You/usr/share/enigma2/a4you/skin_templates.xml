@@ -72,7 +72,7 @@
 		 }
 		 </convert>
 		</widget>
- <panel name="sort_menu"/>
+    <panel name="sort_menu"/>
 	</screen>
 	
 	<!--MAIN MENU-->
@@ -80,13 +80,13 @@
 	<screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 	 <panel name="MenuTemplate"/>
 	</screen>	
- <screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
  	</screen>
- <screen name="menu_setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="menu_setup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
 	</screen>	
- <screen name="menu_system" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="menu_system" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
 	</screen>		
 	<screen name="menu_information" flags="wfNoBorder" position="fill">
@@ -101,9 +101,9 @@
 	<screen name="menu_shutdown" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="MenuTemplate"/>
 	</screen>	
- <screen name="menu_network" position="0,0" size="1280,720" flags="wfNoBorder">	
+	<screen name="menu_network" position="0,0" size="1280,720" flags="wfNoBorder">	
 	 <panel name="MenuTemplate"/>
- </screen>	
+	</screen>	
 	<screen name="SelectionTemplate">
 		<panel name="BasicTemplate"/>
 		<widget source="session.VideoPicture" render="Pig" position="85,110" size="417,243" backgroundColor="transparent" zPosition="1"/>
@@ -429,7 +429,6 @@
 		<panel name="ButtonBlue"/>
 		<widget source="key_blue" render="Label" position="840,657" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 	</screen>
-	
 	<screen name="sRGYB-M">
 		<panel name="sRGYB"/>
 		<panel name="ButtonGrey"/>
@@ -574,7 +573,7 @@
 	 <ePixmap pixmap="buttons/key_info.png" position="1145,660" size="40,22" alphatest="blend"/>
 	</screen>
 	
- <screen name="ButtonExit">
+	<screen name="ButtonExit">
 	 <ePixmap pixmap="buttons/vkey_esc.png" position="1190,660" size="40,22" alphatest="blend"/>
 	</screen>
 
@@ -583,6 +582,7 @@
 		<panel name="ButtonInfo"/>
 		<panel name="ButtonExit"/>
 	</screen>
+		<ePixmap pixmap="buttons/key_text.png" position="10,660" size="40,22" alphatest="blend" zPosition="2"/>	
 
 	<!-- Button Templates-->
 	<screen name="KeyMenu">
@@ -815,7 +815,7 @@
 		<widget name="deleteall" position="950,955" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap position="960,640" size="256,256" pixmap="menu/mediacenter.png" alphatest="blend"/>
 	</screen>
-  <screen name="EMCPlaylistSetup" position="fill" title="EMC Playlist Setup" backgroundColor="transparent" flags="wfNoBorder" >
+ 	<screen name="EMCPlaylistSetup" position="fill" title="EMC Playlist Setup" backgroundColor="transparent" flags="wfNoBorder" >
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
         <widget name="config" position="20,100" size="580,430" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
@@ -823,7 +823,7 @@
 		<widget name="cancel" position="90,630" font="Regular;20" size="210,95" zPosition="1" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/green.png" position="270,667" size="20,25" alphatest="blend"/>
 		<widget name="save" position="300,630" font="Regular;20" size="210,95" zPosition="1" halign="left" valign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1"/>
-  </screen>
+ 	</screen>
   	<screen name="DownloadMovieInfo" position="fill" title="Movie Information Download (TMDb)" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
@@ -839,15 +839,15 @@
 		<widget name="save" position="405,655" size="300,44" font="Regular;20" halign="left" valign="center" transparent="1"/>
 	</screen>
 
-  <screen name="MovieInfoSetup" position="fill" title="Movie Information Download Setup" backgroundColor="bkwall" flags="wfNoBorder">
+ 	<screen name="MovieInfoSetup" position="fill" title="Movie Information Download Setup" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRG"/>
         <widget name="config" position="40,70" size="540,540" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-  </screen>
+ 	</screen>
   
 <!-- EMC-Setup -->
-  <screen name="EMCMenu" position="fill" size="600,480" flags="wfNoBorder">
+ 	<screen name="EMCMenu" position="fill" size="600,480" flags="wfNoBorder">
 		<panel name="WallTemplate"/>
 		<panel name="PigTemplate"/>
 		<panel name="nRGYB"/>
@@ -855,7 +855,7 @@
 	    <widget source="menu" render="Listbox" position="10,55" size="580,430" scrollbarMode="showOnDemand" enableWrapAround="1">
 		    <convert type="StringList"/>
 	  </widget>
-  </screen>
+ 	</screen>
 	<screen name="EnhancedMovieCenterMenu" position="fill" title="EnhancedMovieCenter Menu" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
 		<panel name="sPigTemplate"/>
@@ -870,5 +870,5 @@
 		<panel name="nRG"/>
 		<ePixmap pixmap="buttons/maxbar.png" position="765,300" size="15,300" zPosition="2" alphatest="blend"/>
         <widget name="config" position="40,70" size="725,300" font="Regular;20" scrollbarMode="showOnDemand" transparent="1" zPosition="1"/>
-	</screen>	
+	</screen>		
 </skin>

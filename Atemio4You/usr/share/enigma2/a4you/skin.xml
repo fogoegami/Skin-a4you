@@ -91,19 +91,17 @@
 		<color name="ListboxMarkedForeground" color="#00ff00"/>
 		<color name="ListboxMarkedAndSelectedBackground" color="#1077c6ff"/>
 		<color name="ListboxMarkedAndSelectedForeground" color="#00ff00"/>
-			
-	<!--  screen border png's -->
-	<borderset name="bsWindow">
-		<pixmap filename="window/top_left_corner.png" pos="bpTopLeft"/>
-		<pixmap filename="window/top_edge.png" pos="bpTop"/>
-		<pixmap filename="window/top_right_corner.png" pos="bpTopRight"/>
-		<pixmap filename="window/left_edge.png" pos="bpLeft"/>
-		<pixmap filename="window/right_edge.png" pos="bpRight"/>
-		<pixmap filename="window/bottom_left_corner.png" pos="bpBottomLeft"/>
-		<pixmap filename="window/bottom_edge.png" pos="bpBottom"/>
-		<pixmap filename="window/bottom_right_corner.png" pos="bpBottomRight"/>
-	</borderset>
-	
+				<!--  screen border png's -->
+	    <borderset name="bsWindow">
+		<pixmap pos="bpTopLeft" filename="window/top_left_corner.png"/>
+		<pixmap pos="bpTop" filename="window/top_edge.png"/>
+		<pixmap pos="bpTopRight" filename="window/top_right_corner.png"/>
+		<pixmap pos="bpLeft" filename="window/left_edge.png"/>
+		<pixmap pos="bpRight" filename="window/right_edge.png"/>
+		<pixmap pos="bpBottomLeft" filename="window/bottom_left_corner.png"/>
+		<pixmap pos="bpBottom" filename="window/bottom_edge.png"/>
+		<pixmap pos="bpBottomRight" filename="window/bottom_right_corner.png"/>
+	    </borderset>
 	</windowstyle>
 	
 	<subtitles>
@@ -124,7 +122,6 @@
 		<widget source="label4" render="Label" position="750,600" size="220,100" font="Regular;26" halign="center" valign="center" zPosition="2" noWrap="1" foregroundColor="grey" backgroundColor="grey" transparent="1"/>
 		<widget source="label5" render="Label" position="970,600" size="220,100" font="Regular;26" halign="center" valign="center" zPosition="2" noWrap="1" foregroundColor="grey" backgroundColor="grey" transparent="1"/>
 	</screen>	
-		
 	<!--  AutoRes-Pers-Fuso-Tast-Disp-Parental Customize Setup OKK -->
 	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="bkwall" flags="wfNoBorder">
 		<panel name="sWallTemplate"/>
@@ -154,42 +151,42 @@
 		
 	<!--  SubTitle OK -->
 	<screen name="SubtitleDisplay" title="SubTitle" position="fill" backgroundColor="bkwall" zPosition="-1" flags="wfNoBorder"/>
-	
-        <!--  QuickSubtitlesConfigMenu OK -->
+		<!--  QuickSubtitlesConfigMenu OK -->
 		<screen name="QuickSubtitlesConfigMenu" position="350,450" size="600,320" title="Subtitle settings" backgroundColor="bkwall" flags="wfNoBorder">
 		<widget name="config" position="20,5" size="570,250" font="xRegular;16" foregroundColor="bluette" zPosition="1" transparent="1" valign="center"/>
 		<widget name="videofps" position="20,255" size="570,20" backgroundColor="bkwall" transparent="1" zPosition="1" font="xRegular;14" valign="center" halign="left" foregroundColor="bluette"/>
 	</screen>
 	
 	<!--TempFanControl OK -->
-	<screen name="TempFanControl" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="bkwall">
-		<panel name="WallTemplateSimple"/>
-		<widget name="config" position="10,107" size="503,120" selectionPixmap="buttons/maxbar.png" foregroundColor="background" backgroundColor="bkwall" transparent="1" enableWrapAround="1"/>
-		<widget source="SensorTempText0" render="Label" position="10,250" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
-		<widget source="SensorTemp0" render="Label" position="100,250" zPosition="1" size="100,20" font="Regular;19" halign="right">
-			<convert type="SensorToText"/>
-		</widget>
-		<widget source="SensorTempText1" render="Label" position="10,270" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
-		<widget source="SensorTemp1" render="Label" position="100,270" zPosition="1" size="100,20" font="Regular;19" halign="right">
-			<convert type="SensorToText"/>
-		</widget>
-		<widget source="SensorTempText2" render="Label" position="10,290" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
-		<widget source="SensorTemp2" render="Label" position="100,290" zPosition="1" size="100,20" font="Regular;19" halign="right">
-			<convert type="SensorToText"/>
-		</widget>
-		<widget source="SensorFanText0" render="Label" position="290,250" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
-		<widget source="SensorFan0" render="Label" position="380,250" zPosition="1" size="130,20" font="Regular;19" halign="right">
-			<convert type="SensorToText"/>
-		</widget>
-		<widget source="SensorFanText1" render="Label" position="290,270" zPosition="1" size="90,40" font="Regular;20" halign="left"/>
-		<widget source="SensorFan1" render="Label" position="380,270" zPosition="1" size="130,20" font="Regular;19" halign="right">
-			<convert type="SensorToText"/>
-		</widget>
-		<ePixmap pixmap="buttons/maxbar.png" position="40,663" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="red" render="Label" position="75,663" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="background" backgroundColor="background"/>
-		<ePixmap pixmap="buttons/maxbar.png" position="40,690" size="24,24" alphatest="blend" transparent="1"/>
-		<widget source="green" render="Label" position="75,690" size="190,24" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="center" noWrap="1" foregroundColor="background" backgroundColor="bkwall"/>
-	</screen>
+	<screen name="TempFanControl" position="0,0" size="1280,720" title="Temperature and fan control" flags="wfNoBorder">	
+		<panel name="WallTemplate"/>
+		<panel name="PigTemplate"/>
+			<widget source="red" render="Label" position="90,664" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+			<widget source="green" render="Label" position="300,664" size="250,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+			<widget source="blue" render="Label" position="840,665" size="300,28" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+        <widget name="config" position="80,80" size="515,350" itemHeight="45" scrollbarMode="showOnDemand" transparent="1"/>
+
+        <widget source="SensorTempText0" render="Label" position="10,300" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" backgroundColor="bkwall" transparent="1" />
+        <widget source="SensorTemp0" render="Label" position="100,300" zPosition="1" size="400,200">
+        	<convert type="SensorToText"></convert>
+        </widget>
+        <widget source="SensorTempText1" render="Label" position="10,320" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" backgroundColor="bkwall" transparent="1" />
+        <widget source="SensorTemp1" render="Label" position="100,320" zPosition="1" size="400,200">
+        	<convert type="SensorToText"></convert>
+        </widget>
+        <widget source="SensorTempText2" render="Label" position="10,340" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" backgroundColor="bkwall" transparent="1" />
+        <widget source="SensorTemp2" render="Label" position="100,340" zPosition="1" size="400,200">
+        	<convert type="SensorToText"></convert>
+        </widget>
+        <widget source="SensorTempText3" render="Label" position="10,360" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" backgroundColor="bkwall" transparent="1" />
+        <widget source="SensorTemp3" render="Label" position="100,360" zPosition="1" size="400,200">
+        	<convert type="SensorToText"></convert>
+        </widget>
+        <widget source="SensorTempText4" render="Label" position="10,370" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" backgroundColor="bkwall" transparent="1" />
+        <widget source="SensorTemp4" render="Label" position="100,370" zPosition="1" size="400,200">
+        	<convert type="SensorToText"></convert>
+        </widget>
+		</screen>	
 
 	<!--  PiP Setup OK -->
 	<screen name="PiPSetup" title="Pip Setup" backgroundColor="transparent" position="200,200" size="800,200" zPosition="-1" flags="wfNoBorder">
@@ -216,7 +213,7 @@
 		<eLabel position="7,7" size="686,46" backgroundColor="#4D5375"/>
 		<eLabel position="3,65" size="4,25" backgroundColor="bkwall"/>
 		<eLabel position="3,68" size="45,4" backgroundColor="bkwall"/>
-	        <ePixmap pixmap="buttons/vkey_esc_keyboard.png" zPosition="2" position="8,73" size="38,38" transparent="1" alphatest="blend"/>
+	    <ePixmap pixmap="buttons/vkey_esc_keyboard.png" zPosition="2" position="8,73" size="38,38" transparent="1" alphatest="blend"/>
 		<widget name="header" position="10,42" size="735,26" transparent="0" noWrap="1" foregroundColor="#00ff4a3c" backgroundColor="bkwall"/>
 		<widget name="text" position="13,10" size="670,40" font="Regular;36" transparent="1" noWrap="1" halign="right" foregroundColor="#ffffff" backgroundColor="#10101010" zPosition="5"/>
 		<ePixmap pixmap="buttons/red.png" position="575,70" size="20,25" alphatest="blend"/>
@@ -290,7 +287,7 @@
 	<screen name="InfoBar" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,580" size="1280,140" pixmap="infobar/infobar.png" zPosition="-1" alphatest="off"/>
 	<!--  SNR-->	
-	        <eLabel text="SNR :" position="800,613" size="60,22" font="xRegular;8" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
+	    <eLabel text="SNR :" position="800,613" size="60,22" font="xRegular;8" halign="left" foregroundColor="bluette" backgroundColor="bkwall" transparent="1" zPosition="1"/>
 		<widget source="session.FrontendStatus" render="Progress" position="820,616" size="190,5" pixmap="infobar/pbar_snr_snr.png" backgroundColor="bkwall" zPosition="1" borderWidth="1" borderColor="grey">
 		    <convert type="FrontendInfo">SNR</convert>
 		</widget>
@@ -412,7 +409,7 @@
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1127,655" size="40,18" zPosition="1" alphatest="blend">
 		    <convert type="ServiceInfo">IsMultichannel</convert>
 		    <convert type="ConditionalShowHide"/>
-		</widget>
+		</widget>		
 	</screen>
 	
         <!-- SecondInfoBar -->		 
@@ -1321,9 +1318,9 @@
 		<widget name="config" position="40,130" size="730,400" itemHeight="25" font="xRegular;17" scrollbarMode="showOnDemand" selectionPixmap="buttons/listselect.png" backgroundColor="bkwall" zPosition="2" transparent="1"/>
 		<widget name="footer" position="0,0" size="0,0"/>
 		<panel name="ButtonRed"/>
-		<eLabel text="Cancel" position="90,663" size="220,24" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<eLabel text="Cancel" position="90,657" size="220,24" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<panel name="ButtonGreen"/>
-		<eLabel text="Scan" position="310,663" size="220,24" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
+		<eLabel text="Scan" position="310,657" size="220,24" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 	</screen>		
 		
 	<!-- Scan setup OK -->
@@ -1763,7 +1760,7 @@
 		<ePixmap position="1000,490" size="300,300" pixmap="menu/speaker.png" alphatest="blend"/>
 	</screen>
 
-        <screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
+    <screen name="GraphicalEPG" position="0,0" size="1280,720" backgroundColor="black" transparent="0" flags="wfNoBorder">
 		<ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,20" size="1280,50" zPosition="-1"/>
 		<ePixmap pixmap="icons/clock.png" position="1130,30" zPosition="1" size="20,20" alphatest="blend"/>
 		<widget source="global.CurrentTime" render="Label" position="1148,28" size="100,28" font="xRegular;22" foregroundColor="#a0a0a0" backgroundColor="bkwall" halign="right" transparent="1" zPosition="1">
@@ -1801,12 +1798,12 @@
 		<widget name="list" position="0,90" size="1280,585" backgroundColor="black" RecordForegroundColorSelected="yellow" scrollbarMode="showNever" zPosition="1" transparent="0"/>
 		<widget name="timeline_now" position="0,90" zPosition="3" size="25,593" pixmap="epg/timeline-now.png" alphatest="on"/>
 		<widget name="timeline0" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-                <widget name="timeline1" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-                <widget name="timeline2" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-                <widget name="timeline3" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-                <widget name="timeline4" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-                <widget name="timeline5" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
-	        <ePixmap pixmap="buttons/key_help.png" position="8,683" size="40,22" alphatest="blend" />
+        <widget name="timeline1" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+        <widget name="timeline2" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+        <widget name="timeline3" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+        <widget name="timeline4" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+        <widget name="timeline5" position="0,70" zPosition="2" size="1,610" pixmap="window/timeline_large.png"/>
+		<ePixmap pixmap="buttons/key_help.png" position="8,683" size="40,22" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_text.png" position="48,683" size="40,22" alphatest="blend"/>	
 		<ePixmap pixmap="buttons/key_menu1.png" position="1125,683" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1170,683" size="40,22" alphatest="blend"/>
@@ -1827,7 +1824,7 @@
 	    <panel name="nRGYB"/>
 	    <panel name="Epg_Search"/>
 		<ePixmap pixmap="buttons/key_help.png" position="10,638" size="40,22" alphatest="blend"/>
-		<ePixmap pixmap="buttons/key_text.png" position="10,660" size="40,22" alphatest="blend"/>
+		<ePixmap pixmap="buttons/key_text.png" position="10,660" size="40,22" alphatest="blend"/>	
 		<ePixmap pixmap="menu/bkdown_epg-pig.png" position="0,0" size="1280,720" zPosition="-1"/>		
 		
 	<!-- Pig -->
@@ -1878,12 +1875,12 @@
 		<ePixmap pixmap="buttons/key_ch.png" position="1025,617" size="60,25" alphatest="blend" zPosition="2"/>
 		<widget name="jump" position="1080,616" size="200,25" font="xRegular;17" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1"/>
 		<widget name="number" position="60,193" size="100,25" foregroundColor="#73c6ff" transparent="1"/>
-                <widget name="timeline0" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-                <widget name="timeline1" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-                <widget name="timeline2" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-                <widget name="timeline3" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-                <widget name="timeline4" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
-                <widget name="timeline5" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>	
+        <widget name="timeline0" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+        <widget name="timeline1" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+        <widget name="timeline2" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+        <widget name="timeline3" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+        <widget name="timeline4" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>
+        <widget name="timeline5" position="0,205" zPosition="1" size="1,410" pixmap="window/timeline.png"/>	
 	<!-- Time -->
 		<widget name="bouquetlist" position="60,225"  size="1160,395" itemHeight="28" scrollbarMode="showNever" foregroundColor="#00ff4a3c" backgroundColor="bkwall" transparent="0" zPosition="4"/>
 		<widget name="timeline_now" position="0,95" size="19,585" pixmap="epg/timeline-now.png" alphatest="on" zPosition="3"/>
@@ -1941,11 +1938,11 @@
 		<widget name="list" position="0,75" size="1280,85" backgroundColor="black" RecordForegroundColorSelected="yellow" scrollbarMode="showNever" zPosition="1" transparent="1" EntryFontWrap="no"/>
 		<widget name="timeline_now" position="0,75" size="22,85" pixmap="epg/timeline-now-infobarEPG.png" alphatest="blend" zPosition="2"/>
 		<widget name="timeline0" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-                <widget name="timeline1" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-                <widget name="timeline2" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-                <widget name="timeline3" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-                <widget name="timeline4" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
-                <widget name="timeline5" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+        <widget name="timeline1" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+        <widget name="timeline2" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+        <widget name="timeline3" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+        <widget name="timeline4" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
+        <widget name="timeline5" position="0,55" zPosition="2" size="1,105" pixmap="window/timeline.png"/>
 		<ePixmap pixmap="buttons/key_help.png" position="8,162" size="40,22" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_text.png" position="48,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/red.png" position="100,163" size="20,25" alphatest="blend" transparent="1" zPosition="1"/>
@@ -1956,14 +1953,14 @@
 		<widget name="key_yellow" position="645,160" size="240,25" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
 		<ePixmap pixmap="buttons/blue.png" position="840,163" size="240,25" alphatest="blend" transparent="1" zPosition="1"/>
 		<widget name="key_blue" position="870,160" size="440,25" backgroundColor="bkwall" zPosition="1" transparent="1" font="Regular;22" halign="left"/>
-                <ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,160" size="1280,40" zPosition="-1"/>
-	        <ePixmap pixmap="buttons/key_menu1.png" position="1130,162" size="40,22" alphatest="blend"/>
+        <ePixmap pixmap="screens/fs-bg-top-wizzard.png" position="0,160" size="1280,40" zPosition="-1"/>
+	    <ePixmap pixmap="buttons/key_menu1.png" position="1130,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1175,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/vkey_esc.png" position="1220,162" size="40,22" alphatest="blend"/>		
-        </screen>
+    </screen>
 	<!-- QuickEPG -->
 		<screen name="QuickEPG" position="0,e-200" size="1280,200" backgroundColor="bkwall" title="InfoBar" transparent="0" flags="wfNoBorder">
-	        <ePixmap pixmap="buttons/key_help.png" position="8,162" size="40,22" alphatest="blend" />
+		<ePixmap pixmap="buttons/key_help.png" position="8,162" size="40,22" alphatest="blend" />
 		<ePixmap pixmap="buttons/key_text.png" position="48,162" size="40,22" alphatest="blend"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="1120,160" size="40,22" alphatest="blend" transparent="1" zPosition="1"/>
 		<ePixmap pixmap="buttons/key_info.png" position="1165,160" size="40,22" alphatest="blend" transparent="1" zPosition="1"/>
@@ -2012,7 +2009,7 @@
 		<ePixmap pixmap="menu/mediashadow.png" position="0,0" size="1280,720" zPosition="10" alphatest="blend"/>
 		<widget source="Title" render="Label" zPosition="1" position="480,40" size="390,30" font="xRegular;26" foregroundColor="#808080" backgroundColor="bkwall" transparent="1"/>
 		<ePixmap pixmap="buttons/key_menu1.png" position="1130,37" size="40,22" alphatest="blend"/>
-                <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
+        <ePixmap pixmap="buttons/vkey_esc.png" position="1175,37" size="40,22" alphatest="blend"/>		
 		
 	<!-- Pig -->
 		<eLabel position="30,108" size="350,200" backgroundColor="#808080"/>
@@ -2270,8 +2267,8 @@
 	</screen-->
 
 	<screen name="DVDPlayer" flags="wfNoBorder" position="71,580" size="1280,700" backgroundColor="transparent">
-	        <panel name="PlayerDVD"/>
-                <panel name="PVRState"/>	
+	<panel name="PlayerDVD"/>
+	<panel name="PVRState"/>
 		<ePixmap position="0,0" pixmap="dvr/mplayer.png" zPosition="-1" size="1138,88" transparent="1"/>
 		<widget source="session.CurrentService" render="Label" position="225,11" size="845,24" font="Regular;22" halign="center" foregroundColor="#73c6ff" backgroundColor="#000000" transparent="1" zPosition="1">
 		    <convert type="ServiceName">Name</convert>
@@ -2305,8 +2302,7 @@
 			pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png"/>
 		<widget name="speed" position="35,5" size="80,18" font="Regular;17" halign="left" backgroundColor="transpBlack" foregroundColor="white"  transparent="1" zPosition="4"/>
 	</screen-->
-	
-        <screen name="PVRState" position="240,560" zPosition="2" size="80,25" backgroundColor="black" flags="wfNoBorder" transparent="0">
+    <screen name="PVRState" position="240,560" zPosition="2" size="80,25" backgroundColor="black" flags="wfNoBorder" transparent="0">
 		<widget name="statusicon" position="10,0" zPosition="3" size="50,55" alphatest="blend" transparent="0" pixmaps="skin_default/icons/play.png,skin_default/icons/pause.png,skin_default/icons/stop.png,skin_default/icons/forward.png,skin_default/icons/backward.png,skin_default/icons/slow.png"/>
 		<widget name="speed" position="32,2" size="80,15" font="xRegular;17" halign="left" foregroundColor="infobar-frgrnd" backgroundColor="infobar_sunken" transparent="1" zPosition="4"/>
 	</screen>	
@@ -2384,7 +2380,7 @@
 		<eLabel position="815,332" size="420,1" backgroundColor="#808080" zPosition="5"/>
 		<widget font="Regular;22" halign="center" noWrap="1" position="815,265" render="DRRunningText" options="movetype=running,startpoint=0,startdelay=2000,wrap=0,always=0,repeat=2,oneshot=1" size="420,265" source="Event" foregroundColor="#73c6ff" backgroundColor="bkwall" transparent="1" zPosition="1">
 			<convert type="EventName">Name</convert>
-		</widget>
+		</widget>		
 		<!--widget source="Event" render="EGScrollLabel" position="815,340" size="425,275" font="Regular;20" halign="center" foregroundColor="white" backgroundColor="bkwall" transparent="1">
 		    <convert type="EventName">FullDescription</convert>
 		</widget-->
